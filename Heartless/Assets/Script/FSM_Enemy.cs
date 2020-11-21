@@ -1,34 +1,30 @@
 ﻿using UnityEngine;
 using System.Collections;
-
+using System.Collections.Generic;
 public class FSM_Enemy : MonoBehaviour
 {
 
     [Range(0f, 20f)] public float range = 5f;
     public float reactionTime = 3f;
-    public string targetTag = "Player";
-    public Light ambientLight = null;
-    public Color color1 = Color.red;
-    public Color color2 = Color.yellow;
+    public GameObject aimHelper;
+    public GameObject target;
     public float switchTime = .5f;
 
     private FSM fsm;
     private float ringStart;
     private Color initialColor;
+    public List<Vector2> listOfSpots;
+    int curr = 0;
 
     void Start()
     {
-        if (!ambientLight) return;  // Sanity
-
         // Define states and link actions when enter/exit/stay
-
         FSMState wander = new FSMState(); //off
 
         FSMState seek = new FSMState(); //alarm
-
-        seek.enterActions.Add(StartAlarm);
+        wander.enterActions.Add(StartWander);
+        wander.stayActions.Add(WanderAround);
         seek.stayActions.Add(RingAlarm);
-        seek.exitActions.Add(ShutAlarm);
 
         // Define transitions
         FSMTransition startSeek = new FSMTransition(EnemiesAround);
@@ -60,10 +56,8 @@ public class FSM_Enemy : MonoBehaviour
 
     public bool EnemiesAround()
     {
-        foreach (GameObject go in GameObject.FindGameObjectsWithTag(targetTag))
-        {
-            if ((go.transform.position - transform.position).magnitude <= range) return true;
-        }
+        if ((target.transform.position - transform.position).magnitude <= range) return true;
+        
         return false;
     }
 
@@ -73,28 +67,28 @@ public class FSM_Enemy : MonoBehaviour
     }
 
     // ACTIONS
-
-    public void StartAlarm()
+    public void StartWander()
     {
-        initialColor = ambientLight.color;
         ringStart = Time.realtimeSinceStartup;
+        curr = 0;
     }
 
-    public void ShutAlarm()
+    public void WanderAround()
     {
-        ambientLight.color = initialColor;
+        if ((int)Mathf.Ceil((Time.realtimeSinceStartup - ringStart) / switchTime) % 2 == 0)
+        {
+            aimHelper.transform.position = listOfSpots[curr];
+            curr++;
+            curr = curr % listOfSpots.Count;
+        }
+        //reachPoint(currentSpot);
     }
+
+    
 
     public void RingAlarm()
     {
-        if ((int)Mathf.Floor((Time.realtimeSinceStartup - ringStart) / switchTime) % 2 == 0)
-        {
-            ambientLight.color = color1;
-        }
-        else
-        {
-            ambientLight.color = color2;
-        }
+        aimHelper.transform.position = target.transform.position;
     }
 
 }
