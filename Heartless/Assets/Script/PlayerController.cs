@@ -16,7 +16,8 @@ public class PlayerController : MonoBehaviour
     private Animator playerAnimator;
     private string lastAnimationTriggered;
     bool isAiming = false;
-    float heartRadius = .3f;
+    float heartRadius = .6f;
+    int heartCount = 1;
     // Start is called before the first frame update
     void Awake()
     {
@@ -31,10 +32,11 @@ public class PlayerController : MonoBehaviour
         MovePlayer();
         //ANIMATION 
         SetAnimation(inputMovementVector);
-        if (!isAiming && Input.GetKeyDown(KeyCode.K))
+        if (heartCount>0 && !isAiming && Input.GetKeyDown(KeyCode.K))
         {
             isAiming = true;
             CreateHeart();
+            heartCount--;
         }
         if (isAiming)
         {
@@ -43,11 +45,18 @@ public class PlayerController : MonoBehaviour
         if (isAiming && Input.GetKeyUp(KeyCode.K))
         {
             isAiming = false;
+            heartCount++;
             Destroy(spawnedHeart);
+        }
+        if (isAiming && Input.GetKeyUp(KeyCode.J))
+        {
+            isAiming = false;
+            heartCount++;
+            spawnedHeart.GetComponent<Heart>().Shoot(transform.position);
         }
     }
 
-
+    
 
     private void SetAnimation(Vector2 input)
     {
@@ -115,7 +124,6 @@ public class PlayerController : MonoBehaviour
         inputMovementVector = (Vector2.right * Input.GetAxis("Horizontal") + Vector2.up * Input.GetAxis("Vertical")).normalized;
         if (inputMovementVector != Vector3.zero)
         {
-            Debug.Log(inputMovementVector);
             transform.position = Vector3.Lerp(transform.position, transform.position + inputMovementVector, Time.deltaTime * movementSpeed);
         }
     }
@@ -137,4 +145,5 @@ public class PlayerController : MonoBehaviour
         spawnedHeart.transform.position = MouseOffset;
 
     }
+
 }
