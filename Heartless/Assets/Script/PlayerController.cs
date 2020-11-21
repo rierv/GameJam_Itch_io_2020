@@ -11,7 +11,7 @@ public class PlayerController : MonoBehaviour
     private GameObject spawnedHeart;
     private Vector3 inputMovementVector;
     [SerializeField]
-    private float movementSpeed = 10f;
+    private float movementSpeed = 100f;
     private Rigidbody2D rb2d;
     private Animator playerAnimator;
     private string lastAnimationTriggered;
@@ -120,11 +120,10 @@ public class PlayerController : MonoBehaviour
 
     private void MovePlayer()
     {
-        inputMovementVector = (Vector2.right * Input.GetAxis("Horizontal") + Vector2.up * Input.GetAxis("Vertical")).normalized;
-        if (inputMovementVector != Vector3.zero)
-        {
-            transform.position = Vector3.Lerp(transform.position, transform.position + inputMovementVector, Time.deltaTime * movementSpeed);
-        }
+        inputMovementVector = (Vector2.right * Input.GetAxis("Horizontal") + Vector2.up * Input.GetAxis("Vertical"));
+        transform.position = Vector3.Lerp(transform.position, transform.position + inputMovementVector.normalized, Time.deltaTime * movementSpeed);
+        //transform.position = Vector3.MoveTowards(transform.position, transform.position + inputMovementVector.normalized/10, Time.deltaTime*movementSpeed);
+
     }
 
     private void CreateHeart()
