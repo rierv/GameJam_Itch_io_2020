@@ -1,0 +1,619 @@
+fileFormatVersion: 2
+guid: 879ce4c6c34e5674c92fcd317988d04e
+TextureImporter:
+  internalIDToNameTable:
+  - first:
+      213: -4375913591027894256
+    second: heartlessplayeranimtransp_0
+  - first:
+      213: 2198271679454036748
+    second: heartlessplayeranimtransp_1
+  - first:
+      213: -389182159987838642
+    second: heartlessplayeranimtransp_2
+  - first:
+      213: 3519893586755999247
+    second: heartlessplayeranimtransp_3
+  - first:
+      213: -2475352207531342520
+    second: heartlessplayeranimtransp_4
+  - first:
+      213: -407895705687315424
+    second: heartlessplayeranimtransp_5
+  - first:
+      213: 8041757167706256686
+    second: heartlessplayeranimtransp_6
+  - first:
+      213: 5943753316375670689
+    second: heartlessplayeranimtransp_7
+  - first:
+      213: -2706464979219183393
+    second: heartlessplayeranimtransp_8
+  - first:
+      213: 4696193507797919488
+    second: heartlessplayeranimtransp_9
+  - first:
+      213: -6727314771662271072
+    second: heartlessplayeranimtransp_10
+  - first:
+      213: 2039401913860867468
+    second: heartlessplayeranimtransp_11
+  - first:
+      213: 3930930832405851229
+    second: heartlessplayeranimtransp_12
+  - first:
+      213: -763549898862286951
+    second: heartlessplayeranimtransp_13
+  - first:
+      213: -736803392217963137
+    second: heartlessplayeranimtransp_14
+  - first:
+      213: 7870710344934294928
+    second: heartlessplayeranimtransp_15
+  - first:
+      213: -5439149053929156913
+    second: heartlessplayeranimtransp_16
+  - first:
+      213: -5526330513135791580
+    second: heartlessplayeranimtransp_17
+  - first:
+      213: -3749589908023866016
+    second: heartlessplayeranimtransp_18
+  - first:
+      213: 1336714600214859901
+    second: heartlessplayeranimtransp_0
+  - first:
+      213: -557699557099158896
+    second: heartlessplayeranimtransp_1
+  - first:
+      213: -2257598929273725850
+    second: heartlessplayeranimtransp_2
+  - first:
+      213: -5449550015789451945
+    second: heartlessplayeranimtransp_3
+  - first:
+      213: -1929133196061687984
+    second: heartlessplayeranimtransp_4
+  - first:
+      213: 4075566666108520078
+    second: heartlessplayeranimtransp_5
+  - first:
+      213: 5348196872810214354
+    second: heartlessplayeranimtransp_6
+  - first:
+      213: -2405215311494316577
+    second: heartlessplayeranimtransp_7
+  - first:
+      213: 4412425973207338475
+    second: heartlessplayeranimtransp_8
+  - first:
+      213: 2867792814748376766
+    second: heartlessplayeranimtransp_9
+  - first:
+      213: -2664365415627938592
+    second: heartlessplayeranimtransp_10
+  - first:
+      213: 4206935273898570292
+    second: heartlessplayeranimtransp_11
+  - first:
+      213: -9086142881245922410
+    second: heartlessplayeranimtransp_12
+  - first:
+      213: 7578792199857362046
+    second: heartlessplayeranimtransp_13
+  - first:
+      213: -7278723527991077089
+    second: heartlessplayeranimtransp_14
+  - first:
+      213: 495481947328880551
+    second: heartlessplayeranimtransp_15
+  - first:
+      213: -694787704146535385
+    second: heartlessplayeranimtransp_16
+  - first:
+      213: -6523585552535217026
+    second: heartlessplayeranimtransp_17
+  - first:
+      213: 1691783994457378058
+    second: heartlessplayeranimtransp_18
+  externalObjects: {}
+  serializedVersion: 11
+  mipmaps:
+    mipMapMode: 0
+    enableMipMap: 0
+    sRGBTexture: 1
+    linearTexture: 0
+    fadeOut: 0
+    borderMipMap: 0
+    mipMapsPreserveCoverage: 0
+    alphaTestReferenceValue: 0.5
+    mipMapFadeDistanceStart: 1
+    mipMapFadeDistanceEnd: 3
+  bumpmap:
+    convertToNormalMap: 0
+    externalNormalMap: 0
+    heightScale: 0.25
+    normalMapFilter: 0
+  isReadable: 0
+  streamingMipmaps: 0
+  streamingMipmapsPriority: 0
+  vTOnly: 0
+  grayScaleToAlpha: 0
+  generateCubemap: 6
+  cubemapConvolution: 0
+  seamlessCubemap: 0
+  textureFormat: 1
+  maxTextureSize: 2048
+  textureSettings:
+    serializedVersion: 2
+    filterMode: 0
+    aniso: -1
+    mipBias: -100
+    wrapU: 1
+    wrapV: 1
+    wrapW: 1
+  nPOTScale: 0
+  lightmap: 0
+  compressionQuality: 50
+  spriteMode: 2
+  spriteExtrude: 1
+  spriteMeshType: 1
+  alignment: 0
+  spritePivot: {x: 0.5, y: 0.5}
+  spritePixelsToUnits: 100
+  spriteBorder: {x: 0, y: 0, z: 0, w: 0}
+  spriteGenerateFallbackPhysicsShape: 1
+  alphaUsage: 1
+  alphaIsTransparency: 1
+  spriteTessellationDetail: -1
+  textureType: 8
+  textureShape: 1
+  singleChannelComponent: 0
+  maxTextureSizeSet: 0
+  compressionQualitySet: 0
+  textureFormatSet: 0
+  ignorePngGamma: 0
+  applyGammaDecoding: 0
+  platformSettings:
+  - serializedVersion: 3
+    buildTarget: DefaultTexturePlatform
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 0
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: Standalone
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 0
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  spriteSheet:
+    serializedVersion: 2
+    sprites:
+    - serializedVersion: 2
+      name: heartlessplayeranimtransp_0
+      rect:
+        serializedVersion: 2
+        x: 13
+        y: 161
+        width: 31
+        height: 61
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: d7092efb8d6fc8210800000000000000
+      internalID: 1336714600214859901
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: heartlessplayeranimtransp_1
+      rect:
+        serializedVersion: 2
+        x: 50
+        y: 163
+        width: 30
+        height: 59
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 09246b72537a248f0800000000000000
+      internalID: -557699557099158896
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: heartlessplayeranimtransp_2
+      rect:
+        serializedVersion: 2
+        x: 83
+        y: 161
+        width: 31
+        height: 60
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 66c565f2cb56ba0e0800000000000000
+      internalID: -2257598929273725850
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: heartlessplayeranimtransp_3
+      rect:
+        serializedVersion: 2
+        x: 119
+        y: 161
+        width: 30
+        height: 59
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 7553523322f4f54b0800000000000000
+      internalID: -5449550015789451945
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: heartlessplayeranimtransp_4
+      rect:
+        serializedVersion: 2
+        x: 157
+        y: 161
+        width: 30
+        height: 58
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 05f345444975a35e0800000000000000
+      internalID: -1929133196061687984
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: heartlessplayeranimtransp_5
+      rect:
+        serializedVersion: 2
+        x: 197
+        y: 160
+        width: 17
+        height: 59
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: e8642df1a425f8830800000000000000
+      internalID: 4075566666108520078
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: heartlessplayeranimtransp_6
+      rect:
+        serializedVersion: 2
+        x: 223
+        y: 161
+        width: 31
+        height: 59
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 2d335b848bc983a40800000000000000
+      internalID: 5348196872810214354
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: heartlessplayeranimtransp_7
+      rect:
+        serializedVersion: 2
+        x: 268
+        y: 159
+        width: 17
+        height: 60
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: fddfc06ea65fe9ed0800000000000000
+      internalID: -2405215311494316577
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: heartlessplayeranimtransp_8
+      rect:
+        serializedVersion: 2
+        x: 11
+        y: 97
+        width: 31
+        height: 60
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: bed0bba6b061c3d30800000000000000
+      internalID: 4412425973207338475
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: heartlessplayeranimtransp_9
+      rect:
+        serializedVersion: 2
+        x: 47
+        y: 97
+        width: 32
+        height: 60
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: ebe9e7cee527cc720800000000000000
+      internalID: 2867792814748376766
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: heartlessplayeranimtransp_10
+      rect:
+        serializedVersion: 2
+        x: 86
+        y: 97
+        width: 31
+        height: 60
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 0e429a955c5460bd0800000000000000
+      internalID: -2664365415627938592
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: heartlessplayeranimtransp_11
+      rect:
+        serializedVersion: 2
+        x: 121
+        y: 99
+        width: 30
+        height: 59
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 432f8c1a759026a30800000000000000
+      internalID: 4206935273898570292
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: heartlessplayeranimtransp_12
+      rect:
+        serializedVersion: 2
+        x: 164
+        y: 95
+        width: 18
+        height: 60
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 69b74e0a03987e180800000000000000
+      internalID: -9086142881245922410
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: heartlessplayeranimtransp_13
+      rect:
+        serializedVersion: 2
+        x: 196
+        y: 95
+        width: 30
+        height: 60
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: e74dff20a574d2960800000000000000
+      internalID: 7578792199857362046
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: heartlessplayeranimtransp_14
+      rect:
+        serializedVersion: 2
+        x: 235
+        y: 95
+        width: 17
+        height: 59
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: f1750dff387ccfa90800000000000000
+      internalID: -7278723527991077089
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: heartlessplayeranimtransp_15
+      rect:
+        serializedVersion: 2
+        x: 261
+        y: 95
+        width: 31
+        height: 59
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 7af1827b43e40e600800000000000000
+      internalID: 495481947328880551
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: heartlessplayeranimtransp_16
+      rect:
+        serializedVersion: 2
+        x: 9
+        y: 26
+        width: 42
+        height: 64
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 72c5904a34e9b56f0800000000000000
+      internalID: -694787704146535385
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: heartlessplayeranimtransp_17
+      rect:
+        serializedVersion: 2
+        x: 93
+        y: 27
+        width: 40
+        height: 60
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: e7c944fd0819775a0800000000000000
+      internalID: -6523585552535217026
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: heartlessplayeranimtransp_18
+      rect:
+        serializedVersion: 2
+        x: 136
+        y: 26
+        width: 41
+        height: 63
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: a0dc25a549c6a7710800000000000000
+      internalID: 1691783994457378058
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    outline: []
+    physicsShape: []
+    bones: []
+    spriteID: 5e97eb03825dee720800000000000000
+    internalID: 0
+    vertices: []
+    indices: 
+    edges: []
+    weights: []
+    secondaryTextures: []
+  spritePackingTag: 
+  pSDRemoveMatte: 0
+  pSDShowRemoveMatteOption: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 

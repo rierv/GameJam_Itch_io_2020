@@ -20,10 +20,37 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="649535c8-ff69-40bb-9aa6-526f0d8bd267" name="Default Changelist" comment="Player Controller first implementation">
-      <change beforePath="$PROJECT_DIR$/.idea/.idea.Heartless/.idea/indexLayout.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.Heartless/.idea/indexLayout.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Animation.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Animation/Player.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Animation/Player/Player.controller" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Animation/Player/Player.controller.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Animation/Player/player_idle.anim" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Animation/Player/player_idle.anim.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Animation/Player/player_walkDown.anim" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Animation/Player/player_walkDown.anim.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Animation/Player/player_walkLeft.anim" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Animation/Player/player_walkLeft.anim.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Animation/Player/player_walkRight.anim" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Animation/Player/player_walkRight.anim.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Animation/Player/player_walkUp.anim" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Animation/Player/player_walkUp.anim.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Script/PlayerController.cs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Script/PlayerController.cs.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Sprites.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Sprites/heartlessplayeranimtransp.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Sprites/heartlessplayeranimtransp.png.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Sprites/placeHolders.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Sprites/placeHolders/payer-run.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Sprites/placeHolders/payer-run.png.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Sprites/placeHolders/player-climb.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Sprites/placeHolders/player-climb.png.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Sprites/placeHolders/player-idle.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Sprites/placeHolders/player-idle.png.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/.idea.Heartless/.idea/contentModel.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.Heartless/.idea/contentModel.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/.idea.Heartless/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.Heartless/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Logs/Packages-Update.log" beforeDir="false" afterPath="$PROJECT_DIR$/Logs/Packages-Update.log" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Packages/manifest.json" beforeDir="false" afterPath="$PROJECT_DIR$/Packages/manifest.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scenes/PlayerController.cs" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scenes/PlayerController.cs.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scenes/SampleScene.unity" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scenes/SampleScene.unity" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -34,10 +61,14 @@
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$/.." />
     <option name="RESET_MODE" value="HARD" />
   </component>
+  <component name="HighlightingSettingsPerFile">
+    <setting file="file://$PROJECT_DIR$/../../MaybeHR/2D Game Example/Library/PackageCache/com.unity.textmeshpro@1.3.0/Scripts/Runtime/TMP_InputField.cs" root0="SKIP_HIGHLIGHTING" />
+  </component>
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
       <list>
         <option value="$PROJECT_DIR$/Assets/Scenes/PlayerController.cs" />
+        <option value="$PROJECT_DIR$/Assets/Script/PlayerController.cs" />
       </list>
     </option>
   </component>
@@ -51,6 +82,12 @@
     <property name="Discover.Launch.Via.Unity" value="true" />
     <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
+    <property name="node.js.detected.package.eslint" value="true" />
+    <property name="node.js.detected.package.tslint" value="true" />
+    <property name="node.js.path.for.package.eslint" value="project" />
+    <property name="node.js.path.for.package.tslint" value="project" />
+    <property name="node.js.selected.package.eslint" value="(autodetect)" />
+    <property name="node.js.selected.package.tslint" value="(autodetect)" />
     <property name="vue.rearranger.settings.migration" value="true" />
   </component>
   <component name="RunManager" selected="Attach to Unity Editor.Attach to Unity Editor">
@@ -82,6 +119,7 @@
       <option name="presentableId" value="Default" />
       <updated>1605905722909</updated>
       <workItem from="1605905799925" duration="235000" />
+      <workItem from="1605949851046" duration="2543000" />
     </task>
     <servers />
   </component>
