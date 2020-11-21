@@ -15,25 +15,32 @@ public class FSM_Enemy : MonoBehaviour
     private Color initialColor;
     public List<Vector2> listOfSpots;
     int curr = 0;
-
+    bool stunned = false;
+    GameObject heart;
     void Start()
     {
         // Define states and link actions when enter/exit/stay
         FSMState wander = new FSMState(); //off
+        FSMState stunned = new FSMState(); //off
 
         FSMState seek = new FSMState(); //alarm
         wander.enterActions.Add(StartWander);
+        stunned.stayActions.Add(BeStunned);
         wander.stayActions.Add(WanderAround);
         seek.stayActions.Add(RingAlarm);
 
         // Define transitions
         FSMTransition startSeek = new FSMTransition(EnemiesAround);
+        FSMTransition startStunned = new FSMTransition(GetHit);
+        FSMTransition stopStunned = new FSMTransition(GetFree);
         FSMTransition returnWander = new FSMTransition(NoEnemiesAround);
 
         // Link states with transitions
         wander.AddTransition(startSeek, seek);
+        wander.AddTransition(startStunned, stunned);
+        seek.AddTransition(startStunned, stunned);
         seek.AddTransition(returnWander, wander);
-
+        stunned.AddTransition(stopStunned, wander);
         // Setup a FSA at initial state
         fsm = new FSM(wander);
 
@@ -61,6 +68,17 @@ public class FSM_Enemy : MonoBehaviour
         return false;
     }
 
+    public bool GetHit()
+    {
+        return stunned;
+    }
+
+    public bool GetFree()
+    {
+        if(heart == null) stunned=false;
+        return heart==null;
+    }
+
     public bool NoEnemiesAround()
     {
         return !EnemiesAround();
@@ -69,9 +87,11 @@ public class FSM_Enemy : MonoBehaviour
     // ACTIONS
     public void StartWander()
     {
+        Debug.Log("Starto");
         ringStart = Time.realtimeSinceStartup;
         curr = 0;
     }
+
 
     public void WanderAround()
     {
@@ -84,11 +104,23 @@ public class FSM_Enemy : MonoBehaviour
         //reachPoint(currentSpot);
     }
 
-    
+    public void BeStunned()
+    {
+        aimHelper.transform.position = transform.position;
+    }
 
     public void RingAlarm()
     {
         aimHelper.transform.position = target.transform.position;
     }
 
+    private void OnCollisionEnter2D(Collision2D collision)
+    {
+        if (collision.gameObject.tag == "Heart")
+        {
+            stunned = true;
+            heart = collision.gameObject;
+            fsm.Update();
+        }
+    }
 }
