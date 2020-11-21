@@ -19,21 +19,15 @@
     <select />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="649535c8-ff69-40bb-9aa6-526f0d8bd267" name="Default Changelist" comment="Player animator controller (using ugly&amp;compressed spritesheet)">
-      <change beforePath="$PROJECT_DIR$/.idea/.idea.Heartless/.idea/indexLayout.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.Heartless/.idea/indexLayout.xml" afterDir="false" />
+    <list default="true" id="649535c8-ff69-40bb-9aa6-526f0d8bd267" name="Default Changelist" comment="New Spritesheet + Animation for player">
       <change beforePath="$PROJECT_DIR$/.idea/.idea.Heartless/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.Heartless/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Animation/Player/Player.controller" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Animation/Player/Player.controller" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/Scenes/SampleScene.unity" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scenes/SampleScene.unity" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Sprites/placeHolders.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Sprites/placeHolders/payer-run.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Sprites/placeHolders/payer-run.png.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Sprites/placeHolders/player-climb.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Sprites/placeHolders/player-climb.png.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Sprites/placeHolders/player-idle.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Sprites/placeHolders/player-idle.png.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Packages/manifest.json" beforeDir="false" afterPath="$PROJECT_DIR$/Packages/manifest.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Packages/packages-lock.json" beforeDir="false" afterPath="$PROJECT_DIR$/Packages/packages-lock.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ProjectSettings/InputManager.asset" beforeDir="false" afterPath="$PROJECT_DIR$/ProjectSettings/InputManager.asset" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Sprites/mirror.png.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Sprites/mirror.png.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Sprites/playerSheet.png.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Sprites/playerSheet.png.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Sprites/sheeeplayer.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Sprites/sheeeplayer.png.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/ProjectSettings/ProjectSettings.asset" beforeDir="false" afterPath="$PROJECT_DIR$/ProjectSettings/ProjectSettings.asset" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ProjectSettings/TagManager.asset" beforeDir="false" afterPath="$PROJECT_DIR$/ProjectSettings/TagManager.asset" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -45,7 +39,19 @@
     <option name="RESET_MODE" value="HARD" />
   </component>
   <component name="HighlightingSettingsPerFile">
+    <setting file="file://$PROJECT_DIR$/Library/PackageCache/com.unity.render-pipelines.core@8.2.0/Runtime/Debugging/DebugManager.Actions.cs" root0="SKIP_HIGHLIGHTING" />
+    <setting file="mock://D:/GitRepos/GameJam_Itch_io_2020/Heartless/Assets/Sprites/mirror.png.meta" root0="SKIP_HIGHLIGHTING" />
+    <setting file="mock://D:/GitRepos/GameJam_Itch_io_2020/Heartless/Assets/Prefab/Player.prefab" root0="SKIP_HIGHLIGHTING" />
+    <setting file="mock://D:/GitRepos/GameJam_Itch_io_2020/Heartless/UserSettings/EditorUserSettings.asset" root0="SKIP_HIGHLIGHTING" />
+    <setting file="mock://D:/GitRepos/GameJam_Itch_io_2020/Heartless/Assets/2D Renderer.asset" root0="SKIP_HIGHLIGHTING" />
+    <setting file="mock://D:/GitRepos/GameJam_Itch_io_2020/Heartless/Assets/URPAsset.asset" root0="SKIP_HIGHLIGHTING" />
+    <setting file="mock://D:/GitRepos/GameJam_Itch_io_2020/Heartless/ProjectSettings/GraphicsSettings.asset" root0="SKIP_HIGHLIGHTING" />
+    <setting file="mock://D:/GitRepos/GameJam_Itch_io_2020/Heartless/ProjectSettings/ProjectSettings.asset" root0="SKIP_HIGHLIGHTING" />
+    <setting file="mock://D:/GitRepos/GameJam_Itch_io_2020/Heartless/Assets/Sprites/playerSheet.png.meta" root0="SKIP_HIGHLIGHTING" />
+    <setting file="mock://D:/GitRepos/GameJam_Itch_io_2020/Heartless/ProjectSettings/TagManager.asset" root0="SKIP_HIGHLIGHTING" />
+    <setting file="mock://D:/GitRepos/GameJam_Itch_io_2020/Heartless/Assets/Scenes/SampleScene.unity" root0="SKIP_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/../../MaybeHR/2D Game Example/Library/PackageCache/com.unity.textmeshpro@1.3.0/Scripts/Runtime/TMP_InputField.cs" root0="SKIP_HIGHLIGHTING" />
+    <setting file="mock://D:/GitRepos/GameJam_Itch_io_2020/Heartless/ProjectSettings/QualitySettings.asset" root0="SKIP_HIGHLIGHTING" />
   </component>
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
@@ -111,7 +117,14 @@
       <option name="project" value="LOCAL" />
       <updated>1605958105565</updated>
     </task>
-    <option name="localTasksCounter" value="2" />
+    <task id="LOCAL-00002" summary="New Spritesheet + Animation for player">
+      <created>1605967944429</created>
+      <option name="number" value="00002" />
+      <option name="presentableId" value="LOCAL-00002" />
+      <option name="project" value="LOCAL" />
+      <updated>1605967944429</updated>
+    </task>
+    <option name="localTasksCounter" value="3" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -134,16 +147,30 @@
   <component name="VcsManagerConfiguration">
     <option name="CLEAR_INITIAL_COMMIT_MESSAGE" value="true" />
     <MESSAGE value="Player animator controller (using ugly&amp;compressed spritesheet)" />
-    <option name="LAST_COMMIT_MESSAGE" value="Player animator controller (using ugly&amp;compressed spritesheet)" />
+    <MESSAGE value="New Spritesheet + Animation for player" />
+    <option name="LAST_COMMIT_MESSAGE" value="New Spritesheet + Animation for player" />
   </component>
   <component name="WindowStateProjectService">
     <state x="92" y="92" width="1736" height="866" key="DiffContextDialog" timestamp="1605949362946">
       <screen x="0" y="0" width="1920" height="1050" />
     </state>
     <state x="92" y="92" width="1736" height="866" key="DiffContextDialog/0.0.1920.1050@0.0.1920.1050" timestamp="1605949362946" />
-    <state x="-1368" y="258" key="Vcs.Push.Dialog.v2" timestamp="1605958113515">
-      <screen x="-1920" y="0" width="1920" height="1050" />
+    <state x="598" y="286" width="1046" height="477" key="MultipleFileMergeDialog" timestamp="1605968099615">
+      <screen x="0" y="0" width="1920" height="1050" />
+    </state>
+    <state x="598" y="286" width="1046" height="477" key="MultipleFileMergeDialog/0.0.1920.1050/-1920.0.1920.1050@0.0.1920.1050" timestamp="1605968099615" />
+    <state x="753" y="235" key="RollbackChangesDialog" timestamp="1605971705270">
+      <screen x="0" y="0" width="1920" height="1050" />
+    </state>
+    <state x="753" y="235" key="RollbackChangesDialog/0.0.1920.1050/-1920.0.1920.1050@0.0.1920.1050" timestamp="1605971705270" />
+    <state x="552" y="258" key="Vcs.Push.Dialog.v2" timestamp="1605968183641">
+      <screen x="0" y="0" width="1920" height="1050" />
     </state>
     <state x="-1368" y="258" key="Vcs.Push.Dialog.v2/0.0.1920.1050/-1920.0.1920.1050@-1920.0.1920.1050" timestamp="1605958113515" />
+    <state x="552" y="258" key="Vcs.Push.Dialog.v2/0.0.1920.1050/-1920.0.1920.1050@0.0.1920.1050" timestamp="1605968183641" />
+    <state x="777" y="439" key="com.intellij.openapi.vcs.update.UpdateOrStatusOptionsDialogupdate-v2" timestamp="1605970666969">
+      <screen x="0" y="0" width="1920" height="1050" />
+    </state>
+    <state x="777" y="439" key="com.intellij.openapi.vcs.update.UpdateOrStatusOptionsDialogupdate-v2/0.0.1920.1050/-1920.0.1920.1050@0.0.1920.1050" timestamp="1605970666969" />
   </component>
 </project>

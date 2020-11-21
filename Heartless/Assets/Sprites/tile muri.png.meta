@@ -1,67 +1,73 @@
 fileFormatVersion: 2
-guid: 1f59bacd7b841a343a028db6d81f1c1e
+guid: 49b02ff7eea858f4e8e02a496a6d0482
 TextureImporter:
   internalIDToNameTable:
   - first:
-      213: 2372616077326735055
-    second: sheeeplayer_0
+      213: 6260346653614973098
+    second: tile muri_0
   - first:
-      213: 3660937914230686715
-    second: sheeeplayer_1
+      213: -7134735819048455453
+    second: tile muri_1
   - first:
-      213: -3086474393688801481
-    second: sheeeplayer_2
+      213: 2417272629793685094
+    second: tile muri_2
   - first:
-      213: -9210063669359666536
-    second: sheeeplayer_3
+      213: -251612777631385319
+    second: tile muri_3
   - first:
-      213: -4040855147403074620
-    second: sheeeplayer_4
+      213: -6668129596471261462
+    second: tile muri_4
   - first:
-      213: -728251113550106271
-    second: sheeeplayer_5
+      213: -3527640132120861346
+    second: tile muri_5
   - first:
-      213: 5175166969262575993
-    second: sheeeplayer_6
+      213: 1352684463879480459
+    second: tile muri_6
   - first:
-      213: -2596454217654140554
-    second: sheeeplayer_7
+      213: 4059760248441321406
+    second: tile muri_7
   - first:
-      213: -902768178710591402
-    second: sheeeplayer_8
+      213: -4807135659967643448
+    second: tile muri_8
   - first:
-      213: 2740851459171784053
-    second: sheeeplayer_9
+      213: -1215811437759963542
+    second: tile muri_9
   - first:
-      213: 3011015511230372615
-    second: sheeeplayer_10
+      213: 1598270438545351136
+    second: tile muri_10
   - first:
-      213: 6221153394916418220
-    second: sheeeplayer_11
+      213: -1248948485370492703
+    second: tile muri_11
   - first:
-      213: -2914547741580478131
-    second: sheeeplayer_12
+      213: -1244657697885649420
+    second: tile muri_12
   - first:
-      213: -2503672593595436820
-    second: sheeeplayer_13
+      213: 2801831039349785404
+    second: tile muri_13
   - first:
-      213: -6222356698253898583
-    second: sheeeplayer_14
+      213: 6764354667190948830
+    second: tile muri_14
   - first:
-      213: -5951750736184879187
-    second: sheeeplayer_15
+      213: 3423874644833530316
+    second: tile muri_15
   - first:
-      213: -8874190983019428970
-    second: sheeeplayer_16
+      213: -4628736663744448053
+    second: tile muri_16
   - first:
-      213: 3139998850325688682
-    second: sheeeplayer_17
+      213: 1236619328755654584
+    second: tile muri_17
   - first:
-      213: -312702654459693374
-    second: sheeeplayer_18
+      213: -1690656199386808944
+    second: tile muri_18
   - first:
-      213: -7322311570664974314
-    second: sheeeplayer_19
+      213: -2441465928325582381
+    second: tile muri_19
+  - first:
+      213: -4034167844863927638
+    second: tile muri_20
+  - first:
+      213: 4459612653230078217
+    second: tile muri_21
   externalObjects: {}
   serializedVersion: 11
   mipmaps:
@@ -92,7 +98,7 @@ TextureImporter:
   maxTextureSize: 2048
   textureSettings:
     serializedVersion: 2
-    filterMode: -1
+    filterMode: 0
     aniso: -1
     mipBias: -100
     wrapU: 1
@@ -106,7 +112,7 @@ TextureImporter:
   spriteMeshType: 1
   alignment: 0
   spritePivot: {x: 0.5, y: 0.5}
-  spritePixelsToUnits: 100
+  spritePixelsToUnits: 32
   spriteBorder: {x: 0, y: 0, z: 0, w: 0}
   spriteGenerateFallbackPhysicsShape: 1
   alphaUsage: 1
@@ -149,286 +155,13 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: sheeeplayer_0
+      name: tile muri_0
       rect:
         serializedVersion: 2
-        x: 13
-        y: 162
-        width: 30
-        height: 59
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: fc6d07d60c93de020800000000000000
-      internalID: 2372616077326735055
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: sheeeplayer_1
-      rect:
-        serializedVersion: 2
-        x: 50
-        y: 163
-        width: 30
-        height: 59
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: bf3ca72f2a34ec230800000000000000
-      internalID: 3660937914230686715
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: sheeeplayer_2
-      rect:
-        serializedVersion: 2
-        x: 83
-        y: 162
-        width: 30
-        height: 59
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 73ff6db44e3aa25d0800000000000000
-      internalID: -3086474393688801481
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: sheeeplayer_3
-      rect:
-        serializedVersion: 2
-        x: 119
-        y: 161
-        width: 30
-        height: 59
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 89a1615c3e74f2080800000000000000
-      internalID: -9210063669359666536
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: sheeeplayer_4
-      rect:
-        serializedVersion: 2
-        x: 157
-        y: 161
-        width: 30
-        height: 58
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 4c32b3e17affbe7c0800000000000000
-      internalID: -4040855147403074620
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: sheeeplayer_5
-      rect:
-        serializedVersion: 2
-        x: 197
-        y: 160
-        width: 16
-        height: 59
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 161309d787bb4e5f0800000000000000
-      internalID: -728251113550106271
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: sheeeplayer_6
-      rect:
-        serializedVersion: 2
-        x: 223
-        y: 161
-        width: 30
-        height: 59
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 9711b3870f2e1d740800000000000000
-      internalID: 5175166969262575993
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: sheeeplayer_7
-      rect:
-        serializedVersion: 2
-        x: 268
-        y: 160
-        width: 16
-        height: 59
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 671092945aa87fbd0800000000000000
-      internalID: -2596454217654140554
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: sheeeplayer_8
-      rect:
-        serializedVersion: 2
-        x: 11
-        y: 98
-        width: 30
-        height: 59
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 658cd61ef19b873f0800000000000000
-      internalID: -902768178710591402
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: sheeeplayer_9
-      rect:
-        serializedVersion: 2
-        x: 47
-        y: 98
-        width: 30
-        height: 59
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 5759b0661e5790620800000000000000
-      internalID: 2740851459171784053
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: sheeeplayer_10
-      rect:
-        serializedVersion: 2
-        x: 87
-        y: 98
-        width: 30
-        height: 59
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 70bd31887a649c920800000000000000
-      internalID: 3011015511230372615
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: sheeeplayer_11
-      rect:
-        serializedVersion: 2
-        x: 121
-        y: 99
-        width: 30
-        height: 59
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: ca265353d0af55650800000000000000
-      internalID: 6221153394916418220
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: sheeeplayer_12
-      rect:
-        serializedVersion: 2
-        x: 165
-        y: 95
-        width: 16
-        height: 59
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: d49bd2e55427d87d0800000000000000
-      internalID: -2914547741580478131
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: sheeeplayer_13
-      rect:
-        serializedVersion: 2
-        x: 196
+        x: 0
         y: 96
-        width: 30
-        height: 59
+        width: 32
+        height: 32
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -436,41 +169,20 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: ce0fcd88a0b214dd0800000000000000
-      internalID: -2503672593595436820
+      spriteID: aa0a68bdc1831e650800000000000000
+      internalID: 6260346653614973098
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: sheeeplayer_14
+      name: tile muri_1
       rect:
         serializedVersion: 2
-        x: 236
-        y: 95
-        width: 16
-        height: 59
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 9accdc6ec8fb5a9a0800000000000000
-      internalID: -6222356698253898583
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: sheeeplayer_15
-      rect:
-        serializedVersion: 2
-        x: 262
+        x: 32
         y: 96
-        width: 30
-        height: 58
+        width: 32
+        height: 32
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -478,20 +190,20 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: da7d70a3d32276da0800000000000000
-      internalID: -5951750736184879187
+      spriteID: 3e27c53f2935cfc90800000000000000
+      internalID: -7134735819048455453
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: sheeeplayer_16
+      name: tile muri_2
       rect:
         serializedVersion: 2
-        x: 10
-        y: 28
-        width: 40
-        height: 61
+        x: 64
+        y: 96
+        width: 32
+        height: 32
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -499,20 +211,20 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 6930724815a88d480800000000000000
-      internalID: -8874190983019428970
+      spriteID: 66e702846a0eb8120800000000000000
+      internalID: 2417272629793685094
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: sheeeplayer_17
+      name: tile muri_3
       rect:
         serializedVersion: 2
-        x: 52
-        y: 27
-        width: 40
-        height: 59
+        x: 96
+        y: 96
+        width: 32
+        height: 32
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -520,20 +232,20 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: a613cc46154839b20800000000000000
-      internalID: 3139998850325688682
+      spriteID: 919f4580387128cf0800000000000000
+      internalID: -251612777631385319
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: sheeeplayer_18
+      name: tile muri_4
       rect:
         serializedVersion: 2
-        x: 94
-        y: 28
-        width: 39
-        height: 59
+        x: 128
+        y: 96
+        width: 32
+        height: 32
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -541,20 +253,20 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 2c6bb90b79e09abf0800000000000000
-      internalID: -312702654459693374
+      spriteID: ae6cf06167b0673a0800000000000000
+      internalID: -6668129596471261462
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: sheeeplayer_19
+      name: tile muri_5
       rect:
         serializedVersion: 2
-        x: 136
-        y: 27
-        width: 41
-        height: 62
+        x: 160
+        y: 96
+        width: 32
+        height: 32
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -562,8 +274,344 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 61818c7fb6ce16a90800000000000000
-      internalID: -7322311570664974314
+      spriteID: e5526857dfd4b0fc0800000000000000
+      internalID: -3527640132120861346
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: tile muri_6
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 64
+        width: 32
+        height: 32
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: b84e9b26a53b5c210800000000000000
+      internalID: 1352684463879480459
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: tile muri_7
+      rect:
+        serializedVersion: 2
+        x: 32
+        y: 64
+        width: 32
+        height: 32
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: eb7b899bf6a275830800000000000000
+      internalID: 4059760248441321406
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: tile muri_8
+      rect:
+        serializedVersion: 2
+        x: 64
+        y: 64
+        width: 32
+        height: 32
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 8c00488269f994db0800000000000000
+      internalID: -4807135659967643448
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: tile muri_9
+      rect:
+        serializedVersion: 2
+        x: 96
+        y: 64
+        width: 32
+        height: 32
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: a6ed57260f1902fe0800000000000000
+      internalID: -1215811437759963542
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: tile muri_10
+      rect:
+        serializedVersion: 2
+        x: 128
+        y: 64
+        width: 32
+        height: 32
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 0e1e080fe723e2610800000000000000
+      internalID: 1598270438545351136
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: tile muri_11
+      rect:
+        serializedVersion: 2
+        x: 160
+        y: 64
+        width: 32
+        height: 32
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 1e8cab248f7daaee0800000000000000
+      internalID: -1248948485370492703
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: tile muri_12
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 32
+        width: 32
+        height: 32
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 4f502921b661abee0800000000000000
+      internalID: -1244657697885649420
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: tile muri_13
+      rect:
+        serializedVersion: 2
+        x: 32
+        y: 32
+        width: 32
+        height: 32
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: c338b1d4c7a12e620800000000000000
+      internalID: 2801831039349785404
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: tile muri_14
+      rect:
+        serializedVersion: 2
+        x: 64
+        y: 32
+        width: 32
+        height: 32
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: ed31ca01bb0dfdd50800000000000000
+      internalID: 6764354667190948830
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: tile muri_15
+      rect:
+        serializedVersion: 2
+        x: 96
+        y: 32
+        width: 32
+        height: 32
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: cc1f4c859db048f20800000000000000
+      internalID: 3423874644833530316
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: tile muri_16
+      rect:
+        serializedVersion: 2
+        x: 128
+        y: 32
+        width: 32
+        height: 32
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: bc97fa6478c63cfb0800000000000000
+      internalID: -4628736663744448053
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: tile muri_17
+      rect:
+        serializedVersion: 2
+        x: 160
+        y: 32
+        width: 32
+        height: 32
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 8bfdcd44aba592110800000000000000
+      internalID: 1236619328755654584
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: tile muri_18
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 0
+        width: 32
+        height: 32
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 09dbc36e4259988e0800000000000000
+      internalID: -1690656199386808944
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: tile muri_19
+      rect:
+        serializedVersion: 2
+        x: 32
+        y: 0
+        width: 32
+        height: 32
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 3d13fe27cab2e1ed0800000000000000
+      internalID: -2441465928325582381
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: tile muri_20
+      rect:
+        serializedVersion: 2
+        x: 64
+        y: 0
+        width: 32
+        height: 32
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: aaa159218b1c308c0800000000000000
+      internalID: -4034167844863927638
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: tile muri_21
+      rect:
+        serializedVersion: 2
+        x: 96
+        y: 0
+        width: 32
+        height: 32
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 909bd9f741ab3ed30800000000000000
+      internalID: 4459612653230078217
       vertices: []
       indices: 
       edges: []
