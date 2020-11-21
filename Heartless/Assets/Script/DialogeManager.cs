@@ -1,9 +1,16 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
+using TMPro;
 using UnityEngine;
+using UnityEngine.UI;
 
 public class DialogeManager : MonoBehaviour
 {
+
+    public Text npcName;
+    public Text dialogueText;
+    public Image freccia;
+
     private Queue<string> sentences;
 
     // Start is called before the first frame update
@@ -12,9 +19,19 @@ public class DialogeManager : MonoBehaviour
         sentences = new Queue<string>();
     }
 
+    void Update()
+    {
+        if (Input.GetKeyDown(KeyCode.A))
+        {
+            DisplayNextSentence();
+        }
+    }
+
     public void StartDialogue (Dialogue dialogue)
     {
-        Debug.Log("Starting conv  with" + dialogue.NPCname);
+        Debug.Log("Starting con  with" + dialogue.NPCname);
+
+        npcName.text = dialogue.NPCname;
 
         sentences.Clear();
 
@@ -30,11 +47,14 @@ public class DialogeManager : MonoBehaviour
     {
         if(sentences.Count == 0)
         {
+            freccia.enabled = false;
             EndDialogue();
             return;
         }
 
         string sentence = sentences.Dequeue();
+        dialogueText.text = sentence;
+
         Debug.Log(sentence);
 
     }
