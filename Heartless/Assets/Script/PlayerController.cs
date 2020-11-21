@@ -32,7 +32,7 @@ public class PlayerController : MonoBehaviour
         MovePlayer();
         //ANIMATION 
         SetAnimation(inputMovementVector);
-        if (heartCount>0 && !isAiming && Input.GetKeyDown(KeyCode.K))
+        if (heartCount>0 && !isAiming && Input.GetMouseButtonDown(0))
         {
             isAiming = true;
             CreateHeart();
@@ -42,17 +42,16 @@ public class PlayerController : MonoBehaviour
         {
             Aim();
         }
-        if (isAiming && Input.GetKeyUp(KeyCode.K))
+        if (isAiming && Input.GetMouseButtonUp(0))
         {
             isAiming = false;
             heartCount++;
             Destroy(spawnedHeart);
         }
-        if (isAiming && Input.GetKeyUp(KeyCode.J))
+        if (isAiming && Input.GetMouseButtonDown(1))
         {
             isAiming = false;
-            heartCount++;
-            spawnedHeart.GetComponent<Heart>().Shoot(transform.position);
+            spawnedHeart.GetComponent<Heart>().Shoot(spawnedHeart.transform.position - transform.position);
         }
     }
 
@@ -130,7 +129,7 @@ public class PlayerController : MonoBehaviour
 
     private void CreateHeart()
     {
-        spawnedHeart = Instantiate(Heart, transform.position + Vector3.up, Quaternion.identity);
+        spawnedHeart = Instantiate(Heart, transform.position, Quaternion.identity);
     }
 
     void Aim()
@@ -138,12 +137,21 @@ public class PlayerController : MonoBehaviour
         Vector2 MousePos = Input.mousePosition;
         Vector3 WorldMouse = Camera.main.ScreenToWorldPoint(new Vector3(MousePos.x, MousePos.y, 0));
         Vector2 coord = new Vector2(WorldMouse.x - transform.position.x, WorldMouse.y - transform.position.y).normalized;
-        Vector3 MouseOffset = transform.position + new Vector3(coord.x, coord.y / 2, 0) * heartRadius;
+        Vector3 MouseOffset = transform.position + new Vector3(coord.x, coord.y / 1.5f, 0) * heartRadius;
+        if(coord.y<0) spawnedHeart.GetComponent<SpriteRenderer>().sortingOrder = 0;
+        else spawnedHeart.GetComponent<SpriteRenderer>().sortingOrder = -1;
 
 
 
-        spawnedHeart.transform.position = MouseOffset;
+        spawnedHeart.transform.position = Vector3.Lerp(spawnedHeart.transform.position, MouseOffset, Time.deltaTime * 5);
 
     }
-
+    private void OnCollisionEnter2D(Collision2D collision)
+    {
+        if (collision.gameObject.tag == "Heart")
+        {
+            Destroy(collision.gameObject);
+            heartCount++;
+        }
+    }
 }
