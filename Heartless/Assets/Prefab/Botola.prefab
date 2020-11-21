@@ -11,8 +11,9 @@ GameObject:
   - component: {fileID: 7683429728806127236}
   - component: {fileID: 7683429728806127237}
   - component: {fileID: 1009224770}
+  - component: {fileID: 3106578138071765592}
   m_Layer: 0
-  m_Name: Grata
+  m_Name: Botola
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -73,7 +74,8 @@ SpriteRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
-  m_Sprite: {fileID: 21300000, guid: 8554dd30797d6e0458b7fd202ae3e77d, type: 3}
+  m_Sprite: {fileID: -5345443581396424993, guid: 930dd7c1635143a41a6651bb7fc9db14,
+    type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
@@ -96,6 +98,25 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: f120cb3e2a440b24c94d20ab7e1cb976, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+--- !u!95 &3106578138071765592
+Animator:
+  serializedVersion: 3
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7683429728806127238}
+  m_Enabled: 1
+  m_Avatar: {fileID: 0}
+  m_Controller: {fileID: 9100000, guid: 36f443e981866b64f984dd9a05b62fdf, type: 2}
+  m_CullingMode: 0
+  m_UpdateMode: 0
+  m_ApplyRootMotion: 0
+  m_LinearVelocityBlending: 0
+  m_WarningMessage: 
+  m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
+  m_KeepAnimatorControllerStateOnDisable: 0
 --- !u!1 &7683429729293822293
 GameObject:
   m_ObjectHideFlags: 0
@@ -169,7 +190,8 @@ SpriteRenderer:
   m_SortingLayerID: -321572079
   m_SortingLayer: -1
   m_SortingOrder: 0
-  m_Sprite: {fileID: 21300000, guid: 8554dd30797d6e0458b7fd202ae3e77d, type: 3}
+  m_Sprite: {fileID: -5345443581396424993, guid: 930dd7c1635143a41a6651bb7fc9db14,
+    type: 3}
   m_Color: {r: 0, g: 0, b: 0, a: 1}
   m_FlipX: 0
   m_FlipY: 0
