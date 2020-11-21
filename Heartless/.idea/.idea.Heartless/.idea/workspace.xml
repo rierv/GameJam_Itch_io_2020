@@ -19,38 +19,12 @@
     <select />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="649535c8-ff69-40bb-9aa6-526f0d8bd267" name="Default Changelist" comment="mdfkn Light bruh">
-      <change afterPath="$PROJECT_DIR$/Assets/Animation/Botola.meta" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Animation/Botola/AC_Botola.controller" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Animation/Botola/AC_Botola.controller.meta" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Animation/Botola/Botola_CloseAnim.anim" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Animation/Botola/Botola_CloseAnim.anim.meta" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Animation/Botola/Botola_CloseIdleAnim.anim" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Animation/Botola/Botola_CloseIdleAnim.anim.meta" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Animation/Botola/Botola_OpenAnim.anim" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Animation/Botola/Botola_OpenAnim.anim.meta" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Animation/Botola/Botola_OpenIdleAnim.anim" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Animation/Botola/Botola_OpenIdleAnim.anim.meta" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Animation/Player/Player_EnterBotola.anim" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Animation/Player/Player_EnterBotola.anim.meta" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Animation/Player/Player_ExitBotola.anim" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Animation/Player/Player_ExitBotola.anim.meta" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Prefab/Botola.prefab" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Prefab/Botola.prefab.meta" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Prefab/LuceCunicolo.prefab" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Prefab/LuceCunicolo.prefab.meta" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Prefab/LuceFloor.prefab" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Prefab/LuceFloor.prefab.meta" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Sprites/botolasheet.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Sprites/botolasheet.png.meta" afterDir="false" />
+    <list default="true" id="649535c8-ff69-40bb-9aa6-526f0d8bd267" name="Default Changelist" comment="Animazione entrata/uscita botola più bella">
+      <change afterPath="$PROJECT_DIR$/Assets/GlobalGameManager.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/.idea.Heartless/.idea/contentModel.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.Heartless/.idea/contentModel.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/.idea.Heartless/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.Heartless/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Animation/Player/Player.controller" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Animation/Player/Player.controller" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Prefab/Candela.prefab" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Prefab/Candela.prefab.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Prefab/Grata.prefab" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Prefab/Grata.prefab.meta" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/Scenes/FirstLevelScene.unity" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scenes/FirstLevelScene.unity" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Script/ManagerCunicoli.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Script/ManagerCunicoli.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Script/I_Interactable.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Script/I_Interactable.cs" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/Script/S_Grata.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Script/S_Grata.cs" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -67,6 +41,7 @@
     <setting file="file://$PROJECT_DIR$/Assets/Script/I_Interactable.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="mock://D:/GitRepos/GameJam_Itch_io_2020/Heartless/Assets/Scenes/SaimonShitBox.unity" root0="SKIP_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/../../MaybeHR/2D Game Example/Library/PackageCache/com.unity.textmeshpro@1.3.0/Scripts/Runtime/TMP_InputField.cs" root0="SKIP_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/GlobalGameManager.cs" root0="FORCE_HIGHLIGHTING" />
   </component>
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
@@ -74,11 +49,12 @@
         <option value="$PROJECT_DIR$/Assets/Scenes/PlayerController.cs" />
         <option value="$PROJECT_DIR$/Assets/ManagerCunicoli.cs" />
         <option value="$PROJECT_DIR$/Assets/DisplayOutline.cs" />
-        <option value="$PROJECT_DIR$/Assets/Script/I_Interactable.cs" />
         <option value="$PROJECT_DIR$/Assets/Script/DisplayOutline.cs" />
         <option value="$PROJECT_DIR$/Assets/Script/PlayerController.cs" />
-        <option value="$PROJECT_DIR$/Assets/Script/S_Grata.cs" />
+        <option value="$PROJECT_DIR$/Assets/Script/I_Interactable.cs" />
         <option value="$PROJECT_DIR$/Assets/Script/ManagerCunicoli.cs" />
+        <option value="$PROJECT_DIR$/Assets/Script/S_Grata.cs" />
+        <option value="$PROJECT_DIR$/Assets/GlobalGameManager.cs" />
       </list>
     </option>
   </component>
@@ -133,7 +109,7 @@
       <updated>1605905722909</updated>
       <workItem from="1605905799925" duration="235000" />
       <workItem from="1605949851046" duration="3620000" />
-      <workItem from="1605988620359" duration="5556000" />
+      <workItem from="1605988620359" duration="6757000" />
     </task>
     <task id="LOCAL-00001" summary="Player animator controller (using ugly&amp;compressed spritesheet)">
       <created>1605958105565</created>
@@ -198,7 +174,14 @@
       <option name="project" value="LOCAL" />
       <updated>1605992152069</updated>
     </task>
-    <option name="localTasksCounter" value="10" />
+    <task id="LOCAL-00010" summary="Animazione entrata/uscita botola più bella">
+      <created>1605997792318</created>
+      <option name="number" value="00010" />
+      <option name="presentableId" value="LOCAL-00010" />
+      <option name="project" value="LOCAL" />
+      <updated>1605997792318</updated>
+    </task>
+    <option name="localTasksCounter" value="11" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -230,7 +213,8 @@
     <MESSAGE value="Player Rigid Body + Collider" />
     <MESSAGE value="Cunicoli + Cunicoli Manager (Premere &quot;P&quot; quando si è sopra un cunicolo)" />
     <MESSAGE value="mdfkn Light bruh" />
-    <option name="LAST_COMMIT_MESSAGE" value="mdfkn Light bruh" />
+    <MESSAGE value="Animazione entrata/uscita botola più bella" />
+    <option name="LAST_COMMIT_MESSAGE" value="Animazione entrata/uscita botola più bella" />
   </component>
   <component name="WindowStateProjectService">
     <state x="694" y="327" key="#com.intellij.fileTypes.FileTypeChooser" timestamp="1605991971896">
@@ -245,19 +229,19 @@
       <screen x="0" y="0" width="1920" height="1050" />
     </state>
     <state x="598" y="286" width="1046" height="477" key="MultipleFileMergeDialog/0.0.1920.1050/-1920.0.1920.1050@0.0.1920.1050" timestamp="1605968099615" />
-    <state x="764" y="199" key="RiderGenerateDialog" timestamp="1605982742312">
+    <state x="764" y="199" key="RiderGenerateDialog" timestamp="1605998386116">
       <screen x="0" y="0" width="1920" height="1050" />
     </state>
-    <state x="764" y="199" key="RiderGenerateDialog/0.0.1920.1050/-1920.0.1920.1050@0.0.1920.1050" timestamp="1605982742312" />
+    <state x="764" y="199" key="RiderGenerateDialog/0.0.1920.1050/-1920.0.1920.1050@0.0.1920.1050" timestamp="1605998386116" />
     <state x="753" y="235" key="RollbackChangesDialog" timestamp="1605988857323">
       <screen x="0" y="0" width="1920" height="1050" />
     </state>
     <state x="753" y="235" key="RollbackChangesDialog/0.0.1920.1050/-1920.0.1920.1050@0.0.1920.1050" timestamp="1605988857323" />
-    <state x="552" y="258" key="Vcs.Push.Dialog.v2" timestamp="1605992160991">
+    <state x="552" y="258" key="Vcs.Push.Dialog.v2" timestamp="1605997809618">
       <screen x="0" y="0" width="1920" height="1050" />
     </state>
     <state x="-1368" y="258" key="Vcs.Push.Dialog.v2/0.0.1920.1050/-1920.0.1920.1050@-1920.0.1920.1050" timestamp="1605958113515" />
-    <state x="552" y="258" key="Vcs.Push.Dialog.v2/0.0.1920.1050/-1920.0.1920.1050@0.0.1920.1050" timestamp="1605992160991" />
+    <state x="552" y="258" key="Vcs.Push.Dialog.v2/0.0.1920.1050/-1920.0.1920.1050@0.0.1920.1050" timestamp="1605997809618" />
     <state x="777" y="439" key="com.intellij.openapi.vcs.update.UpdateOrStatusOptionsDialogupdate-v2" timestamp="1605993654996">
       <screen x="0" y="0" width="1920" height="1050" />
     </state>
