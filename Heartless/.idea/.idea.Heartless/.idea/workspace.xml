@@ -19,8 +19,82 @@
     <select />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="649535c8-ff69-40bb-9aa6-526f0d8bd267" name="Default Changelist" comment="Mirror Collider for outline">
-      <change beforePath="$PROJECT_DIR$/Assets/Scenes/SampleScene.unity" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scenes/SampleScene.unity" afterDir="false" />
+    <list default="true" id="649535c8-ff69-40bb-9aa6-526f0d8bd267" name="Default Changelist" comment="Player Rigid Body + Collider">
+      <change afterPath="$PROJECT_DIR$/Assets/Prefab/Grata.prefab" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Prefab/Grata.prefab.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Script/I_Interactable.cs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Sprites/grata.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Sprites/grata.png.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Sprites/tile muri cunicoli.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Sprites/tile muri cunicoli.png.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Sprites/tile pavimento cunicoli.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Sprites/tile pavimento cunicoli.png.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/TilePalettes/PalettaCunicoli.prefab" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/TilePalettes/PalettaCunicoli.prefab.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/TilePalettes/TileCunicoli.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/TilePalettes/TileCunicoli/tile muri_0.asset" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/TilePalettes/TileCunicoli/tile muri_0.asset.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/TilePalettes/TileCunicoli/tile muri_1.asset" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/TilePalettes/TileCunicoli/tile muri_1.asset.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/TilePalettes/TileCunicoli/tile muri_10.asset" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/TilePalettes/TileCunicoli/tile muri_10.asset.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/TilePalettes/TileCunicoli/tile muri_11.asset" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/TilePalettes/TileCunicoli/tile muri_11.asset.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/TilePalettes/TileCunicoli/tile muri_12.asset" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/TilePalettes/TileCunicoli/tile muri_12.asset.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/TilePalettes/TileCunicoli/tile muri_13.asset" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/TilePalettes/TileCunicoli/tile muri_13.asset.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/TilePalettes/TileCunicoli/tile muri_14.asset" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/TilePalettes/TileCunicoli/tile muri_14.asset.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/TilePalettes/TileCunicoli/tile muri_15.asset" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/TilePalettes/TileCunicoli/tile muri_15.asset.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/TilePalettes/TileCunicoli/tile muri_16.asset" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/TilePalettes/TileCunicoli/tile muri_16.asset.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/TilePalettes/TileCunicoli/tile muri_17.asset" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/TilePalettes/TileCunicoli/tile muri_17.asset.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/TilePalettes/TileCunicoli/tile muri_18.asset" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/TilePalettes/TileCunicoli/tile muri_18.asset.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/TilePalettes/TileCunicoli/tile muri_19.asset" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/TilePalettes/TileCunicoli/tile muri_19.asset.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/TilePalettes/TileCunicoli/tile muri_2.asset" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/TilePalettes/TileCunicoli/tile muri_2.asset.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/TilePalettes/TileCunicoli/tile muri_20.asset" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/TilePalettes/TileCunicoli/tile muri_20.asset.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/TilePalettes/TileCunicoli/tile muri_21.asset" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/TilePalettes/TileCunicoli/tile muri_21.asset.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/TilePalettes/TileCunicoli/tile muri_3.asset" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/TilePalettes/TileCunicoli/tile muri_3.asset.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/TilePalettes/TileCunicoli/tile muri_4.asset" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/TilePalettes/TileCunicoli/tile muri_4.asset.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/TilePalettes/TileCunicoli/tile muri_5.asset" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/TilePalettes/TileCunicoli/tile muri_5.asset.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/TilePalettes/TileCunicoli/tile muri_6.asset" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/TilePalettes/TileCunicoli/tile muri_6.asset.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/TilePalettes/TileCunicoli/tile muri_7.asset" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/TilePalettes/TileCunicoli/tile muri_7.asset.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/TilePalettes/TileCunicoli/tile muri_8.asset" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/TilePalettes/TileCunicoli/tile muri_8.asset.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/TilePalettes/TileCunicoli/tile muri_9.asset" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/TilePalettes/TileCunicoli/tile muri_9.asset.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/TilePalettes/TileCunicoli/tile pavimento_0.asset" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/TilePalettes/TileCunicoli/tile pavimento_0.asset.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/TilePalettes/TileCunicoli/tile pavimento_1.asset" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/TilePalettes/TileCunicoli/tile pavimento_1.asset.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/TilePalettes/TileCunicoli/tile pavimento_2.asset" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/TilePalettes/TileCunicoli/tile pavimento_2.asset.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/TilePalettes/TileCunicoli/tile pavimento_3.asset" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/TilePalettes/TileCunicoli/tile pavimento_3.asset.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/TilePalettes/TileCunicoli/tile pavimento_4.asset" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/TilePalettes/TileCunicoli/tile pavimento_4.asset.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/TilePalettes/TileCunicoli/tile pavimento_5.asset" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/TilePalettes/TileCunicoli/tile pavimento_5.asset.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/.idea.Heartless/.idea/contentModel.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.Heartless/.idea/contentModel.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/.idea.Heartless/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.Heartless/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/DisplayOutline.cs" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/DisplayOutline.cs.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Prefab/Player.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Prefab/Player.prefab" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scenes/FirstLevelScene.unity" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scenes/FirstLevelScene.unity" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ProjectSettings/TagManager.asset" beforeDir="false" afterPath="$PROJECT_DIR$/ProjectSettings/TagManager.asset" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -34,18 +108,22 @@
   <component name="HighlightingSettingsPerFile">
     <setting file="mock://D:/GitRepos/GameJam_Itch_io_2020/Heartless/ProjectSettings/ProjectSettings.asset" root0="SKIP_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Library/PackageCache/com.unity.render-pipelines.core@8.2.0/Runtime/Debugging/DebugManager.Actions.cs" root0="SKIP_HIGHLIGHTING" />
-    <setting file="file://$PROJECT_DIR$/Assets/DisplayOutline.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="mock://D:/GitRepos/GameJam_Itch_io_2020/Heartless/Assets/Sprites/mirror.png.meta" root0="SKIP_HIGHLIGHTING" />
+    <setting file="mock://D:/GitRepos/GameJam_Itch_io_2020/Heartless/Assets/Prefab/Player.prefab" root0="SKIP_HIGHLIGHTING" />
+    <setting file="mock://D:/GitRepos/GameJam_Itch_io_2020/Heartless/Assets/Scenes/FirstLevelScene.unity" root0="SKIP_HIGHLIGHTING" />
+    <setting file="mock://D:/GitRepos/GameJam_Itch_io_2020/Heartless/Assets/Prefab/Mirror.prefab" root0="SKIP_HIGHLIGHTING" />
     <setting file="mock://D:/GitRepos/GameJam_Itch_io_2020/Heartless/Assets/Prefab/Player.prefab" root0="SKIP_HIGHLIGHTING" />
     <setting file="mock://D:/GitRepos/GameJam_Itch_io_2020/Heartless/UserSettings/EditorUserSettings.asset" root0="SKIP_HIGHLIGHTING" />
     <setting file="mock://D:/GitRepos/GameJam_Itch_io_2020/Heartless/Assets/2D Renderer.asset" root0="SKIP_HIGHLIGHTING" />
     <setting file="mock://D:/GitRepos/GameJam_Itch_io_2020/Heartless/Assets/URPAsset.asset" root0="SKIP_HIGHLIGHTING" />
     <setting file="mock://D:/GitRepos/GameJam_Itch_io_2020/Heartless/ProjectSettings/GraphicsSettings.asset" root0="SKIP_HIGHLIGHTING" />
     <setting file="mock://D:/GitRepos/GameJam_Itch_io_2020/Heartless/ProjectSettings/ProjectSettings.asset" root0="SKIP_HIGHLIGHTING" />
+    <setting file="mock://D:/GitRepos/GameJam_Itch_io_2020/Heartless/ProjectSettings/TagManager.asset" root0="SKIP_HIGHLIGHTING" />
     <setting file="mock://D:/GitRepos/GameJam_Itch_io_2020/Heartless/Assets/Scenes/SampleScene.unity" root0="SKIP_HIGHLIGHTING" />
     <setting file="mock://D:/GitRepos/GameJam_Itch_io_2020/Heartless/Assets/Sprites/playerSheet.png.meta" root0="SKIP_HIGHLIGHTING" />
     <setting file="mock://D:/GitRepos/GameJam_Itch_io_2020/Heartless/ProjectSettings/TagManager.asset" root0="SKIP_HIGHLIGHTING" />
     <setting file="mock://D:/GitRepos/GameJam_Itch_io_2020/Heartless/Assets/Scenes/SampleScene.unity" root0="SKIP_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/Script/I_Interactable.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/../../MaybeHR/2D Game Example/Library/PackageCache/com.unity.textmeshpro@1.3.0/Scripts/Runtime/TMP_InputField.cs" root0="SKIP_HIGHLIGHTING" />
     <setting file="mock://D:/GitRepos/GameJam_Itch_io_2020/Heartless/ProjectSettings/QualitySettings.asset" root0="SKIP_HIGHLIGHTING" />
   </component>
@@ -54,17 +132,25 @@
       <list>
         <option value="$PROJECT_DIR$/Assets/Scenes/PlayerController.cs" />
         <option value="$PROJECT_DIR$/Assets/Script/PlayerController.cs" />
+        <option value="$PROJECT_DIR$/Assets/ManagerCunicoli.cs" />
         <option value="$PROJECT_DIR$/Assets/DisplayOutline.cs" />
+        <option value="$PROJECT_DIR$/Assets/Script/I_Interactable.cs" />
+        <option value="$PROJECT_DIR$/Assets/Script/DisplayOutline.cs" />
+        <option value="$PROJECT_DIR$/Assets/Script/S_Grata.cs" />
+        <option value="$PROJECT_DIR$/Assets/Script/ManagerCunicoli.cs" />
       </list>
     </option>
   </component>
   <component name="ProjectId" id="1kZQdVCd6IifGXrGPNE9G9107kJ" />
-  <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
+  <component name="ProjectLevelVcsManager" settingsEditedManually="true">
+    <ConfirmationsSetting value="2" id="Add" />
+  </component>
   <component name="ProjectViewState">
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
   <component name="PropertiesComponent">
+    <property name="ASKED_ADD_EXTERNAL_FILES" value="true" />
     <property name="Discover.Launch.Via.Unity" value="true" />
     <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
@@ -135,7 +221,28 @@
       <option name="project" value="LOCAL" />
       <updated>1605974411673</updated>
     </task>
-    <option name="localTasksCounter" value="5" />
+    <task id="LOCAL-00005" summary="Mirror Prefab updated">
+      <created>1605974472141</created>
+      <option name="number" value="00005" />
+      <option name="presentableId" value="LOCAL-00005" />
+      <option name="project" value="LOCAL" />
+      <updated>1605974472141</updated>
+    </task>
+    <task id="LOCAL-00006" summary="Primo livello + cuore importato">
+      <created>1605978373050</created>
+      <option name="number" value="00006" />
+      <option name="presentableId" value="LOCAL-00006" />
+      <option name="project" value="LOCAL" />
+      <updated>1605978373050</updated>
+    </task>
+    <task id="LOCAL-00007" summary="Player Rigid Body + Collider">
+      <created>1605979508327</created>
+      <option name="number" value="00007" />
+      <option name="presentableId" value="LOCAL-00007" />
+      <option name="project" value="LOCAL" />
+      <updated>1605979508327</updated>
+    </task>
+    <option name="localTasksCounter" value="8" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -156,12 +263,16 @@
     <option name="oldMeFiltersMigrated" value="true" />
   </component>
   <component name="VcsManagerConfiguration">
+    <option name="ADD_EXTERNAL_FILES_SILENTLY" value="true" />
     <option name="CLEAR_INITIAL_COMMIT_MESSAGE" value="true" />
     <MESSAGE value="Player animator controller (using ugly&amp;compressed spritesheet)" />
     <MESSAGE value="New Spritesheet + Animation for player" />
     <MESSAGE value="Imported Tilemaps" />
     <MESSAGE value="Mirror Collider for outline" />
-    <option name="LAST_COMMIT_MESSAGE" value="Mirror Collider for outline" />
+    <MESSAGE value="Mirror Prefab updated" />
+    <MESSAGE value="Primo livello + cuore importato" />
+    <MESSAGE value="Player Rigid Body + Collider" />
+    <option name="LAST_COMMIT_MESSAGE" value="Player Rigid Body + Collider" />
   </component>
   <component name="WindowStateProjectService">
     <state x="92" y="92" width="1736" height="866" key="DiffContextDialog" timestamp="1605949362946">
@@ -172,18 +283,22 @@
       <screen x="0" y="0" width="1920" height="1050" />
     </state>
     <state x="598" y="286" width="1046" height="477" key="MultipleFileMergeDialog/0.0.1920.1050/-1920.0.1920.1050@0.0.1920.1050" timestamp="1605968099615" />
+    <state x="764" y="199" key="RiderGenerateDialog" timestamp="1605982742312">
+      <screen x="0" y="0" width="1920" height="1050" />
+    </state>
+    <state x="764" y="199" key="RiderGenerateDialog/0.0.1920.1050/-1920.0.1920.1050@0.0.1920.1050" timestamp="1605982742312" />
     <state x="753" y="235" key="RollbackChangesDialog" timestamp="1605971705270">
       <screen x="0" y="0" width="1920" height="1050" />
     </state>
     <state x="753" y="235" key="RollbackChangesDialog/0.0.1920.1050/-1920.0.1920.1050@0.0.1920.1050" timestamp="1605971705270" />
-    <state x="552" y="258" key="Vcs.Push.Dialog.v2" timestamp="1605974418935">
+    <state x="552" y="258" key="Vcs.Push.Dialog.v2" timestamp="1605979514491">
       <screen x="0" y="0" width="1920" height="1050" />
     </state>
     <state x="-1368" y="258" key="Vcs.Push.Dialog.v2/0.0.1920.1050/-1920.0.1920.1050@-1920.0.1920.1050" timestamp="1605958113515" />
-    <state x="552" y="258" key="Vcs.Push.Dialog.v2/0.0.1920.1050/-1920.0.1920.1050@0.0.1920.1050" timestamp="1605974418935" />
-    <state x="777" y="439" key="com.intellij.openapi.vcs.update.UpdateOrStatusOptionsDialogupdate-v2" timestamp="1605973335200">
+    <state x="552" y="258" key="Vcs.Push.Dialog.v2/0.0.1920.1050/-1920.0.1920.1050@0.0.1920.1050" timestamp="1605979514491" />
+    <state x="777" y="439" key="com.intellij.openapi.vcs.update.UpdateOrStatusOptionsDialogupdate-v2" timestamp="1605978478117">
       <screen x="0" y="0" width="1920" height="1050" />
     </state>
-    <state x="777" y="439" key="com.intellij.openapi.vcs.update.UpdateOrStatusOptionsDialogupdate-v2/0.0.1920.1050/-1920.0.1920.1050@0.0.1920.1050" timestamp="1605973335200" />
+    <state x="777" y="439" key="com.intellij.openapi.vcs.update.UpdateOrStatusOptionsDialogupdate-v2/0.0.1920.1050/-1920.0.1920.1050@0.0.1920.1050" timestamp="1605978478117" />
   </component>
 </project>
