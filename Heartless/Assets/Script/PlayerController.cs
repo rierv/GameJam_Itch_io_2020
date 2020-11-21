@@ -153,4 +153,9 @@ public class PlayerController : MonoBehaviour
             heartCount++;
         }
     }
+
+    private void NotifyGGMBotolaInteraction()
+    {
+        GlobalGameManager.instance.InteractBotola();
+    }
 }

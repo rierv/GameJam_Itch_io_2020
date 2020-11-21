@@ -8,7 +8,14 @@ public class GlobalGameManager : MonoBehaviour
 {
 
     public static GlobalGameManager instance;
-    
+    private GameObject player;
+
+    public GameObject Player
+    {
+        get => player;
+        set => player = value;
+    }
+
     [SerializeField]
     private bool isInCunicolo;
 
@@ -53,6 +60,8 @@ public class GlobalGameManager : MonoBehaviour
         {
             //Necessario? Dipende come gestiamo livelli differenti
             //DontDestroyOnLoad(gameObject);
+
+            player = GameObject.FindWithTag("Player");
             
             instance = this;
             IsInCunicolo = false;
@@ -83,7 +92,6 @@ public class GlobalGameManager : MonoBehaviour
     private void EnterCunicolo()
     {
         IsInCunicolo = true;
-        GameObject.FindWithTag("Player").GetComponent<Animator>().SetTrigger("enterBotola");
         globalLight.GetComponent<Light2D>().intensity = 0.25f;
         cunicoloLights.SetActive(true);
         groundLights.SetActive(false);
@@ -95,7 +103,6 @@ public class GlobalGameManager : MonoBehaviour
     private void ExitCunicolo()
     {
         IsInCunicolo = false;
-        GameObject.FindWithTag("Player").GetComponent<Animator>().SetTrigger("enterBotola");
         globalLight.GetComponent<Light2D>().intensity = 0.5f;
         cunicoloLights.SetActive(false);
         groundLights.SetActive(true);
@@ -116,6 +123,13 @@ public class GlobalGameManager : MonoBehaviour
             {
                 EnterCunicolo();
             }
+
+            player.GetComponent<PlayerController>().enabled = true;
         }
+    }
+
+    public void InteractMirror()
+    {
+        
     }
 }
