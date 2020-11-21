@@ -24,7 +24,6 @@ public class EnemyController : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        MovePlayer();
         //ANIMATION 
         SetAnimation(inputMovementVector);
        
