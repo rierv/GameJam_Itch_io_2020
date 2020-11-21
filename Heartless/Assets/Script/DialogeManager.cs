@@ -10,6 +10,7 @@ public class DialogeManager : MonoBehaviour
     public Text npcName;
     public Text dialogueText;
     public Image freccia;
+    public GameObject DialogueBox;
 
     private Queue<string> sentences;
 
@@ -29,6 +30,7 @@ public class DialogeManager : MonoBehaviour
 
     public void StartDialogue (Dialogue dialogue)
     {
+        Instantiate(DialogueBox, new Vector2(0, 0), Quaternion.identity);
         Debug.Log("Starting con  with" + dialogue.NPCname);
 
         npcName.text = dialogue.NPCname;
@@ -61,6 +63,7 @@ public class DialogeManager : MonoBehaviour
 
     void EndDialogue()
     {
+        //Destroy(gameObject);
         Debug.Log("End");    
     }
 }

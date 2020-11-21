@@ -5,11 +5,14 @@ using UnityEngine;
 public class DialogueTrigger : MonoBehaviour
 {
     public Dialogue dialogue;
+    public GameObject DManager;
     private BoxCollider2D bc;
+    private DialogeManager DMscript;
 
     private void Start()
     {
         bc = gameObject.GetComponent<BoxCollider2D>();
+        DMscript = DManager.GetComponent<DialogeManager>();
     }
 
 
@@ -17,14 +20,20 @@ public class DialogueTrigger : MonoBehaviour
 
     public void  TriggerDialogue()
     {
-        FindObjectOfType<DialogeManager>().StartDialogue(dialogue);
+        DMscript.StartDialogue(dialogue);
+        Debug.Log("funge");
     }
 
-    private void OnTriggerEnter2D(BoxCollider2D col)
+    private void OnTriggerStay2D(Collider2D col)
     {
-        if(col.tag == "player")
+        if(col.tag == "Player")
         {
-            Debug.Log("dialogo");
+            if (Input.GetKeyDown(KeyCode.Z))
+            {
+                Debug.Log("fungo");
+                TriggerDialogue();
+            }
+            //Debug.Log("dialogo");
         }
         else
         {
