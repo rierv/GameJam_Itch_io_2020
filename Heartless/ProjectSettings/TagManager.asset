@@ -13,8 +13,8 @@ TagManager:
   - UI
   - 
   - 
-  - 
-  - 
+  - Player
+  - TriggerColliders
   - 
   - 
   - 
@@ -40,6 +40,9 @@ TagManager:
   m_SortingLayers:
   - name: Ground
     uniqueID: 1820352227
+    locked: 0
+  - name: ObjOutline
+    uniqueID: 3973395217
     locked: 0
   - name: Default
     uniqueID: 0
