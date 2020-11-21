@@ -1,4 +1,5 @@
-﻿using System.Collections;
+﻿using System;
+using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.InputSystem;
@@ -6,13 +7,16 @@ using UnityEngine.InputSystem;
 
 public class PlayerController : MonoBehaviour
 {
-    private Vector2 inputMovementVector;
+    public GameObject Heart;
+    private GameObject spawnedHeart;
+    private Vector3 inputMovementVector;
     [SerializeField]
-    private float movementSpeed = 3f;
+    private float movementSpeed = 10f;
     private Rigidbody2D rb2d;
     private Animator playerAnimator;
     private string lastAnimationTriggered;
-    
+    bool isAiming = false;
+    float heartRadius = .3f;
     // Start is called before the first frame update
     void Awake()
     {
@@ -22,17 +26,28 @@ public class PlayerController : MonoBehaviour
     }
 
     // Update is called once per frame
-    void FixedUpdate()
+    void Update()
     {
         MovePlayer();
         //ANIMATION 
         SetAnimation(inputMovementVector);
+        if (!isAiming && Input.GetKeyDown(KeyCode.K))
+        {
+            isAiming = true;
+            CreateHeart();
+        }
+        if (isAiming)
+        {
+            Aim();
+        }
+        if (isAiming && Input.GetKeyUp(KeyCode.K))
+        {
+            isAiming = false;
+            Destroy(spawnedHeart);
+        }
     }
 
-    public void OnMove(InputValue value)
-    {
-        inputMovementVector = value.Get<Vector2>();
-    }
+
 
     private void SetAnimation(Vector2 input)
     {
@@ -97,11 +112,29 @@ public class PlayerController : MonoBehaviour
 
     private void MovePlayer()
     {
-        if (inputMovementVector != Vector2.zero)
+        inputMovementVector = (Vector2.right * Input.GetAxis("Horizontal") + Vector2.up * Input.GetAxis("Vertical")).normalized;
+        if (inputMovementVector != Vector3.zero)
         {
-            //MOVEMENT
-            Vector2 movementInput = new Vector2(inputMovementVector.x, inputMovementVector.y).normalized * Time.deltaTime;
-            transform.Translate(movementInput * movementSpeed); 
+            Debug.Log(inputMovementVector);
+            transform.position = Vector3.Lerp(transform.position, transform.position + inputMovementVector, Time.deltaTime * movementSpeed);
         }
+    }
+
+    private void CreateHeart()
+    {
+        spawnedHeart = Instantiate(Heart, transform.position + Vector3.up, Quaternion.identity);
+    }
+
+    void Aim()
+    {
+        Vector2 MousePos = Input.mousePosition;
+        Vector3 WorldMouse = Camera.main.ScreenToWorldPoint(new Vector3(MousePos.x, MousePos.y, 0));
+        Vector2 coord = new Vector2(WorldMouse.x - transform.position.x, WorldMouse.y - transform.position.y).normalized;
+        Vector3 MouseOffset = transform.position + new Vector3(coord.x, coord.y / 2, 0) * heartRadius;
+
+
+
+        spawnedHeart.transform.position = MouseOffset;
+
     }
 }
