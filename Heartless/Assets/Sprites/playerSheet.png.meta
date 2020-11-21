@@ -1,121 +1,67 @@
 fileFormatVersion: 2
-guid: 879ce4c6c34e5674c92fcd317988d04e
+guid: ab6e925c32ab61a4ca42a57af9088801
 TextureImporter:
   internalIDToNameTable:
   - first:
-      213: -4375913591027894256
-    second: heartlessplayeranimtransp_0
+      213: 3250217521903682891
+    second: playerSheet_0
   - first:
-      213: 2198271679454036748
-    second: heartlessplayeranimtransp_1
+      213: -8971043269568505482
+    second: playerSheet_1
   - first:
-      213: -389182159987838642
-    second: heartlessplayeranimtransp_2
+      213: -5886853242381924632
+    second: playerSheet_2
   - first:
-      213: 3519893586755999247
-    second: heartlessplayeranimtransp_3
+      213: 5898906554094136455
+    second: playerSheet_3
   - first:
-      213: -2475352207531342520
-    second: heartlessplayeranimtransp_4
+      213: -3373079133645523029
+    second: playerSheet_4
   - first:
-      213: -407895705687315424
-    second: heartlessplayeranimtransp_5
+      213: -3625454055298545366
+    second: playerSheet_5
   - first:
-      213: 8041757167706256686
-    second: heartlessplayeranimtransp_6
+      213: -944514909738714461
+    second: playerSheet_6
   - first:
-      213: 5943753316375670689
-    second: heartlessplayeranimtransp_7
+      213: -2968553946133765837
+    second: playerSheet_7
   - first:
-      213: -2706464979219183393
-    second: heartlessplayeranimtransp_8
+      213: 112134945408151140
+    second: playerSheet_8
   - first:
-      213: 4696193507797919488
-    second: heartlessplayeranimtransp_9
+      213: -7630017730274726121
+    second: playerSheet_9
   - first:
-      213: -6727314771662271072
-    second: heartlessplayeranimtransp_10
+      213: -4090207633011260478
+    second: playerSheet_10
   - first:
-      213: 2039401913860867468
-    second: heartlessplayeranimtransp_11
+      213: 199856643572996834
+    second: playerSheet_11
   - first:
-      213: 3930930832405851229
-    second: heartlessplayeranimtransp_12
+      213: 3496745551035639832
+    second: playerSheet_12
   - first:
-      213: -763549898862286951
-    second: heartlessplayeranimtransp_13
+      213: 872974892636792159
+    second: playerSheet_13
   - first:
-      213: -736803392217963137
-    second: heartlessplayeranimtransp_14
+      213: -4582208288718245536
+    second: playerSheet_14
   - first:
-      213: 7870710344934294928
-    second: heartlessplayeranimtransp_15
+      213: 6715671151406061198
+    second: playerSheet_15
   - first:
-      213: -5439149053929156913
-    second: heartlessplayeranimtransp_16
+      213: -5691605561658285805
+    second: playerSheet_16
   - first:
-      213: -5526330513135791580
-    second: heartlessplayeranimtransp_17
+      213: -3330508149440565967
+    second: playerSheet_17
   - first:
-      213: -3749589908023866016
-    second: heartlessplayeranimtransp_18
+      213: -1298287904192972682
+    second: playerSheet_18
   - first:
-      213: 1336714600214859901
-    second: heartlessplayeranimtransp_0
-  - first:
-      213: -557699557099158896
-    second: heartlessplayeranimtransp_1
-  - first:
-      213: -2257598929273725850
-    second: heartlessplayeranimtransp_2
-  - first:
-      213: -5449550015789451945
-    second: heartlessplayeranimtransp_3
-  - first:
-      213: -1929133196061687984
-    second: heartlessplayeranimtransp_4
-  - first:
-      213: 4075566666108520078
-    second: heartlessplayeranimtransp_5
-  - first:
-      213: 5348196872810214354
-    second: heartlessplayeranimtransp_6
-  - first:
-      213: -2405215311494316577
-    second: heartlessplayeranimtransp_7
-  - first:
-      213: 4412425973207338475
-    second: heartlessplayeranimtransp_8
-  - first:
-      213: 2867792814748376766
-    second: heartlessplayeranimtransp_9
-  - first:
-      213: -2664365415627938592
-    second: heartlessplayeranimtransp_10
-  - first:
-      213: 4206935273898570292
-    second: heartlessplayeranimtransp_11
-  - first:
-      213: -9086142881245922410
-    second: heartlessplayeranimtransp_12
-  - first:
-      213: 7578792199857362046
-    second: heartlessplayeranimtransp_13
-  - first:
-      213: -7278723527991077089
-    second: heartlessplayeranimtransp_14
-  - first:
-      213: 495481947328880551
-    second: heartlessplayeranimtransp_15
-  - first:
-      213: -694787704146535385
-    second: heartlessplayeranimtransp_16
-  - first:
-      213: -6523585552535217026
-    second: heartlessplayeranimtransp_17
-  - first:
-      213: 1691783994457378058
-    second: heartlessplayeranimtransp_18
+      213: -4734302037683611076
+    second: playerSheet_19
   externalObjects: {}
   serializedVersion: 11
   mipmaps:
@@ -180,7 +126,7 @@ TextureImporter:
     maxTextureSize: 2048
     resizeAlgorithm: 0
     textureFormat: -1
-    textureCompression: 0
+    textureCompression: 1
     compressionQuality: 50
     crunchedCompression: 0
     allowsAlphaSplitting: 0
@@ -192,7 +138,7 @@ TextureImporter:
     maxTextureSize: 2048
     resizeAlgorithm: 0
     textureFormat: -1
-    textureCompression: 0
+    textureCompression: 1
     compressionQuality: 50
     crunchedCompression: 0
     allowsAlphaSplitting: 0
@@ -203,13 +149,13 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: heartlessplayeranimtransp_0
+      name: playerSheet_0
       rect:
         serializedVersion: 2
         x: 13
-        y: 161
-        width: 31
-        height: 61
+        y: 162
+        width: 30
+        height: 59
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -217,14 +163,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: d7092efb8d6fc8210800000000000000
-      internalID: 1336714600214859901
+      spriteID: b45c1d3ad971b1d20800000000000000
+      internalID: 3250217521903682891
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: heartlessplayeranimtransp_1
+      name: playerSheet_1
       rect:
         serializedVersion: 2
         x: 50
@@ -238,20 +184,20 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 09246b72537a248f0800000000000000
-      internalID: -557699557099158896
+      spriteID: 679d5bc4da3708380800000000000000
+      internalID: -8971043269568505482
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: heartlessplayeranimtransp_2
+      name: playerSheet_2
       rect:
         serializedVersion: 2
         x: 83
-        y: 161
-        width: 31
-        height: 60
+        y: 162
+        width: 30
+        height: 59
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -259,14 +205,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 66c565f2cb56ba0e0800000000000000
-      internalID: -2257598929273725850
+      spriteID: 8e608fa7a22bd4ea0800000000000000
+      internalID: -5886853242381924632
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: heartlessplayeranimtransp_3
+      name: playerSheet_3
       rect:
         serializedVersion: 2
         x: 119
@@ -280,14 +226,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 7553523322f4f54b0800000000000000
-      internalID: -5449550015789451945
+      spriteID: 78c2108d1402dd150800000000000000
+      internalID: 5898906554094136455
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: heartlessplayeranimtransp_4
+      name: playerSheet_4
       rect:
         serializedVersion: 2
         x: 157
@@ -301,19 +247,19 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 05f345444975a35e0800000000000000
-      internalID: -1929133196061687984
+      spriteID: ba7b6c7366a6031d0800000000000000
+      internalID: -3373079133645523029
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: heartlessplayeranimtransp_5
+      name: playerSheet_5
       rect:
         serializedVersion: 2
         x: 197
         y: 160
-        width: 17
+        width: 16
         height: 59
       alignment: 0
       pivot: {x: 0, y: 0}
@@ -322,19 +268,19 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: e8642df1a425f8830800000000000000
-      internalID: 4075566666108520078
+      spriteID: a294e64cebccfadc0800000000000000
+      internalID: -3625454055298545366
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: heartlessplayeranimtransp_6
+      name: playerSheet_6
       rect:
         serializedVersion: 2
         x: 223
         y: 161
-        width: 31
+        width: 30
         height: 59
       alignment: 0
       pivot: {x: 0, y: 0}
@@ -343,20 +289,20 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 2d335b848bc983a40800000000000000
-      internalID: 5348196872810214354
+      spriteID: 3aab6ff91b864e2f0800000000000000
+      internalID: -944514909738714461
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: heartlessplayeranimtransp_7
+      name: playerSheet_7
       rect:
         serializedVersion: 2
         x: 268
-        y: 159
-        width: 17
-        height: 60
+        y: 160
+        width: 16
+        height: 59
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -364,20 +310,20 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: fddfc06ea65fe9ed0800000000000000
-      internalID: -2405215311494316577
+      spriteID: 331ec100ae39dc6d0800000000000000
+      internalID: -2968553946133765837
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: heartlessplayeranimtransp_8
+      name: playerSheet_8
       rect:
         serializedVersion: 2
         x: 11
-        y: 97
-        width: 31
-        height: 60
+        y: 98
+        width: 30
+        height: 59
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -385,20 +331,20 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: bed0bba6b061c3d30800000000000000
-      internalID: 4412425973207338475
+      spriteID: 46ee5f383226e8100800000000000000
+      internalID: 112134945408151140
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: heartlessplayeranimtransp_9
+      name: playerSheet_9
       rect:
         serializedVersion: 2
         x: 47
-        y: 97
-        width: 32
-        height: 60
+        y: 98
+        width: 30
+        height: 59
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -406,20 +352,20 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: ebe9e7cee527cc720800000000000000
-      internalID: 2867792814748376766
+      spriteID: 71fea05cc4bbc1690800000000000000
+      internalID: -7630017730274726121
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: heartlessplayeranimtransp_10
+      name: playerSheet_10
       rect:
         serializedVersion: 2
-        x: 86
-        y: 97
-        width: 31
-        height: 60
+        x: 87
+        y: 98
+        width: 30
+        height: 59
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -427,14 +373,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 0e429a955c5460bd0800000000000000
-      internalID: -2664365415627938592
+      spriteID: 2c3c5c024d9ac37c0800000000000000
+      internalID: -4090207633011260478
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: heartlessplayeranimtransp_11
+      name: playerSheet_11
       rect:
         serializedVersion: 2
         x: 121
@@ -448,20 +394,20 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 432f8c1a759026a30800000000000000
-      internalID: 4206935273898570292
+      spriteID: 2ea9b26fe8806c200800000000000000
+      internalID: 199856643572996834
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: heartlessplayeranimtransp_12
+      name: playerSheet_12
       rect:
         serializedVersion: 2
-        x: 164
+        x: 165
         y: 95
-        width: 18
-        height: 60
+        width: 16
+        height: 59
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -469,40 +415,19 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 69b74e0a03987e180800000000000000
-      internalID: -9086142881245922410
+      spriteID: 81828675d8fe68030800000000000000
+      internalID: 3496745551035639832
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: heartlessplayeranimtransp_13
+      name: playerSheet_13
       rect:
         serializedVersion: 2
         x: 196
-        y: 95
+        y: 96
         width: 30
-        height: 60
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: e74dff20a574d2960800000000000000
-      internalID: 7578792199857362046
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: heartlessplayeranimtransp_14
-      rect:
-        serializedVersion: 2
-        x: 235
-        y: 95
-        width: 17
         height: 59
       alignment: 0
       pivot: {x: 0, y: 0}
@@ -511,19 +436,19 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: f1750dff387ccfa90800000000000000
-      internalID: -7278723527991077089
+      spriteID: f5563752a0e6d1c00800000000000000
+      internalID: 872974892636792159
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: heartlessplayeranimtransp_15
+      name: playerSheet_14
       rect:
         serializedVersion: 2
-        x: 261
+        x: 236
         y: 95
-        width: 31
+        width: 16
         height: 59
       alignment: 0
       pivot: {x: 0, y: 0}
@@ -532,20 +457,20 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 7af1827b43e40e600800000000000000
-      internalID: 495481947328880551
+      spriteID: 0613918c6d9b860c0800000000000000
+      internalID: -4582208288718245536
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: heartlessplayeranimtransp_16
+      name: playerSheet_15
       rect:
         serializedVersion: 2
-        x: 9
-        y: 26
-        width: 42
-        height: 64
+        x: 262
+        y: 96
+        width: 30
+        height: 58
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -553,20 +478,41 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 72c5904a34e9b56f0800000000000000
-      internalID: -694787704146535385
+      spriteID: e8695efb45bd23d50800000000000000
+      internalID: 6715671151406061198
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: heartlessplayeranimtransp_17
+      name: playerSheet_16
       rect:
         serializedVersion: 2
-        x: 93
+        x: 10
+        y: 28
+        width: 40
+        height: 61
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 31168b7a5ea5301b0800000000000000
+      internalID: -5691605561658285805
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: playerSheet_17
+      rect:
+        serializedVersion: 2
+        x: 52
         y: 27
         width: 40
-        height: 60
+        height: 59
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -574,20 +520,41 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: e7c944fd0819775a0800000000000000
-      internalID: -6523585552535217026
+      spriteID: 13d2d0fdb78a7c1d0800000000000000
+      internalID: -3330508149440565967
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: heartlessplayeranimtransp_18
+      name: playerSheet_18
+      rect:
+        serializedVersion: 2
+        x: 94
+        y: 28
+        width: 39
+        height: 59
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 678346e970e8bfde0800000000000000
+      internalID: -1298287904192972682
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: playerSheet_19
       rect:
         serializedVersion: 2
         x: 136
-        y: 26
+        y: 27
         width: 41
-        height: 63
+        height: 62
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -595,8 +562,8 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: a0dc25a549c6a7710800000000000000
-      internalID: 1691783994457378058
+      spriteID: c3ad57051616c4eb0800000000000000
+      internalID: -4734302037683611076
       vertices: []
       indices: 
       edges: []
