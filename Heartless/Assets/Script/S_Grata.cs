@@ -7,10 +7,12 @@ public class S_Grata : MonoBehaviour, I_Interactable
     public void PlayerEnterRange()
     {
         ManagerCunicoli.instance.SelectedGrata = gameObject;
+        GetComponent<Animator>().SetTrigger("OpenMouth");
     }
 
     public void PlayerExitRange()
     {
         ManagerCunicoli.instance.SelectedGrata = null;
+        GetComponent<Animator>().SetTrigger("CloseMouth");
     }
 }

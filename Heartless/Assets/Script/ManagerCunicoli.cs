@@ -58,6 +58,7 @@ public class ManagerCunicoli : MonoBehaviour
     private void EnterCunicolo()
     {
         isInCunicolo = true;
+        GameObject.FindWithTag("Player").GetComponent<Animator>().SetTrigger("enterBotola");
         groundCunicoloTileMap.SetActive(true);
         wallCunicoloTileMap.SetActive(true);
         wallTileMap.GetComponent<TilemapCollider2D>().enabled = false;
@@ -66,6 +67,7 @@ public class ManagerCunicoli : MonoBehaviour
     private void ExitCunicolo()
     {
         isInCunicolo = false;
+        GameObject.FindWithTag("Player").GetComponent<Animator>().SetTrigger("enterBotola");
         groundCunicoloTileMap.SetActive(false);
         wallCunicoloTileMap.SetActive(false);
         wallTileMap.GetComponent<TilemapCollider2D>().enabled = true;

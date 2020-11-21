@@ -12,7 +12,7 @@ GameObject:
   - component: {fileID: 7627105753028816588}
   - component: {fileID: 7627105753028816587}
   m_Layer: 0
-  m_Name: Candela
+  m_Name: LuceFloor
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -152,7 +152,7 @@ MonoBehaviour:
   m_Color: {r: 0.990566, g: 0.8093522, b: 0.5747152, a: 1}
   m_Intensity: 1
   m_LightVolumeOpacity: 0
-  m_ApplyToSortingLayers: e35e806ceb5eb952d551813d03bc4eb400000000c7c6bb61
+  m_ApplyToSortingLayers: e35e806ceb5eb95200000000c7c6bb61
   m_LightCookieSprite: {fileID: 0}
   m_UseNormalMap: 0
   m_LightOrder: 0
