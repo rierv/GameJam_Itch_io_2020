@@ -1,0 +1,586 @@
+fileFormatVersion: 2
+guid: 1f59bacd7b841a343a028db6d81f1c1e
+TextureImporter:
+  internalIDToNameTable:
+  - first:
+      213: 2372616077326735055
+    second: sheeeplayer_0
+  - first:
+      213: 3660937914230686715
+    second: sheeeplayer_1
+  - first:
+      213: -3086474393688801481
+    second: sheeeplayer_2
+  - first:
+      213: -9210063669359666536
+    second: sheeeplayer_3
+  - first:
+      213: -4040855147403074620
+    second: sheeeplayer_4
+  - first:
+      213: -728251113550106271
+    second: sheeeplayer_5
+  - first:
+      213: 5175166969262575993
+    second: sheeeplayer_6
+  - first:
+      213: -2596454217654140554
+    second: sheeeplayer_7
+  - first:
+      213: -902768178710591402
+    second: sheeeplayer_8
+  - first:
+      213: 2740851459171784053
+    second: sheeeplayer_9
+  - first:
+      213: 3011015511230372615
+    second: sheeeplayer_10
+  - first:
+      213: 6221153394916418220
+    second: sheeeplayer_11
+  - first:
+      213: -2914547741580478131
+    second: sheeeplayer_12
+  - first:
+      213: -2503672593595436820
+    second: sheeeplayer_13
+  - first:
+      213: -6222356698253898583
+    second: sheeeplayer_14
+  - first:
+      213: -5951750736184879187
+    second: sheeeplayer_15
+  - first:
+      213: -8874190983019428970
+    second: sheeeplayer_16
+  - first:
+      213: 3139998850325688682
+    second: sheeeplayer_17
+  - first:
+      213: -312702654459693374
+    second: sheeeplayer_18
+  - first:
+      213: -7322311570664974314
+    second: sheeeplayer_19
+  externalObjects: {}
+  serializedVersion: 11
+  mipmaps:
+    mipMapMode: 0
+    enableMipMap: 0
+    sRGBTexture: 1
+    linearTexture: 0
+    fadeOut: 0
+    borderMipMap: 0
+    mipMapsPreserveCoverage: 0
+    alphaTestReferenceValue: 0.5
+    mipMapFadeDistanceStart: 1
+    mipMapFadeDistanceEnd: 3
+  bumpmap:
+    convertToNormalMap: 0
+    externalNormalMap: 0
+    heightScale: 0.25
+    normalMapFilter: 0
+  isReadable: 0
+  streamingMipmaps: 0
+  streamingMipmapsPriority: 0
+  vTOnly: 0
+  grayScaleToAlpha: 0
+  generateCubemap: 6
+  cubemapConvolution: 0
+  seamlessCubemap: 0
+  textureFormat: 1
+  maxTextureSize: 2048
+  textureSettings:
+    serializedVersion: 2
+    filterMode: -1
+    aniso: -1
+    mipBias: -100
+    wrapU: 1
+    wrapV: 1
+    wrapW: 1
+  nPOTScale: 0
+  lightmap: 0
+  compressionQuality: 50
+  spriteMode: 2
+  spriteExtrude: 1
+  spriteMeshType: 1
+  alignment: 0
+  spritePivot: {x: 0.5, y: 0.5}
+  spritePixelsToUnits: 100
+  spriteBorder: {x: 0, y: 0, z: 0, w: 0}
+  spriteGenerateFallbackPhysicsShape: 1
+  alphaUsage: 1
+  alphaIsTransparency: 1
+  spriteTessellationDetail: -1
+  textureType: 8
+  textureShape: 1
+  singleChannelComponent: 0
+  maxTextureSizeSet: 0
+  compressionQualitySet: 0
+  textureFormatSet: 0
+  ignorePngGamma: 0
+  applyGammaDecoding: 0
+  platformSettings:
+  - serializedVersion: 3
+    buildTarget: DefaultTexturePlatform
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: Standalone
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  spriteSheet:
+    serializedVersion: 2
+    sprites:
+    - serializedVersion: 2
+      name: sheeeplayer_0
+      rect:
+        serializedVersion: 2
+        x: 13
+        y: 162
+        width: 30
+        height: 59
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: fc6d07d60c93de020800000000000000
+      internalID: 2372616077326735055
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: sheeeplayer_1
+      rect:
+        serializedVersion: 2
+        x: 50
+        y: 163
+        width: 30
+        height: 59
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: bf3ca72f2a34ec230800000000000000
+      internalID: 3660937914230686715
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: sheeeplayer_2
+      rect:
+        serializedVersion: 2
+        x: 83
+        y: 162
+        width: 30
+        height: 59
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 73ff6db44e3aa25d0800000000000000
+      internalID: -3086474393688801481
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: sheeeplayer_3
+      rect:
+        serializedVersion: 2
+        x: 119
+        y: 161
+        width: 30
+        height: 59
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 89a1615c3e74f2080800000000000000
+      internalID: -9210063669359666536
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: sheeeplayer_4
+      rect:
+        serializedVersion: 2
+        x: 157
+        y: 161
+        width: 30
+        height: 58
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 4c32b3e17affbe7c0800000000000000
+      internalID: -4040855147403074620
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: sheeeplayer_5
+      rect:
+        serializedVersion: 2
+        x: 197
+        y: 160
+        width: 16
+        height: 59
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 161309d787bb4e5f0800000000000000
+      internalID: -728251113550106271
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: sheeeplayer_6
+      rect:
+        serializedVersion: 2
+        x: 223
+        y: 161
+        width: 30
+        height: 59
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 9711b3870f2e1d740800000000000000
+      internalID: 5175166969262575993
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: sheeeplayer_7
+      rect:
+        serializedVersion: 2
+        x: 268
+        y: 160
+        width: 16
+        height: 59
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 671092945aa87fbd0800000000000000
+      internalID: -2596454217654140554
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: sheeeplayer_8
+      rect:
+        serializedVersion: 2
+        x: 11
+        y: 98
+        width: 30
+        height: 59
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 658cd61ef19b873f0800000000000000
+      internalID: -902768178710591402
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: sheeeplayer_9
+      rect:
+        serializedVersion: 2
+        x: 47
+        y: 98
+        width: 30
+        height: 59
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 5759b0661e5790620800000000000000
+      internalID: 2740851459171784053
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: sheeeplayer_10
+      rect:
+        serializedVersion: 2
+        x: 87
+        y: 98
+        width: 30
+        height: 59
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 70bd31887a649c920800000000000000
+      internalID: 3011015511230372615
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: sheeeplayer_11
+      rect:
+        serializedVersion: 2
+        x: 121
+        y: 99
+        width: 30
+        height: 59
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: ca265353d0af55650800000000000000
+      internalID: 6221153394916418220
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: sheeeplayer_12
+      rect:
+        serializedVersion: 2
+        x: 165
+        y: 95
+        width: 16
+        height: 59
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: d49bd2e55427d87d0800000000000000
+      internalID: -2914547741580478131
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: sheeeplayer_13
+      rect:
+        serializedVersion: 2
+        x: 196
+        y: 96
+        width: 30
+        height: 59
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: ce0fcd88a0b214dd0800000000000000
+      internalID: -2503672593595436820
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: sheeeplayer_14
+      rect:
+        serializedVersion: 2
+        x: 236
+        y: 95
+        width: 16
+        height: 59
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 9accdc6ec8fb5a9a0800000000000000
+      internalID: -6222356698253898583
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: sheeeplayer_15
+      rect:
+        serializedVersion: 2
+        x: 262
+        y: 96
+        width: 30
+        height: 58
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: da7d70a3d32276da0800000000000000
+      internalID: -5951750736184879187
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: sheeeplayer_16
+      rect:
+        serializedVersion: 2
+        x: 10
+        y: 28
+        width: 40
+        height: 61
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 6930724815a88d480800000000000000
+      internalID: -8874190983019428970
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: sheeeplayer_17
+      rect:
+        serializedVersion: 2
+        x: 52
+        y: 27
+        width: 40
+        height: 59
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: a613cc46154839b20800000000000000
+      internalID: 3139998850325688682
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: sheeeplayer_18
+      rect:
+        serializedVersion: 2
+        x: 94
+        y: 28
+        width: 39
+        height: 59
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 2c6bb90b79e09abf0800000000000000
+      internalID: -312702654459693374
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: sheeeplayer_19
+      rect:
+        serializedVersion: 2
+        x: 136
+        y: 27
+        width: 41
+        height: 62
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 61818c7fb6ce16a90800000000000000
+      internalID: -7322311570664974314
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    outline: []
+    physicsShape: []
+    bones: []
+    spriteID: 5e97eb03825dee720800000000000000
+    internalID: 0
+    vertices: []
+    indices: 
+    edges: []
+    weights: []
+    secondaryTextures: []
+  spritePackingTag: 
+  pSDRemoveMatte: 0
+  pSDShowRemoveMatteOption: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
