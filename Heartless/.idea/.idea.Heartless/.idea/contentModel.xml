@@ -208,6 +208,7 @@
           </e>
         </e>
         <e p="EnemyController.cs" t="Include" />
+        <e p="GlobalGameManager.cs" t="Include" />
         <e p="Script" t="Include">
           <e p="DialogeManager.cs" t="Include" />
           <e p="Dialogue.cs" t="Include" />

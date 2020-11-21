@@ -14148,7 +14148,7 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 4
+  m_RootOrder: 3
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &569904294
 GameObject:
@@ -17839,7 +17839,7 @@ Tilemap:
     e31: 0
     e32: 0
     e33: 1
---- !u!1 &787315649
+--- !u!1 &697613822
 GameObject:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -17847,39 +17847,25 @@ GameObject:
   m_PrefabAsset: {fileID: 0}
   serializedVersion: 6
   m_Component:
-  - component: {fileID: 787315650}
-  - component: {fileID: 787315651}
+  - component: {fileID: 697613824}
+  - component: {fileID: 697613823}
   m_Layer: 0
-  m_Name: ManagerCunicoli
+  m_Name: GlobalGameManager
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
---- !u!4 &787315650
-Transform:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 787315649}
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 20.441662, y: 7.5684824, z: -8.406062}
-  m_LocalScale: {x: 1, y: 1, z: 1}
-  m_Children: []
-  m_Father: {fileID: 0}
-  m_RootOrder: 3
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &787315651
+--- !u!114 &697613823
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 787315649}
+  m_GameObject: {fileID: 697613822}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 02c998c9ac8e76f4ea2fef7aafc89059, type: 3}
+  m_Script: {fileID: 11500000, guid: e99a1bd4510208f409d965f6c964b2ea, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   isInCunicolo: 0
@@ -17887,7 +17873,22 @@ MonoBehaviour:
   wallTileMap: {fileID: 690014715}
   groundCunicoloTileMap: {fileID: 1057004210}
   wallCunicoloTileMap: {fileID: 1030070985}
-  selectedGrata: {fileID: 0}
+  groundLights: {fileID: 1003579098}
+  cunicoloLights: {fileID: 794277803}
+--- !u!4 &697613824
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 697613822}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_RootOrder: 4
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &794277803
 GameObject:
   m_ObjectHideFlags: 0
