@@ -217,6 +217,7 @@
           <e p="FSM.cs" t="Include" />
           <e p="FSM_Enemy.cs" t="Include" />
           <e p="FSMAlarmSentinel.cs" t="Include" />
+          <e p="Generator.cs" t="Include" />
           <e p="Heart.cs" t="Include" />
           <e p="I_Interactable.cs" t="Include" />
           <e p="ManagerCunicoli.cs" t="Include" />
