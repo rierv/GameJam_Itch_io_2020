@@ -19,26 +19,23 @@
     <select />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="649535c8-ff69-40bb-9aa6-526f0d8bd267" name="Default Changelist" comment="Botola very cool">
-      <change afterPath="$PROJECT_DIR$/Assets/Animation/Mirror.meta" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Animation/Mirror/MirrorEmptyAnim.anim" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Animation/Mirror/MirrorEmptyAnim.anim.meta" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Animation/Mirror/MirrorFullAnim.anim" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Animation/Mirror/MirrorFullAnim.anim.meta" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Animation/Mirror/Mirror_AC.controller" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Animation/Mirror/Mirror_AC.controller.meta" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Script/S_Mirror.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Script/S_Mirror.cs.meta" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Sprites/mirrorsheet.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Sprites/mirrorsheet.png.meta" afterDir="false" />
+    <list default="true" id="649535c8-ff69-40bb-9aa6-526f0d8bd267" name="Default Changelist" comment="Working Mirror">
+      <change afterPath="$PROJECT_DIR$/Assets/Animation/Generatore.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Animation/Generatore/GeneratoreBroken.anim" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Animation/Generatore/GeneratoreBroken.anim.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Animation/Generatore/GeneratoreWorking.anim" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Animation/Generatore/GeneratoreWorking.anim.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Animation/Generatore/Generatore_AC.controller" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Animation/Generatore/Generatore_AC.controller.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Prefab/Generator.prefab" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Prefab/Generator.prefab.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Sprites/interruttore e dettagli.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Sprites/interruttore e dettagli.png.meta" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/.idea.Heartless/.idea/contentModel.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.Heartless/.idea/contentModel.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/.idea.Heartless/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.Heartless/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/GlobalGameManager.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/GlobalGameManager.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Prefab/Mirror.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Prefab/Mirror.prefab" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/S_Mirror.cs" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/S_Mirror.cs.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Prefab/LuceCunicolo.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Prefab/LuceCunicolo.prefab" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/Scenes/FirstLevelScene.unity" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scenes/FirstLevelScene.unity" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Script/PlayerController.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Script/PlayerController.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Script/Generator.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Script/Generator.cs" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -70,6 +67,7 @@
         <option value="$PROJECT_DIR$/Assets/Script/S_Grata.cs" />
         <option value="$PROJECT_DIR$/Assets/Script/PlayerController.cs" />
         <option value="$PROJECT_DIR$/Assets/GlobalGameManager.cs" />
+        <option value="$PROJECT_DIR$/Assets/Script/Generator.cs" />
       </list>
     </option>
   </component>
@@ -124,7 +122,7 @@
       <updated>1605905722909</updated>
       <workItem from="1605905799925" duration="235000" />
       <workItem from="1605949851046" duration="3620000" />
-      <workItem from="1605988620359" duration="10989000" />
+      <workItem from="1605988620359" duration="14643000" />
     </task>
     <task id="LOCAL-00001" summary="Player animator controller (using ugly&amp;compressed spritesheet)">
       <created>1605958105565</created>
@@ -217,7 +215,14 @@
       <option name="project" value="LOCAL" />
       <updated>1606001886337</updated>
     </task>
-    <option name="localTasksCounter" value="14" />
+    <task id="LOCAL-00014" summary="Working Mirror">
+      <created>1606003664821</created>
+      <option name="number" value="00014" />
+      <option name="presentableId" value="LOCAL-00014" />
+      <option name="project" value="LOCAL" />
+      <updated>1606003664821</updated>
+    </task>
+    <option name="localTasksCounter" value="15" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -253,7 +258,8 @@
     <MESSAGE value="GlobalGameManager" />
     <MESSAGE value="Light change upon entering cunicolo" />
     <MESSAGE value="Botola very cool" />
-    <option name="LAST_COMMIT_MESSAGE" value="Botola very cool" />
+    <MESSAGE value="Working Mirror" />
+    <option name="LAST_COMMIT_MESSAGE" value="Working Mirror" />
   </component>
   <component name="WindowStateProjectService">
     <state x="694" y="327" key="#com.intellij.fileTypes.FileTypeChooser" timestamp="1605991971896">
@@ -276,11 +282,11 @@
       <screen x="0" y="0" width="1920" height="1050" />
     </state>
     <state x="753" y="235" key="RollbackChangesDialog/0.0.1920.1050/-1920.0.1920.1050@0.0.1920.1050" timestamp="1605988857323" />
-    <state x="552" y="258" key="Vcs.Push.Dialog.v2" timestamp="1606001898210">
+    <state x="552" y="258" key="Vcs.Push.Dialog.v2" timestamp="1606003670343">
       <screen x="0" y="0" width="1920" height="1050" />
     </state>
     <state x="-1368" y="258" key="Vcs.Push.Dialog.v2/0.0.1920.1050/-1920.0.1920.1050@-1920.0.1920.1050" timestamp="1605958113515" />
-    <state x="552" y="258" key="Vcs.Push.Dialog.v2/0.0.1920.1050/-1920.0.1920.1050@0.0.1920.1050" timestamp="1606001898210" />
+    <state x="552" y="258" key="Vcs.Push.Dialog.v2/0.0.1920.1050/-1920.0.1920.1050@0.0.1920.1050" timestamp="1606003670343" />
     <state x="777" y="439" key="com.intellij.openapi.vcs.update.UpdateOrStatusOptionsDialogupdate-v2" timestamp="1605993654996">
       <screen x="0" y="0" width="1920" height="1050" />
     </state>
