@@ -3,7 +3,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.InputSystem;
-
+using UnityEngine.UI;
 
 public class PlayerController : MonoBehaviour
 {
@@ -21,15 +21,18 @@ public class PlayerController : MonoBehaviour
     public int startHeartCount = 1;
     Vector3 startPosition;
     GlobalGameManager GameManager;
+    Text txtHearts;
     // Start is called before the first frame update
     void Awake()
     {
+        txtHearts = GetComponentInChildren<Text>();
         GameManager = GameObject.FindObjectOfType<GlobalGameManager>();
         startPosition = transform.position;
         startHeartCount = heartCount;
         rb2d = GetComponent<Rigidbody2D>();
         playerAnimator = GetComponent<Animator>();
         lastAnimationTriggered = "idle";
+        txtHearts.text = heartCount.ToString();
     }
 
     // Update is called once per frame
@@ -43,6 +46,7 @@ public class PlayerController : MonoBehaviour
             isAiming = true;
             CreateHeart();
             heartCount--;
+            txtHearts.text = heartCount.ToString();
         }
         if (isAiming)
         {
@@ -54,6 +58,7 @@ public class PlayerController : MonoBehaviour
         {
             isAiming = false;
             heartCount++;
+            txtHearts.text = heartCount.ToString();
             Destroy(spawnedHeart);
         }
         if (isAiming && Input.GetMouseButtonDown(1))
@@ -159,6 +164,7 @@ public class PlayerController : MonoBehaviour
         {
             Destroy(collision.gameObject);
             heartCount++;
+            txtHearts.text = heartCount.ToString();
         }
         if (collision.gameObject.tag == "Enemy")
         {
