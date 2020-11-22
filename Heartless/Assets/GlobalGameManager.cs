@@ -112,7 +112,7 @@ public class GlobalGameManager : MonoBehaviour
     void Update()
     {
         //TODO CHANGE THIS TO INTERACTION KEY
-        if (Input.GetKeyDown(KeyCode.P))
+        if (Input.GetKeyDown(KeyCode.Space))
         {
             if (selectedInteractableObj)
             {
