@@ -40,6 +40,7 @@ public class EnemyController : MonoBehaviour
             //IDLE
             if(stunned&&lastAnimationTriggered != "hitted")
             {
+                Debug.Log("hittedf");
                 enemyAnimator.SetTrigger("hitted");
                 lastAnimationTriggered = "hitted";
             }
