@@ -1,6 +1,7 @@
 ﻿using System;
 using System.Collections;
 using System.Collections.Generic;
+using TMPro;
 using UnityEngine;
 using UnityEngine.InputSystem;
 using UnityEngine.UI;
@@ -189,6 +190,8 @@ public class PlayerController : MonoBehaviour
         foreach (EnemyController ep in FindObjectsOfType<EnemyController>())
         {
             ep.gameObject.transform.localPosition = Vector3.zero;
+            ep.SetStunned(false);
+            ep.gameObject.GetComponent<Animator>().SetTrigger("idle");
         }
         startHeartCount = startHeartCount + 1;
         heartCount = startHeartCount;

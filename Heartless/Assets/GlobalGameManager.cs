@@ -26,6 +26,14 @@ public class GlobalGameManager : MonoBehaviour
         set => isInCunicolo = value;
     }
 
+    private bool wasInCunicolo;
+
+    public bool WasInCunicolo
+    {
+        get => wasInCunicolo;
+        set => wasInCunicolo = value;
+    }
+
     public bool PlayerVisible
     {
         get => playerVisible;
@@ -73,6 +81,7 @@ public class GlobalGameManager : MonoBehaviour
             
             instance = this;
             IsInCunicolo = false;
+            wasInCunicolo = false;
             playerInMirror = false;
             playerVisible = true;
 
@@ -117,6 +126,8 @@ public class GlobalGameManager : MonoBehaviour
         foreach (Transform child in enemyContainer.transform)
         {
             child.gameObject.layer = LayerMask.NameToLayer("noCollision"); //NO COLLISION
+            child.gameObject.GetComponentInChildren<SpriteRenderer>().sortingLayerID =
+                SortingLayer.NameToID("NemiciWhenInCunicolo");
             foreach (Transform child2 in child.transform)
             {
                 child2.gameObject.layer = LayerMask.NameToLayer("noCollision"); //NO COLLISION
@@ -140,6 +151,8 @@ public class GlobalGameManager : MonoBehaviour
         foreach (Transform child in enemyContainer.transform)
         {
             child.gameObject.layer = LayerMask.NameToLayer("Enemy"); 
+            child.gameObject.GetComponentInChildren<SpriteRenderer>().sortingLayerID =
+                SortingLayer.NameToID("Player");
             foreach (Transform child2 in child.transform)
             {
                 child2.gameObject.layer = LayerMask.NameToLayer("Enemy");
@@ -154,7 +167,7 @@ public class GlobalGameManager : MonoBehaviour
     {
         if (selectedInteractableObj)
         {
-            if (IsInCunicolo)
+            if (WasInCunicolo)
             {
                 ExitCunicolo();
             }
