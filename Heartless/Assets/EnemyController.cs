@@ -12,7 +12,7 @@ public class EnemyController : MonoBehaviour
     private Animator enemyAnimator;
     private string lastAnimationTriggered;
     bool isAiming = false;
-    
+    bool stunned = false;
     // Start is called before the first frame update
     void Awake()
     {
