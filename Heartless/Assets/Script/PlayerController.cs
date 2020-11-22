@@ -20,9 +20,11 @@ public class PlayerController : MonoBehaviour
     int heartCount = 1;
     public int startHeartCount = 1;
     Vector3 startPosition;
+    GlobalGameManager GameManager;
     // Start is called before the first frame update
     void Awake()
     {
+        GameManager = GameObject.FindObjectOfType<GlobalGameManager>();
         startPosition = transform.position;
         startHeartCount = heartCount;
         rb2d = GetComponent<Rigidbody2D>();
@@ -160,7 +162,9 @@ public class PlayerController : MonoBehaviour
         }
         if (collision.gameObject.tag == "Enemy")
         {
-            RestartLevel();
+
+            if(!collision.gameObject.GetComponent<EnemyController>().stunned&& GameManager.PlayerVisible && !GameManager.IsInCunicolo)
+                RestartLevel();
         }
     }
 
