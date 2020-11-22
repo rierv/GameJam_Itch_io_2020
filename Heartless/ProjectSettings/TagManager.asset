@@ -6,6 +6,7 @@ TagManager:
   tags:
   - Heart
   - Enemy
+  - NPC
   layers:
   - Default
   - TransparentFX
@@ -22,7 +23,7 @@ TagManager:
   - Enemy
   - cunicolo
   - floor
-  - 
+  - NPC
   - 
   - 
   - 

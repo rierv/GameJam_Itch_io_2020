@@ -10,6 +10,7 @@ public class DialogueTrigger : MonoBehaviour
     private DialogeManager DMscript;
     private bool canTalk;
     private bool isTalking;
+    
 
     private void Start()
     {
@@ -42,9 +43,11 @@ public class DialogueTrigger : MonoBehaviour
     
     private void OnTriggerStay2D(Collider2D col)
     {
+        Debug.Log("coll");
         if(col.tag == "Player")
         {
-           
+            Debug.Log("!!!!!!qqqqqqqqqqq");
+
             canTalk = true;
         }
         else
@@ -53,6 +56,8 @@ public class DialogueTrigger : MonoBehaviour
         }
         
     }
+  
+    
 
     private void OnTriggerExit2D(Collider2D other)
     {
