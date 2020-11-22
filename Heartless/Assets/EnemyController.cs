@@ -43,7 +43,7 @@ public class EnemyController : MonoBehaviour
                 enemyAnimator.SetTrigger("hitted");
                 lastAnimationTriggered = "hitted";
             }
-            else if (!stunned&&lastAnimationTriggered != "idle")
+            else if (lastAnimationTriggered != "idle")
             {
                 enemyAnimator.SetTrigger("idle");
                 lastAnimationTriggered = "idle";

@@ -82,7 +82,7 @@ SpriteRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 10754, guid: 0000000000000000f000000000000000, type: 0}
+  - {fileID: 2100000, guid: a97c105638bdf8b4a8650670310a4cd3, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -147,6 +147,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   movementSpeed: 5
+  stunned: 0
 --- !u!1 &7801180264074507812
 GameObject:
   m_ObjectHideFlags: 0
@@ -275,6 +276,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: f47640b3016086e40bd6ee9470bb9b35, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  playerVisible: 1
   range: 4.8
   reactionTime: 0.5
   aimHelper: {fileID: 2073559774}
@@ -283,6 +285,7 @@ MonoBehaviour:
   listOfSpots:
   - {x: 2, y: 2}
   - {x: -2, y: 0}
+  Generator: {fileID: 0}
 --- !u!50 &6248328334989688692
 Rigidbody2D:
   serializedVersion: 4

@@ -1,16 +1,22 @@
 fileFormatVersion: 2
-guid: d315b2d51c4a8f1449cae27c2777bf7f
+guid: 0492e03744d75794fb6a5b966bfab1fe
 TextureImporter:
   internalIDToNameTable:
   - first:
-      213: 8667106333974490255
-    second: cuore_spritesheet_0
+      213: -127933805768386180
+    second: trono corpo e npc_0
   - first:
-      213: 4426418657576917972
-    second: cuore_spritesheet_1
+      213: -5470946557966069022
+    second: trono corpo e npc_1
   - first:
-      213: 8102278801509006322
-    second: cuore_spritesheet_2
+      213: 4967087111995694714
+    second: trono corpo e npc_2
+  - first:
+      213: 668476867994741865
+    second: trono corpo e npc_3
+  - first:
+      213: 5066178051624211531
+    second: trono corpo e npc_4
   externalObjects: {}
   serializedVersion: 11
   mipmaps:
@@ -98,13 +104,13 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: cuore_spritesheet_0
+      name: trono corpo e npc_0
       rect:
         serializedVersion: 2
-        x: 0
-        y: 0
-        width: 23
-        height: 30
+        x: 5
+        y: 145
+        width: 123
+        height: 86
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -112,20 +118,20 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: f8c661b5a4fb74870800000000000000
-      internalID: 8667106333974490255
+      spriteID: c795968a1ec793ef0800000000000000
+      internalID: -127933805768386180
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: cuore_spritesheet_1
+      name: trono corpo e npc_1
       rect:
         serializedVersion: 2
-        x: 23
-        y: 0
-        width: 23
-        height: 30
+        x: 144
+        y: 145
+        width: 123
+        height: 86
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -133,20 +139,20 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 4db9800215ccd6d30800000000000000
-      internalID: 4426418657576917972
+      spriteID: 2e25943871b4314b0800000000000000
+      internalID: -5470946557966069022
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: cuore_spritesheet_2
+      name: trono corpo e npc_2
       rect:
         serializedVersion: 2
-        x: 46
-        y: 0
-        width: 23
-        height: 30
+        x: 299
+        y: 145
+        width: 123
+        height: 58
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -154,8 +160,50 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 2fb3f1b64a3117070800000000000000
-      internalID: 8102278801509006322
+      spriteID: a7e9cee5963aee440800000000000000
+      internalID: 4967087111995694714
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: trono corpo e npc_3
+      rect:
+        serializedVersion: 2
+        x: 5
+        y: 29
+        width: 123
+        height: 86
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 96c64617b28e64900800000000000000
+      internalID: 668476867994741865
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: trono corpo e npc_4
+      rect:
+        serializedVersion: 2
+        x: 144
+        y: 29
+        width: 123
+        height: 86
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: b4411ff981eae4640800000000000000
+      internalID: 5066178051624211531
       vertices: []
       indices: 
       edges: []

@@ -1,57 +1,26 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
-using TMPro;
 using UnityEngine;
-using UnityEngine.Experimental.Rendering.Universal;
 
-public class Generator : MonoBehaviour, I_Interactable
+public class Generator : MonoBehaviour
 {
     public bool broken = false;
     float timer = 0;
-
-    public GameObject linkedLight;
     
-    public void PlayerEnterRange()
+    private void OnCollisionStay2D(Collision2D collision)
     {
-        GlobalGameManager.instance.SelectedInteractableObj = gameObject;
-    }
-
-    public void PlayerExitRange()
-    {
-        GlobalGameManager.instance.SelectedInteractableObj = null;
-    }
-
-    public void Interact()
-    {
-        if (!broken)
+        if (collision.gameObject.tag == "Player")
         {
-            broken = true;
-            GetComponent<Animator>().SetTrigger("break");
-            if (linkedLight != null)
-            {
-                linkedLight.GetComponentInChildren<Light2D>().enabled = false;
-            }
+            timer += Time.deltaTime;
+            if (timer > 1) broken = true;
         }
-    }
-    
-    private void OnTriggerStay2D(Collider2D collision)
-    {
         if (collision.gameObject.tag == "Enemy")
         {
             timer += Time.deltaTime;
-            if (timer > 1)
-            {
-                broken = false;
-                timer = 0;
-                GetComponent<Animator>().SetTrigger("repair");
-                if (linkedLight != null)
-                {
-                    linkedLight.GetComponentInChildren<Light2D>().enabled = true;
-                }
-            }
+            if (timer > 1) broken = false;
         }
+
     }
-    
     private void OnCollisionExit2D(Collision2D collision)
     {
         timer = 0;

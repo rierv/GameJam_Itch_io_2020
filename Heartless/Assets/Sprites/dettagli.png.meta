@@ -1,46 +1,61 @@
 fileFormatVersion: 2
-guid: e318e4a38249cc54f81b4011d2ba41dd
+guid: 9a64dc44cff412e41bad0d6289cfe68b
 TextureImporter:
   internalIDToNameTable:
   - first:
-      213: -1186328543175398688
-    second: interruttore e dettagli_0
+      213: -5896999155389266154
+    second: dettagli_0
   - first:
-      213: -1710069590959491286
-    second: interruttore e dettagli_1
+      213: -6440663255631575579
+    second: dettagli_1
   - first:
-      213: -5844550031176884638
-    second: interruttore e dettagli_2
+      213: 4145627903158729024
+    second: dettagli_2
   - first:
-      213: -8414095357695322384
-    second: interruttore e dettagli_3
+      213: -2452950865525034071
+    second: dettagli_3
   - first:
-      213: 8537030412972275654
-    second: interruttore e dettagli_4
+      213: -7160370322711313290
+    second: dettagli_4
   - first:
-      213: -7561926945168008442
-    second: interruttore e dettagli_5
+      213: -3035710533263445411
+    second: dettagli_5
   - first:
-      213: 4625657288082394889
-    second: interruttore e dettagli_6
+      213: -4183831221858888295
+    second: dettagli_6
   - first:
-      213: -3623930696095404270
-    second: interruttore e dettagli_7
+      213: 4219739846570835829
+    second: dettagli_7
   - first:
-      213: -8896955121480769486
-    second: interruttore e dettagli_8
+      213: 8699029359308126923
+    second: dettagli_8
   - first:
-      213: -885190397467513646
-    second: interruttore e dettagli_9
+      213: -4324481535904469532
+    second: dettagli_9
   - first:
-      213: -8724255410138151868
-    second: interruttore e dettagli_10
+      213: -8301322721845041548
+    second: dettagli_10
   - first:
-      213: -3878392707243206837
-    second: interruttore e dettagli_11
+      213: -3442811551595970827
+    second: dettagli_11
   - first:
-      213: -1983901337676265386
-    second: interruttore e dettagli_12
+      213: 3629985020415928556
+    second: dettagli_12
+  - first:
+      213: -8742949722413860057
+    second: dettagli_13
+  - first:
+      213: -6295101769480654254
+    second: dettagli_14
+  - first:
+      213: -1810425219857200519
+    second: dettagli_15
+  - first:
+      213: 5361826473466104663
+    second: dettagli_16
+  - first:
+      213: 1061488523633625669
+    second: dettagli_17
   externalObjects: {}
   serializedVersion: 11
   mipmaps:
@@ -128,13 +143,13 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: interruttore e dettagli_0
+      name: dettagli_0
       rect:
         serializedVersion: 2
-        x: 14
-        y: 106
-        width: 36
-        height: 61
+        x: 22
+        y: 44
+        width: 15
+        height: 11
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -142,20 +157,20 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 0eaaf15b970598fe0800000000000000
-      internalID: -1186328543175398688
+      spriteID: 6178e360386a92ea0800000000000000
+      internalID: -5896999155389266154
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: interruttore e dettagli_1
+      name: dettagli_1
       rect:
         serializedVersion: 2
-        x: 55
-        y: 106
-        width: 36
-        height: 61
+        x: 46
+        y: 48
+        width: 15
+        height: 9
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -163,61 +178,19 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: a2779a174cc9448e0800000000000000
-      internalID: -1710069590959491286
+      spriteID: 5e54b22a4ea2e96a0800000000000000
+      internalID: -6440663255631575579
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: interruttore e dettagli_2
+      name: dettagli_2
       rect:
         serializedVersion: 2
-        x: 13
-        y: 43
-        width: 36
-        height: 61
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 26e14bf56bcf3eea0800000000000000
-      internalID: -5844550031176884638
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: interruttore e dettagli_3
-      rect:
-        serializedVersion: 2
-        x: 56
-        y: 43
-        width: 36
-        height: 61
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 0f69e4a1ad02b3b80800000000000000
-      internalID: -8414095357695322384
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: interruttore e dettagli_4
-      rect:
-        serializedVersion: 2
-        x: 102
-        y: 68
-        width: 21
+        x: 70
+        y: 42
+        width: 20
         height: 19
       alignment: 0
       pivot: {x: 0, y: 0}
@@ -226,41 +199,20 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 6c73be1fdef997670800000000000000
-      internalID: 8537030412972275654
+      spriteID: 04939ba0d9a388930800000000000000
+      internalID: 4145627903158729024
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: interruttore e dettagli_5
-      rect:
-        serializedVersion: 2
-        x: 127
-        y: 68
-        width: 17
-        height: 15
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 60b5ec71283ae0790800000000000000
-      internalID: -7561926945168008442
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: interruttore e dettagli_6
+      name: dettagli_3
       rect:
         serializedVersion: 2
         x: 102
-        y: 46
-        width: 21
-        height: 19
+        y: 43
+        width: 16
+        height: 26
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -268,82 +220,19 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 90f09d4bbc2a13040800000000000000
-      internalID: 4625657288082394889
+      spriteID: 9a3b4e02f2e55fdd0800000000000000
+      internalID: -2452950865525034071
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: interruttore e dettagli_7
+      name: dettagli_4
       rect:
         serializedVersion: 2
-        x: 127
-        y: 46
-        width: 17
-        height: 15
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 21f69987b3635bdc0800000000000000
-      internalID: -3623930696095404270
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: interruttore e dettagli_8
-      rect:
-        serializedVersion: 2
-        x: 4
-        y: 1
-        width: 26
-        height: 40
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 230eb81847aa78480800000000000000
-      internalID: -8896955121480769486
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: interruttore e dettagli_9
-      rect:
-        serializedVersion: 2
-        x: 37
-        y: 1
-        width: 26
-        height: 40
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 2dcac50060c27b3f0800000000000000
-      internalID: -885190397467513646
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: interruttore e dettagli_10
-      rect:
-        serializedVersion: 2
-        x: 100
-        y: 30
-        width: 36
+        x: 131
+        y: 51
+        width: 18
         height: 16
       alignment: 0
       pivot: {x: 0, y: 0}
@@ -352,20 +241,146 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 4448fe47de73de680800000000000000
-      internalID: -8724255410138151868
+      spriteID: 6740b86f02141ac90800000000000000
+      internalID: -7160370322711313290
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: interruttore e dettagli_11
+      name: dettagli_5
+      rect:
+        serializedVersion: 2
+        x: 18
+        y: 23
+        width: 19
+        height: 14
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: d52bbe79a5dfed5d0800000000000000
+      internalID: -3035710533263445411
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: dettagli_6
+      rect:
+        serializedVersion: 2
+        x: 44
+        y: 24
+        width: 20
+        height: 12
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 99599ecabab00f5c0800000000000000
+      internalID: -4183831221858888295
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: dettagli_7
+      rect:
+        serializedVersion: 2
+        x: 69
+        y: 26
+        width: 20
+        height: 12
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 57f7a6788078f8a30800000000000000
+      internalID: 4219739846570835829
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: dettagli_8
+      rect:
+        serializedVersion: 2
+        x: 107
+        y: 33
+        width: 5
+        height: 5
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: bca3144ec1929b870800000000000000
+      internalID: 8699029359308126923
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: dettagli_9
+      rect:
+        serializedVersion: 2
+        x: 113
+        y: 31
+        width: 9
+        height: 8
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 4edada684fa5cf3c0800000000000000
+      internalID: -4324481535904469532
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: dettagli_10
+      rect:
+        serializedVersion: 2
+        x: 131
+        y: 30
+        width: 13
+        height: 11
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 4762c8e77f6cbcc80800000000000000
+      internalID: -8301322721845041548
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: dettagli_11
       rect:
         serializedVersion: 2
         x: 109
-        y: 5
-        width: 9
-        height: 16
+        y: 26
+        width: 4
+        height: 5
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -373,19 +388,40 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: b479d41a16e2d2ac0800000000000000
-      internalID: -3878392707243206837
+      spriteID: 5feb286722da830d0800000000000000
+      internalID: -3442811551595970827
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: interruttore e dettagli_12
+      name: dettagli_12
       rect:
         serializedVersion: 2
-        x: 120
-        y: 5
-        width: 4
+        x: 71
+        y: 9
+        width: 13
+        height: 12
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: ce861e1c42c406230800000000000000
+      internalID: 3629985020415928556
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: dettagli_13
+      rect:
+        serializedVersion: 2
+        x: 104
+        y: 14
+        width: 14
         height: 7
       alignment: 0
       pivot: {x: 0, y: 0}
@@ -394,8 +430,92 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 658426a9e34c774e0800000000000000
-      internalID: -1983901337676265386
+      spriteID: 72bfb62bc8dcaa680800000000000000
+      internalID: -8742949722413860057
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: dettagli_14
+      rect:
+        serializedVersion: 2
+        x: 121
+        y: 13
+        width: 7
+        height: 7
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 2523c252b4e43a8a0800000000000000
+      internalID: -6295101769480654254
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: dettagli_15
+      rect:
+        serializedVersion: 2
+        x: 136
+        y: 13
+        width: 11
+        height: 8
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 97ac006cad310e6e0800000000000000
+      internalID: -1810425219857200519
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: dettagli_16
+      rect:
+        serializedVersion: 2
+        x: 112
+        y: 6
+        width: 8
+        height: 6
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 75b8b3af4c8096a40800000000000000
+      internalID: 5361826473466104663
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: dettagli_17
+      rect:
+        serializedVersion: 2
+        x: 136
+        y: 6
+        width: 6
+        height: 6
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 54a0650303a2bbe00800000000000000
+      internalID: 1061488523633625669
       vertices: []
       indices: 
       edges: []
