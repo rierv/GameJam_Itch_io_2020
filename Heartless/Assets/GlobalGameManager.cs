@@ -26,6 +26,14 @@ public class GlobalGameManager : MonoBehaviour
         set => isInCunicolo = value;
     }
 
+    private bool wasInCunicolo;
+
+    public bool WasInCunicolo
+    {
+        get => wasInCunicolo;
+        set => wasInCunicolo = value;
+    }
+
     public bool PlayerVisible
     {
         get => playerVisible;
@@ -73,6 +81,7 @@ public class GlobalGameManager : MonoBehaviour
             
             instance = this;
             IsInCunicolo = false;
+            wasInCunicolo = false;
             playerInMirror = false;
             playerVisible = true;
 
@@ -158,7 +167,7 @@ public class GlobalGameManager : MonoBehaviour
     {
         if (selectedInteractableObj)
         {
-            if (IsInCunicolo)
+            if (WasInCunicolo)
             {
                 ExitCunicolo();
             }
