@@ -12,7 +12,7 @@ public class EnemyController : MonoBehaviour
     private Animator enemyAnimator;
     private string lastAnimationTriggered;
     bool isAiming = false;
-    
+    bool stunned = false;
     // Start is called before the first frame update
     void Awake()
     {
@@ -33,11 +33,17 @@ public class EnemyController : MonoBehaviour
 
     private void SetAnimation(Vector2 input)
     {
+      
         if (input == Vector2.zero)
         {
             //EDIT HERE IF WE WANT A DIFFERENT IDLE ANIMATION BASED ON LAST MOVEMENT DIRECTION
             //IDLE
-            if (lastAnimationTriggered != "idle")
+            if(stunned&&lastAnimationTriggered != "hitted")
+            {
+                enemyAnimator.SetTrigger("hitted");
+                lastAnimationTriggered = "hitted";
+            }
+            else if (!stunned&&lastAnimationTriggered != "idle")
             {
                 enemyAnimator.SetTrigger("idle");
                 lastAnimationTriggered = "idle";

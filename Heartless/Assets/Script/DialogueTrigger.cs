@@ -8,11 +8,23 @@ public class DialogueTrigger : MonoBehaviour
     public GameObject DManager;
     private BoxCollider2D bc;
     private DialogeManager DMscript;
+    private bool canTalk;
+    private bool isTalking;
 
     private void Start()
     {
         bc = gameObject.GetComponent<BoxCollider2D>();
         DMscript = DManager.GetComponent<DialogeManager>();
+        canTalk = false;
+        isTalking = false;
+    }
+
+    void Update()
+    {
+        if (Input.GetKeyDown(KeyCode.Z) && canTalk)
+        {
+            TriggerDialogue();
+        }
     }
 
 
@@ -20,20 +32,20 @@ public class DialogueTrigger : MonoBehaviour
 
     public void  TriggerDialogue()
     {
-        DMscript.StartDialogue(dialogue);
-        Debug.Log("funge");
+        if (!isTalking)
+        {
+            DMscript.StartDialogue(dialogue);
+            isTalking = true;
+        }
+     
     }
-
+    
     private void OnTriggerStay2D(Collider2D col)
     {
         if(col.tag == "Player")
         {
-            if (Input.GetKeyDown(KeyCode.Z))
-            {
-                Debug.Log("fungo");
-                TriggerDialogue();
-            }
-            //Debug.Log("dialogo");
+           
+            canTalk = true;
         }
         else
         {
@@ -41,4 +53,12 @@ public class DialogueTrigger : MonoBehaviour
         }
         
     }
+
+    private void OnTriggerExit2D(Collider2D other)
+    {
+        canTalk = false;
+        isTalking = false;
+
+    }
+
 }

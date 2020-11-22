@@ -137,8 +137,8 @@ public class PlayerController : MonoBehaviour
         Vector3 WorldMouse = Camera.main.ScreenToWorldPoint(new Vector3(MousePos.x, MousePos.y, 0));
         Vector2 coord = new Vector2(WorldMouse.x - transform.position.x, WorldMouse.y - transform.position.y).normalized;
         Vector3 MouseOffset = transform.position + new Vector3(coord.x, coord.y / 1.5f, 0) * heartRadius;
-        if(coord.y<0) spawnedHeart.GetComponent<SpriteRenderer>().sortingOrder = 0;
-        else spawnedHeart.GetComponent<SpriteRenderer>().sortingOrder = -1;
+        if(coord.y<0) spawnedHeart.GetComponent<SpriteRenderer>().sortingOrder = 10;
+        else spawnedHeart.GetComponent<SpriteRenderer>().sortingOrder = -10;
 
 
 

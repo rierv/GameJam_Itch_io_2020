@@ -1,25 +1,13 @@
 fileFormatVersion: 2
-guid: a2ae1b1f4a0cb464da6a91fcabab0ced
+guid: e436cf2daa29d0d44b7222db9e60cc6d
 TextureImporter:
   internalIDToNameTable:
   - first:
-      213: -5323087837003181992
-    second: dialogbox_0
+      213: 2869963496483585798
+    second: scale e lanterna_0
   - first:
-      213: -3710594880850807668
-    second: dialogbox_1
-  - first:
-      213: -8724707947570996602
-    second: dialogbox_2
-  - first:
-      213: -4614172105035238725
-    second: dialogbox_3
-  - first:
-      213: -1203277955897533304
-    second: dialogbox_4
-  - first:
-      213: 1589937420136805895
-    second: dialogbox_5
+      213: 2032218682408406037
+    second: scale e lanterna_1
   externalObjects: {}
   serializedVersion: 11
   mipmaps:
@@ -64,7 +52,7 @@ TextureImporter:
   spriteMeshType: 1
   alignment: 0
   spritePivot: {x: 0.5, y: 0.5}
-  spritePixelsToUnits: 32
+  spritePixelsToUnits: 32.1
   spriteBorder: {x: 0, y: 0, z: 0, w: 0}
   spriteGenerateFallbackPhysicsShape: 1
   alphaUsage: 1
@@ -107,13 +95,13 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: dialogbox_0
+      name: scale e lanterna_0
       rect:
         serializedVersion: 2
-        x: 0
-        y: 82
-        width: 160
-        height: 64
+        x: 11
+        y: 57
+        width: 60
+        height: 96
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -121,20 +109,20 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 850193fa0d79026b0800000000000000
-      internalID: -5323087837003181992
+      spriteID: 60ffd36289824d720800000000000000
+      internalID: 2869963496483585798
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: dialogbox_1
+      name: scale e lanterna_1
       rect:
         serializedVersion: 2
-        x: 0
-        y: 18
-        width: 160
-        height: 64
+        x: 102
+        y: 24
+        width: 19
+        height: 19
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -142,29 +130,8 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: c84318d8d91518cc0800000000000000
-      internalID: -3710594880850807668
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: dialogbox_5
-      rect:
-        serializedVersion: 2
-        x: 7
-        y: 2
-        width: 8
-        height: 11
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 706fa56e8a7901610800000000000000
-      internalID: 1589937420136805895
+      spriteID: 51c8ddedf14e33c10800000000000000
+      internalID: 2032218682408406037
       vertices: []
       indices: 
       edges: []

@@ -18,8 +18,10 @@ public class FSM_Enemy : MonoBehaviour
     bool stunned = false;
     GameObject heart;
     public GameObject Generator;
+    GlobalGameManager GameManager;
     void Start()
     {
+        GameManager = GameObject.FindObjectOfType<GlobalGameManager>();
         // Define states and link actions when enter/exit/stay
         FSMState wander = new FSMState(); //off
         FSMState stunned = new FSMState(); //off
@@ -80,7 +82,7 @@ public class FSM_Enemy : MonoBehaviour
 
     public bool EnemiesAround()
     {   
-        if (playerVisible&&(target.transform.position - transform.position).magnitude <= range) return true;
+        if (GameManager.PlayerVisible&&!GameManager.IsInCunicolo&&(target.transform.position - transform.position).magnitude <= range) return true;
         
         return false;
     }
