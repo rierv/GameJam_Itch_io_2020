@@ -214,7 +214,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   broken: 0
-  linkedLight: {fileID: 0}
 --- !u!95 &8776395223838886821
 Animator:
   serializedVersion: 3
