@@ -196,5 +196,6 @@ public class PlayerController : MonoBehaviour
         startHeartCount = startHeartCount + 1;
         heartCount = startHeartCount;
         transform.position = startPosition;
+        txtHearts.text = heartCount.ToString();
     }
 }
