@@ -54,6 +54,12 @@ public class GlobalGameManager : MonoBehaviour
     public GameObject[] groundObjects;
 
     public GameObject enemyContainer;
+
+    public GameObject level2Container;
+    public GameObject groundTileMap2, walltileMap2, groundCunicoloTileMap2, wallCunicoloTileMap2;
+    public GameObject groundLights2, cunicoloLights2;
+    public GameObject[] groundObjects2;
+    public GameObject enemyContainer2;
     
     [SerializeField]
     private GameObject selectedInteractableObj;
@@ -74,9 +80,6 @@ public class GlobalGameManager : MonoBehaviour
         }
         else
         {
-            //Necessario? Dipende come gestiamo livelli differenti
-            //DontDestroyOnLoad(gameObject);
-
             player = GameObject.FindWithTag("Player");
             
             instance = this;
@@ -96,6 +99,12 @@ public class GlobalGameManager : MonoBehaviour
             groundCunicoloTileMap.SetActive(false);
             wallCunicoloTileMap.SetActive(false);
             cunicoloLights.SetActive(false);
+            
+            //SET ENEMY TARGET
+            foreach (Transform child in enemyContainer.transform)
+            {
+                child.gameObject.GetComponentInChildren<FSM_Enemy>().target = player;
+            }
         }
     }
 
@@ -212,5 +221,10 @@ public class GlobalGameManager : MonoBehaviour
             InteractMirror();
         }
 
+    }
+
+    public void GoToLevel2()
+    {
+        
     }
 }
