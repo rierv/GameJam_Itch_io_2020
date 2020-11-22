@@ -18,9 +18,13 @@ public class PlayerController : MonoBehaviour
     bool isAiming = false;
     float heartRadius = .6f;
     int heartCount = 1;
+    public int startHeartCount = 1;
+    Vector3 startPosition;
     // Start is called before the first frame update
     void Awake()
     {
+        startPosition = transform.position;
+        startHeartCount = heartCount;
         rb2d = GetComponent<Rigidbody2D>();
         playerAnimator = GetComponent<Animator>();
         lastAnimationTriggered = "idle";
@@ -40,7 +44,7 @@ public class PlayerController : MonoBehaviour
         }
         if (isAiming)
         {
-            if (spawnedHeart.GetComponent<Heart>().enemy == null) Aim();
+            if (spawnedHeart && spawnedHeart.GetComponent<Heart>().enemy == null) Aim();
             else isAiming = false;
 
         }
@@ -154,11 +158,30 @@ public class PlayerController : MonoBehaviour
             Destroy(collision.gameObject);
             heartCount++;
         }
+        if (collision.gameObject.tag == "Enemy")
+        {
+            RestartLevel();
+        }
     }
 
     private void NotifyGGMBotolaInteraction()
     {
         //Questo metodo viene chiamato alla fine dell'animazione "EnterBotola"
         GlobalGameManager.instance.InteractBotola();
+    }
+    void RestartLevel()
+    {
+        
+        foreach (Heart h in FindObjectsOfType<Heart>())
+        {
+            Destroy(h.gameObject);
+        }
+        foreach (EnemyController ep in FindObjectsOfType<EnemyController>())
+        {
+            ep.gameObject.transform.localPosition = Vector3.zero;
+        }
+        startHeartCount = startHeartCount + 1;
+        heartCount = startHeartCount;
+        transform.position = startPosition;
     }
 }
