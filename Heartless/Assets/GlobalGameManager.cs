@@ -1,5 +1,6 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
+using UnityEditor.Experimental.GraphView;
 using UnityEngine;
 using UnityEngine.Experimental.Rendering.Universal;
 using UnityEngine.Tilemaps;
@@ -43,6 +44,8 @@ public class GlobalGameManager : MonoBehaviour
     public GameObject globalLight;
 
     public GameObject[] groundObjects;
+
+    public GameObject enemyContainer;
     
     [SerializeField]
     private GameObject selectedInteractableObj;
@@ -110,6 +113,15 @@ public class GlobalGameManager : MonoBehaviour
         {
             go.SetActive(false);
         }
+
+        foreach (Transform child in enemyContainer.transform)
+        {
+            child.gameObject.layer = LayerMask.NameToLayer("noCollision"); //NO COLLISION
+            foreach (Transform child2 in child.transform)
+            {
+                child2.gameObject.layer = LayerMask.NameToLayer("noCollision"); //NO COLLISION
+            }
+        }
         groundCunicoloTileMap.SetActive(true);
         wallCunicoloTileMap.SetActive(true);
         wallTileMap.GetComponent<TilemapCollider2D>().enabled = false;
@@ -124,6 +136,14 @@ public class GlobalGameManager : MonoBehaviour
         foreach (var go in groundObjects)
         {
             go.SetActive(true);
+        }
+        foreach (Transform child in enemyContainer.transform)
+        {
+            child.gameObject.layer = LayerMask.NameToLayer("Enemy"); 
+            foreach (Transform child2 in child.transform)
+            {
+                child2.gameObject.layer = LayerMask.NameToLayer("Enemy");
+            }
         }
         groundCunicoloTileMap.SetActive(false);
         wallCunicoloTileMap.SetActive(false);

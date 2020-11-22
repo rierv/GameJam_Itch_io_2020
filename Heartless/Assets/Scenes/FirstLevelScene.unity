@@ -27040,6 +27040,11 @@ PrefabInstance:
       propertyPath: groundObjects.Array.data[0]
       value: 
       objectReference: {fileID: 1879277072}
+    - target: {fileID: 6843053647904315268, guid: 5aff41ee1e4ba3a4cb301196d1819121,
+        type: 3}
+      propertyPath: enemyContainer
+      value: 
+      objectReference: {fileID: 1387749867}
     - target: {fileID: 6843053647904315269, guid: 5aff41ee1e4ba3a4cb301196d1819121,
         type: 3}
       propertyPath: m_Name
