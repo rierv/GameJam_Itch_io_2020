@@ -1,5 +1,6 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
+using UnityEditor.Experimental.GraphView;
 using UnityEngine;
 using UnityEngine.Experimental.Rendering.Universal;
 using UnityEngine.Tilemaps;
@@ -25,6 +26,14 @@ public class GlobalGameManager : MonoBehaviour
         set => isInCunicolo = value;
     }
 
+    private bool wasInCunicolo;
+
+    public bool WasInCunicolo
+    {
+        get => wasInCunicolo;
+        set => wasInCunicolo = value;
+    }
+
     public bool PlayerVisible
     {
         get => playerVisible;
@@ -43,6 +52,14 @@ public class GlobalGameManager : MonoBehaviour
     public GameObject globalLight;
 
     public GameObject[] groundObjects;
+
+    public GameObject enemyContainer;
+
+    public GameObject level2Container;
+    public GameObject groundTileMap2, walltileMap2, groundCunicoloTileMap2, wallCunicoloTileMap2;
+    public GameObject groundLights2, cunicoloLights2;
+    public GameObject[] groundObjects2;
+    public GameObject enemyContainer2;
     
     [SerializeField]
     private GameObject selectedInteractableObj;
@@ -63,13 +80,11 @@ public class GlobalGameManager : MonoBehaviour
         }
         else
         {
-            //Necessario? Dipende come gestiamo livelli differenti
-            //DontDestroyOnLoad(gameObject);
-
             player = GameObject.FindWithTag("Player");
             
             instance = this;
             IsInCunicolo = false;
+            wasInCunicolo = false;
             playerInMirror = false;
             playerVisible = true;
 
@@ -84,6 +99,12 @@ public class GlobalGameManager : MonoBehaviour
             groundCunicoloTileMap.SetActive(false);
             wallCunicoloTileMap.SetActive(false);
             cunicoloLights.SetActive(false);
+            
+            //SET ENEMY TARGET
+            foreach (Transform child in enemyContainer.transform)
+            {
+                child.gameObject.GetComponentInChildren<FSM_Enemy>().target = player;
+            }
         }
     }
 
@@ -91,7 +112,7 @@ public class GlobalGameManager : MonoBehaviour
     void Update()
     {
         //TODO CHANGE THIS TO INTERACTION KEY
-        if (Input.GetKeyDown(KeyCode.P))
+        if (Input.GetKeyDown(KeyCode.Space))
         {
             if (selectedInteractableObj)
             {
@@ -110,6 +131,17 @@ public class GlobalGameManager : MonoBehaviour
         {
             go.SetActive(false);
         }
+
+        foreach (Transform child in enemyContainer.transform)
+        {
+            child.gameObject.layer = LayerMask.NameToLayer("noCollision"); //NO COLLISION
+            child.gameObject.GetComponentInChildren<SpriteRenderer>().sortingLayerID =
+                SortingLayer.NameToID("NemiciWhenInCunicolo");
+            foreach (Transform child2 in child.transform)
+            {
+                child2.gameObject.layer = LayerMask.NameToLayer("noCollision"); //NO COLLISION
+            }
+        }
         groundCunicoloTileMap.SetActive(true);
         wallCunicoloTileMap.SetActive(true);
         wallTileMap.GetComponent<TilemapCollider2D>().enabled = false;
@@ -125,6 +157,16 @@ public class GlobalGameManager : MonoBehaviour
         {
             go.SetActive(true);
         }
+        foreach (Transform child in enemyContainer.transform)
+        {
+            child.gameObject.layer = LayerMask.NameToLayer("Enemy"); 
+            child.gameObject.GetComponentInChildren<SpriteRenderer>().sortingLayerID =
+                SortingLayer.NameToID("Player");
+            foreach (Transform child2 in child.transform)
+            {
+                child2.gameObject.layer = LayerMask.NameToLayer("Enemy");
+            }
+        }
         groundCunicoloTileMap.SetActive(false);
         wallCunicoloTileMap.SetActive(false);
         wallTileMap.GetComponent<TilemapCollider2D>().enabled = true;
@@ -134,7 +176,7 @@ public class GlobalGameManager : MonoBehaviour
     {
         if (selectedInteractableObj)
         {
-            if (IsInCunicolo)
+            if (WasInCunicolo)
             {
                 ExitCunicolo();
             }
@@ -179,5 +221,10 @@ public class GlobalGameManager : MonoBehaviour
             InteractMirror();
         }
 
+    }
+
+    public void GoToLevel2()
+    {
+        
     }
 }

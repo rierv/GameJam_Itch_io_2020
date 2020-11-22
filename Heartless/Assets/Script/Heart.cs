@@ -50,7 +50,7 @@ public class Heart : MonoBehaviour
         if (collision.gameObject.tag == "Enemy")
         {
             gameObject.layer = 11;
-            collision.gameObject.GetComponentInChildren<EnemyController>().stunned=true;
+            collision.gameObject.GetComponentInChildren<EnemyController>().SetStunned(true);
             enemy = collision.gameObject;
         }
     }

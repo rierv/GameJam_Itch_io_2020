@@ -1,9 +1,10 @@
 ﻿using System;
 using System.Collections;
 using System.Collections.Generic;
+using TMPro;
 using UnityEngine;
 using UnityEngine.InputSystem;
-
+using UnityEngine.UI;
 
 public class PlayerController : MonoBehaviour
 {
@@ -18,12 +19,21 @@ public class PlayerController : MonoBehaviour
     bool isAiming = false;
     float heartRadius = .6f;
     int heartCount = 1;
+    public int startHeartCount = 1;
+    Vector3 startPosition;
+    GlobalGameManager GameManager;
+    Text txtHearts;
     // Start is called before the first frame update
     void Awake()
     {
+        txtHearts = GetComponentInChildren<Text>();
+        GameManager = GameObject.FindObjectOfType<GlobalGameManager>();
+        startPosition = transform.position;
+        startHeartCount = heartCount;
         rb2d = GetComponent<Rigidbody2D>();
         playerAnimator = GetComponent<Animator>();
         lastAnimationTriggered = "idle";
+        txtHearts.text = heartCount.ToString();
     }
 
     // Update is called once per frame
@@ -37,10 +47,11 @@ public class PlayerController : MonoBehaviour
             isAiming = true;
             CreateHeart();
             heartCount--;
+            txtHearts.text = heartCount.ToString();
         }
         if (isAiming)
         {
-            if (spawnedHeart.GetComponent<Heart>().enemy == null) Aim();
+            if (spawnedHeart && spawnedHeart.GetComponent<Heart>().enemy == null) Aim();
             else isAiming = false;
 
         }
@@ -48,6 +59,7 @@ public class PlayerController : MonoBehaviour
         {
             isAiming = false;
             heartCount++;
+            txtHearts.text = heartCount.ToString();
             Destroy(spawnedHeart);
         }
         if (isAiming && Input.GetMouseButtonDown(1))
@@ -153,6 +165,13 @@ public class PlayerController : MonoBehaviour
         {
             Destroy(collision.gameObject);
             heartCount++;
+            txtHearts.text = heartCount.ToString();
+        }
+        if (collision.gameObject.tag == "Enemy")
+        {
+
+            if(!collision.gameObject.GetComponent<EnemyController>().stunned&& GameManager.PlayerVisible && !GameManager.IsInCunicolo)
+                RestartLevel();
         }
     }
 
@@ -160,5 +179,23 @@ public class PlayerController : MonoBehaviour
     {
         //Questo metodo viene chiamato alla fine dell'animazione "EnterBotola"
         GlobalGameManager.instance.InteractBotola();
+    }
+    void RestartLevel()
+    {
+        
+        foreach (Heart h in FindObjectsOfType<Heart>())
+        {
+            Destroy(h.gameObject);
+        }
+        foreach (EnemyController ep in FindObjectsOfType<EnemyController>())
+        {
+            ep.gameObject.transform.localPosition = Vector3.zero;
+            ep.SetStunned(false);
+            ep.gameObject.GetComponent<Animator>().SetTrigger("idle");
+        }
+        startHeartCount = startHeartCount + 1;
+        heartCount = startHeartCount;
+        transform.position = startPosition;
+        txtHearts.text = heartCount.ToString();
     }
 }
