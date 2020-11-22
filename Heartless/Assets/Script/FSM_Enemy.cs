@@ -3,7 +3,7 @@ using System.Collections;
 using System.Collections.Generic;
 public class FSM_Enemy : MonoBehaviour
 {
-
+    public bool playerVisible = true;
     [Range(0f, 20f)] public float range = 5f;
     public float reactionTime = 3f;
     public GameObject aimHelper;
@@ -17,13 +17,14 @@ public class FSM_Enemy : MonoBehaviour
     int curr = 0;
     bool stunned = false;
     GameObject heart;
+    public GameObject Generator;
     void Start()
     {
         // Define states and link actions when enter/exit/stay
         FSMState wander = new FSMState(); //off
         FSMState stunned = new FSMState(); //off
-
         FSMState seek = new FSMState(); //alarm
+
         wander.enterActions.Add(StartWander);
         stunned.stayActions.Add(BeStunned);
         wander.stayActions.Add(WanderAround);
@@ -34,6 +35,7 @@ public class FSM_Enemy : MonoBehaviour
         FSMTransition startStunned = new FSMTransition(GetHit);
         FSMTransition stopStunned = new FSMTransition(GetFree);
         FSMTransition returnWander = new FSMTransition(NoEnemiesAround);
+        
 
         // Link states with transitions
         wander.AddTransition(startSeek, seek);
@@ -41,6 +43,21 @@ public class FSM_Enemy : MonoBehaviour
         seek.AddTransition(startStunned, stunned);
         seek.AddTransition(returnWander, wander);
         stunned.AddTransition(stopStunned, wander);
+
+        if (Generator != null)
+        {
+
+            FSMState fixGenerator = new FSMState(); //alarm
+
+            fixGenerator.stayActions.Add(Fix);
+
+            FSMTransition goFix = new FSMTransition(isGeneratorBroken);
+            FSMTransition endFixing = new FSMTransition(isGeneratorFixed);
+
+            wander.AddTransition(goFix, fixGenerator);
+            fixGenerator.AddTransition(startSeek, seek);
+            fixGenerator.AddTransition(endFixing, wander);
+        }
         // Setup a FSA at initial state
         fsm = new FSM(wander);
 
@@ -62,8 +79,8 @@ public class FSM_Enemy : MonoBehaviour
     // CONDITIONS
 
     public bool EnemiesAround()
-    {
-        if ((target.transform.position - transform.position).magnitude <= range) return true;
+    {   
+        if (playerVisible&&(target.transform.position - transform.position).magnitude <= range) return true;
         
         return false;
     }
@@ -77,6 +94,16 @@ public class FSM_Enemy : MonoBehaviour
     {
         if(heart == null) stunned=false;
         return heart==null;
+    }
+
+    public bool isGeneratorBroken()
+    {
+        return Generator.GetComponent<Generator>().broken;
+    }
+
+    public bool isGeneratorFixed()
+    {
+        return !Generator.GetComponent<Generator>().broken;
     }
 
     public bool NoEnemiesAround()
@@ -107,6 +134,11 @@ public class FSM_Enemy : MonoBehaviour
     public void BeStunned()
     {
         aimHelper.transform.position = transform.position;
+    }
+
+    public void Fix()
+    {
+        aimHelper.transform.position = Generator.transform.position;
     }
 
     public void RingAlarm()
