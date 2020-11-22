@@ -248,7 +248,7 @@ public class GlobalGameManager : MonoBehaviour
         wasInCunicolo = false;
         playerInMirror = false;
         playerVisible = true;
-        
+        player.GetComponent<PlayerController>().RestartLevel();
         if (currentFloor == 1)
         {
             level1Container.SetActive(false);

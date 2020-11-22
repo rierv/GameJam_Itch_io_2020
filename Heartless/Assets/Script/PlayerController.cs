@@ -171,7 +171,11 @@ public class PlayerController : MonoBehaviour
         {
 
             if(!collision.gameObject.GetComponent<EnemyController>().stunned&& GameManager.PlayerVisible && !GameManager.IsInCunicolo)
+            {
+                transform.position = startPosition;
+                startHeartCount = startHeartCount + 1;
                 RestartLevel();
+            }
         }
     }
 
@@ -180,7 +184,7 @@ public class PlayerController : MonoBehaviour
         //Questo metodo viene chiamato alla fine dell'animazione "EnterBotola"
         GlobalGameManager.instance.InteractBotola();
     }
-    void RestartLevel()
+    public void RestartLevel()
     {
         
         foreach (Heart h in FindObjectsOfType<Heart>())
@@ -193,9 +197,7 @@ public class PlayerController : MonoBehaviour
             ep.SetStunned(false);
             ep.gameObject.GetComponent<Animator>().SetTrigger("idle");
         }
-        startHeartCount = startHeartCount + 1;
         heartCount = startHeartCount;
-        transform.position = startPosition;
         txtHearts.text = heartCount.ToString();
     }
 }
