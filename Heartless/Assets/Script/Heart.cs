@@ -9,7 +9,7 @@ public class Heart : MonoBehaviour
     Vector3 startingScale;
     float counter = 0;
     float heartAnimationSpeed = 1;
-    GameObject enemy=null;
+    public GameObject enemy=null;
     // Start is called before the first frame update
     void Start()
     {
@@ -50,7 +50,7 @@ public class Heart : MonoBehaviour
         if (collision.gameObject.tag == "Enemy")
         {
             gameObject.layer = 11;
-            gameObject.GetComponentInChildren<EnemyController>().stunned=true;
+            collision.gameObject.GetComponentInChildren<EnemyController>().stunned=true;
             enemy = collision.gameObject;
         }
     }
