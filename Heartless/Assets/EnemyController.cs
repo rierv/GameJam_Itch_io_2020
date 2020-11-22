@@ -1,4 +1,5 @@
-﻿using System.Collections;
+﻿using System;
+using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
@@ -13,27 +14,30 @@ public class EnemyController : MonoBehaviour
     private string lastAnimationTriggered;
     bool isAiming = false;
     public bool stunned = false;
+
+    private Vector3 lastPosition;
+    
     // Start is called before the first frame update
     void Awake()
     {
         rb2d = GetComponent<Rigidbody2D>();
         enemyAnimator = GetComponent<Animator>();
         lastAnimationTriggered = "idle";
+        lastPosition = transform.parent.transform.position;
     }
 
     // Update is called once per frame
-    void Update()
+    void FixedUpdate()
     {
         //ANIMATION 
-        SetAnimation(inputMovementVector);
-       
+        Vector3 movementVector = (transform.position - lastPosition).normalized;
+        SetAnimation(movementVector);
+        lastPosition = transform.position;
     }
-
-
-
+    
     private void SetAnimation(Vector2 input)
     {
-      
+        Debug.Log(input.x + " " + input.y);
         if (input == Vector2.zero)
         {
             //EDIT HERE IF WE WANT A DIFFERENT IDLE ANIMATION BASED ON LAST MOVEMENT DIRECTION
