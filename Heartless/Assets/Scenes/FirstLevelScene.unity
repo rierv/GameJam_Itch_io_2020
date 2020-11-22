@@ -18388,7 +18388,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!4 &1030070986
 Transform:
   m_ObjectHideFlags: 0
@@ -19978,7 +19978,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!4 &1057004211
 Transform:
   m_ObjectHideFlags: 0
@@ -21977,6 +21977,7 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 4
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+<<<<<<< HEAD
 --- !u!1001 &1404527315
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -22051,6 +22052,8 @@ PrefabInstance:
       objectReference: {fileID: 1801634438}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: e429dfab755b08f4499bc843096a615c, type: 3}
+=======
+>>>>>>> parent of 307cfac... Merge branch 'master' of https://github.com/rierv/GameJam_Itch_io_2020
 --- !u!1001 &1629045484
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -22317,12 +22320,6 @@ Transform:
   m_CorrespondingSourceObject: {fileID: 7627105753028816589, guid: 51275b6edef54bc4b96aee124137e34e,
     type: 3}
   m_PrefabInstance: {fileID: 1778243320}
-  m_PrefabAsset: {fileID: 0}
---- !u!1 &1801634438 stripped
-GameObject:
-  m_CorrespondingSourceObject: {fileID: 7627105753028816590, guid: 7d905eccb2e432740b7569b675b50599,
-    type: 3}
-  m_PrefabInstance: {fileID: 7627105752222106615}
   m_PrefabAsset: {fileID: 0}
 --- !u!4 &1801634441 stripped
 Transform:
