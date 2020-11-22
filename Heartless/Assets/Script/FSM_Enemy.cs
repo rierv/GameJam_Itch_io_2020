@@ -128,7 +128,7 @@ public class FSM_Enemy : MonoBehaviour
 
     public void WanderAround()
     {
-        if ((int)Mathf.Ceil((Time.realtimeSinceStartup - ringStart) / switchTime) % 2 == 0)
+        if (Vector3.Distance(transform.position,aimHelper.transform.position)<1)
         {
             aimHelper.transform.position = listOfSpots[curr];
             curr++;
