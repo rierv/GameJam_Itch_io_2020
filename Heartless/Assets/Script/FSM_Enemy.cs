@@ -88,7 +88,15 @@ public class FSM_Enemy : MonoBehaviour
 
     public bool EnemiesAround()
     {
-        if (GameManager.PlayerVisible && !GameManager.IsInCunicolo && (target.transform.position - transform.position).magnitude <= range)
+        int layerMask = ~LayerMask.GetMask("Nemico");
+
+        Debug.DrawRay(transform.position, target.transform.position - transform.position, Color.red); //debug ray to see the ray
+        Vector3 tmp = target.transform.position - transform.position;
+        Vector2 dir = new Vector2(tmp.x, tmp.y);
+        dir = dir.normalized;
+        RaycastHit2D hit = Physics2D.Raycast(transform.position+new Vector3(dir.x, dir.y, 0)*2, target.transform.position - transform.position, Vector2.Distance(target.transform.position, transform.position), layerMask);
+        Debug.Log(hit.collider.gameObject.name);
+        if (GameManager.PlayerVisible && !GameManager.IsInCunicolo && hit.collider&& hit.collider.gameObject.tag=="Player")//(target.transform.position - transform.position).magnitude <= range)
         {
             return true;
         }
