@@ -19,8 +19,13 @@ public class FSM_Enemy : MonoBehaviour
     GameObject heart;
     public GameObject Generator;
     GlobalGameManager GameManager;
+    public float seekSpeed=2;
+    float stadardSpeed;
     void Start()
     {
+
+        stadardSpeed = GetComponent<Pathfinding.AIPath>().maxSpeed;
+
         GameManager = GameObject.FindObjectOfType<GlobalGameManager>();
         // Define states and link actions when enter/exit/stay
         FSMState wander = new FSMState(); //off
@@ -30,6 +35,7 @@ public class FSM_Enemy : MonoBehaviour
         wander.enterActions.Add(StartWander);
         stunned.stayActions.Add(BeStunned);
         wander.stayActions.Add(WanderAround);
+        seek.enterActions.Add(Boost);
         seek.stayActions.Add(RingAlarm);
 
         // Define transitions
@@ -81,8 +87,11 @@ public class FSM_Enemy : MonoBehaviour
     // CONDITIONS
 
     public bool EnemiesAround()
-    {   
-        if (GameManager.PlayerVisible&&!GameManager.IsInCunicolo&&(target.transform.position - transform.position).magnitude <= range) return true;
+    {
+        if (GameManager.PlayerVisible && !GameManager.IsInCunicolo && (target.transform.position - transform.position).magnitude <= range)
+        {
+            return true;
+        }
         
         return false;
     }
@@ -114,13 +123,14 @@ public class FSM_Enemy : MonoBehaviour
 
     public bool NoEnemiesAround()
     {
+
         return !EnemiesAround();
     }
 
     // ACTIONS
     public void StartWander()
     {
-        Debug.Log("Starto");
+        GetComponent<Pathfinding.AIPath>().maxSpeed = stadardSpeed;
         ringStart = Time.realtimeSinceStartup;
         curr = 0;
     }
@@ -145,6 +155,12 @@ public class FSM_Enemy : MonoBehaviour
     public void Fix()
     {
         aimHelper.transform.position = Generator.transform.position;
+    }
+
+    public void Boost()
+    {
+        GetComponent<Pathfinding.AIPath>().maxSpeed = stadardSpeed*seekSpeed;
+        
     }
 
     public void RingAlarm()

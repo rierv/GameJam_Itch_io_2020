@@ -176,6 +176,7 @@ MonoBehaviour:
   - {x: 2, y: 2}
   - {x: -2, y: 0}
   Generator: {fileID: 0}
+  seekSpeed: 1.5
 --- !u!114 &3471935749820772021
 MonoBehaviour:
   m_ObjectHideFlags: 0
