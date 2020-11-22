@@ -41,6 +41,8 @@ public class GlobalGameManager : MonoBehaviour
     public GameObject groundLights, cunicoloLights;
 
     public GameObject globalLight;
+
+    public GameObject[] groundObjects;
     
     [SerializeField]
     private GameObject selectedInteractableObj;
@@ -74,6 +76,10 @@ public class GlobalGameManager : MonoBehaviour
             groundTileMap.SetActive(true);
             wallTileMap.SetActive(true);
             groundLights.SetActive(true);
+            foreach (var go in groundObjects)
+            {
+                go.SetActive(true);
+            }
             
             groundCunicoloTileMap.SetActive(false);
             wallCunicoloTileMap.SetActive(false);
@@ -100,6 +106,10 @@ public class GlobalGameManager : MonoBehaviour
         globalLight.GetComponent<Light2D>().intensity = 0.25f;
         cunicoloLights.SetActive(true);
         groundLights.SetActive(false);
+        foreach (var go in groundObjects)
+        {
+            go.SetActive(false);
+        }
         groundCunicoloTileMap.SetActive(true);
         wallCunicoloTileMap.SetActive(true);
         wallTileMap.GetComponent<TilemapCollider2D>().enabled = false;
@@ -111,6 +121,10 @@ public class GlobalGameManager : MonoBehaviour
         globalLight.GetComponent<Light2D>().intensity = 0.5f;
         cunicoloLights.SetActive(false);
         groundLights.SetActive(true);
+        foreach (var go in groundObjects)
+        {
+            go.SetActive(true);
+        }
         groundCunicoloTileMap.SetActive(false);
         wallCunicoloTileMap.SetActive(false);
         wallTileMap.GetComponent<TilemapCollider2D>().enabled = true;
