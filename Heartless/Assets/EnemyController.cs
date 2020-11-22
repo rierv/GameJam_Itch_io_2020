@@ -37,7 +37,6 @@ public class EnemyController : MonoBehaviour
     
     private void SetAnimation(Vector2 input)
     {
-        Debug.Log(input.x + " " + input.y);
         if (input == Vector2.zero)
         {
             //EDIT HERE IF WE WANT A DIFFERENT IDLE ANIMATION BASED ON LAST MOVEMENT DIRECTION
