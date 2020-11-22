@@ -94,7 +94,11 @@ public class FSM_Enemy : MonoBehaviour
 
     public bool GetFree()
     {
-        if(heart == null) stunned=false;
+        if (heart == null)
+        {
+            stunned = false;
+            GetComponentInChildren<EnemyController>().stunned = false;
+        }
         return heart==null;
     }
 
