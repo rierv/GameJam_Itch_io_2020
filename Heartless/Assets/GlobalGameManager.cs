@@ -69,7 +69,8 @@ public class GlobalGameManager : MonoBehaviour
             instance = this;
             IsInCunicolo = false;
             playerInMirror = false;
-            
+            playerVisible = true;
+
             groundTileMap.SetActive(true);
             wallTileMap.SetActive(true);
             groundLights.SetActive(true);
