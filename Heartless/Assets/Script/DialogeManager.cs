@@ -7,10 +7,11 @@ using UnityEngine.UI;
 public class DialogeManager : MonoBehaviour
 {
 
-    public Text npcName;
-    public Text dialogueText;
-    public Image freccia;
+ 
     public GameObject DialogueBox;
+    private GameObject boxIstance;
+
+
 
     private Queue<string> sentences;
 
@@ -18,11 +19,14 @@ public class DialogeManager : MonoBehaviour
     void Start()
     {
         sentences = new Queue<string>();
+        
+
+      
     }
 
     void Update()
     {
-        if (Input.GetKeyDown(KeyCode.A))
+        if (Input.GetKeyDown(KeyCode.Z))
         {
             DisplayNextSentence();
         }
@@ -30,10 +34,14 @@ public class DialogeManager : MonoBehaviour
 
     public void StartDialogue (Dialogue dialogue)
     {
-        Instantiate(DialogueBox, new Vector2(0, 0), Quaternion.identity);
-        Debug.Log("Starting con  with" + dialogue.NPCname);
 
-        npcName.text = dialogue.NPCname;
+
+        Time.timeScale = 0;
+        boxIstance = Instantiate(DialogueBox, new Vector2(0, 0), Quaternion.identity);
+        
+        Debug.Log("Starting con  with " + dialogue.NPCname);
+
+        boxIstance.GetComponent<Transform>().GetChild(0).GetChild(4).GetComponent<Text>().text = dialogue.NPCname;
 
         sentences.Clear();
 
@@ -49,13 +57,13 @@ public class DialogeManager : MonoBehaviour
     {
         if(sentences.Count == 0)
         {
-            freccia.enabled = false;
+            boxIstance.GetComponent<Transform>().GetChild(0).GetChild(1).GetComponent<Image>().enabled = false;
             EndDialogue();
             return;
         }
 
         string sentence = sentences.Dequeue();
-        dialogueText.text = sentence;
+        boxIstance.GetComponent<Transform>().GetChild(0).GetChild(3).GetComponent<Text>().text = sentence;
 
         Debug.Log(sentence);
 
@@ -63,7 +71,8 @@ public class DialogeManager : MonoBehaviour
 
     void EndDialogue()
     {
-        //Destroy(gameObject);
+        Destroy(boxIstance);
+        Time.timeScale = 1;
         Debug.Log("End");    
     }
 }
