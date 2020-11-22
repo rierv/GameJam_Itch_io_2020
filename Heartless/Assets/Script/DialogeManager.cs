@@ -10,10 +10,17 @@ public class DialogeManager : MonoBehaviour
  
     public GameObject DialogueBox;
     private GameObject boxIstance;
+    public GameObject NPCBlue;
+    public GameObject NPCVerde;
+    public GameObject NPCRosa;
+
+    private bool nextButton = true;
 
 
 
     private Queue<string> sentences;
+
+    bool ready = false;
 
     // Start is called before the first frame update
     void Start()
@@ -28,7 +35,12 @@ public class DialogeManager : MonoBehaviour
     {
         if (Input.GetKeyDown(KeyCode.Z))
         {
-            DisplayNextSentence();
+            if (ready) DisplayNextSentence();
+            else
+            {
+                
+                ready = true;
+            }
         }
     }
 
@@ -57,21 +69,27 @@ public class DialogeManager : MonoBehaviour
     {
         if(sentences.Count == 0)
         {
-            boxIstance.GetComponent<Transform>().GetChild(0).GetChild(1).GetComponent<Image>().enabled = false;
+
             EndDialogue();
             return;
-        }
+        } 
+        
 
-        string sentence = sentences.Dequeue();
-        boxIstance.GetComponent<Transform>().GetChild(0).GetChild(3).GetComponent<Text>().text = sentence;
+            string sentence = sentences.Dequeue();
+            boxIstance.GetComponent<Transform>().GetChild(0).GetChild(3).GetComponent<Text>().text = sentence;
 
-        Debug.Log(sentence);
 
     }
+
+
 
     void EndDialogue()
     {
         Destroy(boxIstance);
+        //sentences.Enqueue("CAZZO FAI ANCORA QUI");
+        //sentences.Clear();
+     
+        NPCBlue.GetComponent<AttivatoreBotole>().EnableCunicolo();
         Time.timeScale = 1;
         Debug.Log("End");    
     }

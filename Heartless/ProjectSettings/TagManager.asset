@@ -6,6 +6,7 @@ TagManager:
   tags:
   - Heart
   - Enemy
+  - NPC
   layers:
   - Default
   - TransparentFX
@@ -22,7 +23,7 @@ TagManager:
   - Enemy
   - cunicolo
   - floor
-  - noCollision
+  - NPC
   - 
   - 
   - 
@@ -45,9 +46,6 @@ TagManager:
     locked: 0
   - name: Walls
     uniqueID: 1387880171
-    locked: 0
-  - name: NemiciWhenInCunicolo
-    uniqueID: 4208422829
     locked: 0
   - name: CunicoliGround
     uniqueID: 1031885269
