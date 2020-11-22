@@ -15,6 +15,15 @@ public class EnemyController : MonoBehaviour
     bool isAiming = false;
     public bool stunned = false;
 
+    public void SetStunned(bool value)
+    {
+        if (value && !stunned)
+        {
+            enemyAnimator.SetTrigger("hitted");
+        }
+        stunned = value;
+    }
+    
     private Vector3 lastPosition;
     
     // Start is called before the first frame update
@@ -37,17 +46,25 @@ public class EnemyController : MonoBehaviour
     
     private void SetAnimation(Vector2 input)
     {
+        if (stunned)
+        {
+            return;
+        }
+        
+        
         if (input == Vector2.zero)
         {
             //EDIT HERE IF WE WANT A DIFFERENT IDLE ANIMATION BASED ON LAST MOVEMENT DIRECTION
             //IDLE
+            /*
             if(stunned&&lastAnimationTriggered != "hitted")
             {
                 Debug.Log("hittedf");
                 enemyAnimator.SetTrigger("hitted");
                 lastAnimationTriggered = "hitted";
             }
-            else if (!stunned&&lastAnimationTriggered != "idle")
+            */
+            if (!stunned&&lastAnimationTriggered != "idle")
             {
                 enemyAnimator.SetTrigger("idle");
                 lastAnimationTriggered = "idle";
