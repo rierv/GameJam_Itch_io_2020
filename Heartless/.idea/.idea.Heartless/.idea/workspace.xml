@@ -19,17 +19,26 @@
     <select />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="649535c8-ff69-40bb-9aa6-526f0d8bd267" name="Default Changelist" comment="Light change upon entering cunicolo">
-      <change afterPath="$PROJECT_DIR$/Assets/Prefab/GlobalGameManager.prefab" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Prefab/GlobalGameManager.prefab.meta" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/S_Mirror.cs" afterDir="false" />
+    <list default="true" id="649535c8-ff69-40bb-9aa6-526f0d8bd267" name="Default Changelist" comment="Botola very cool">
+      <change afterPath="$PROJECT_DIR$/Assets/Animation/Mirror.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Animation/Mirror/MirrorEmptyAnim.anim" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Animation/Mirror/MirrorEmptyAnim.anim.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Animation/Mirror/MirrorFullAnim.anim" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Animation/Mirror/MirrorFullAnim.anim.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Animation/Mirror/Mirror_AC.controller" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Animation/Mirror/Mirror_AC.controller.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Script/S_Mirror.cs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Script/S_Mirror.cs.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Sprites/mirrorsheet.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Sprites/mirrorsheet.png.meta" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/.idea.Heartless/.idea/contentModel.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.Heartless/.idea/contentModel.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/.idea.Heartless/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.Heartless/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Animation/Player/Player_EnterBotola.anim" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Animation/Player/Player_EnterBotola.anim" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/GlobalGameManager.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/GlobalGameManager.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Prefab/Mirror.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Prefab/Mirror.prefab" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/S_Mirror.cs" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/S_Mirror.cs.meta" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/Scenes/FirstLevelScene.unity" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scenes/FirstLevelScene.unity" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/Script/PlayerController.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Script/PlayerController.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Script/S_Grata.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Script/S_Grata.cs" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -44,7 +53,6 @@
     <setting file="file://$PROJECT_DIR$/Library/PackageCache/com.unity.render-pipelines.core@8.2.0/Runtime/Debugging/DebugManager.Actions.cs" root0="SKIP_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Script/I_Interactable.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="mock://D:/GitRepos/GameJam_Itch_io_2020/Heartless/Assets/Scenes/SaimonShitBox.unity" root0="SKIP_HIGHLIGHTING" />
-    <setting file="file://$PROJECT_DIR$/Assets/S_Mirror.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="mock://D:/GitRepos/GameJam_Itch_io_2020/Heartless/Assets/Script/S_Grata.cs" root0="SKIP_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/../../MaybeHR/2D Game Example/Library/PackageCache/com.unity.textmeshpro@1.3.0/Scripts/Runtime/TMP_InputField.cs" root0="SKIP_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/GlobalGameManager.cs" root0="FORCE_HIGHLIGHTING" />
@@ -60,8 +68,8 @@
         <option value="$PROJECT_DIR$/Assets/Script/ManagerCunicoli.cs" />
         <option value="$PROJECT_DIR$/Assets/S_Mirror.cs" />
         <option value="$PROJECT_DIR$/Assets/Script/S_Grata.cs" />
-        <option value="$PROJECT_DIR$/Assets/GlobalGameManager.cs" />
         <option value="$PROJECT_DIR$/Assets/Script/PlayerController.cs" />
+        <option value="$PROJECT_DIR$/Assets/GlobalGameManager.cs" />
       </list>
     </option>
   </component>
@@ -116,7 +124,7 @@
       <updated>1605905722909</updated>
       <workItem from="1605905799925" duration="235000" />
       <workItem from="1605949851046" duration="3620000" />
-      <workItem from="1605988620359" duration="9223000" />
+      <workItem from="1605988620359" duration="10989000" />
     </task>
     <task id="LOCAL-00001" summary="Player animator controller (using ugly&amp;compressed spritesheet)">
       <created>1605958105565</created>
@@ -202,7 +210,14 @@
       <option name="project" value="LOCAL" />
       <updated>1606000706251</updated>
     </task>
-    <option name="localTasksCounter" value="13" />
+    <task id="LOCAL-00013" summary="Botola very cool">
+      <created>1606001886337</created>
+      <option name="number" value="00013" />
+      <option name="presentableId" value="LOCAL-00013" />
+      <option name="project" value="LOCAL" />
+      <updated>1606001886337</updated>
+    </task>
+    <option name="localTasksCounter" value="14" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -237,7 +252,8 @@
     <MESSAGE value="Animazione entrata/uscita botola più bella" />
     <MESSAGE value="GlobalGameManager" />
     <MESSAGE value="Light change upon entering cunicolo" />
-    <option name="LAST_COMMIT_MESSAGE" value="Light change upon entering cunicolo" />
+    <MESSAGE value="Botola very cool" />
+    <option name="LAST_COMMIT_MESSAGE" value="Botola very cool" />
   </component>
   <component name="WindowStateProjectService">
     <state x="694" y="327" key="#com.intellij.fileTypes.FileTypeChooser" timestamp="1605991971896">
@@ -260,11 +276,11 @@
       <screen x="0" y="0" width="1920" height="1050" />
     </state>
     <state x="753" y="235" key="RollbackChangesDialog/0.0.1920.1050/-1920.0.1920.1050@0.0.1920.1050" timestamp="1605988857323" />
-    <state x="552" y="258" key="Vcs.Push.Dialog.v2" timestamp="1605999144652">
+    <state x="552" y="258" key="Vcs.Push.Dialog.v2" timestamp="1606001898210">
       <screen x="0" y="0" width="1920" height="1050" />
     </state>
     <state x="-1368" y="258" key="Vcs.Push.Dialog.v2/0.0.1920.1050/-1920.0.1920.1050@-1920.0.1920.1050" timestamp="1605958113515" />
-    <state x="552" y="258" key="Vcs.Push.Dialog.v2/0.0.1920.1050/-1920.0.1920.1050@0.0.1920.1050" timestamp="1605999144652" />
+    <state x="552" y="258" key="Vcs.Push.Dialog.v2/0.0.1920.1050/-1920.0.1920.1050@0.0.1920.1050" timestamp="1606001898210" />
     <state x="777" y="439" key="com.intellij.openapi.vcs.update.UpdateOrStatusOptionsDialogupdate-v2" timestamp="1605993654996">
       <screen x="0" y="0" width="1920" height="1050" />
     </state>

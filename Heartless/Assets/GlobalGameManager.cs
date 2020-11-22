@@ -31,6 +31,8 @@ public class GlobalGameManager : MonoBehaviour
         set => playerVisible = value;
     }
 
+    private bool playerInMirror;
+
     [SerializeField] 
     private bool playerVisible;
 
@@ -40,6 +42,7 @@ public class GlobalGameManager : MonoBehaviour
 
     public GameObject globalLight;
     
+    [SerializeField]
     private GameObject selectedInteractableObj;
 
     public GameObject SelectedInteractableObj
@@ -65,6 +68,7 @@ public class GlobalGameManager : MonoBehaviour
             
             instance = this;
             IsInCunicolo = false;
+            playerInMirror = false;
             
             groundTileMap.SetActive(true);
             wallTileMap.SetActive(true);
@@ -130,6 +134,35 @@ public class GlobalGameManager : MonoBehaviour
 
     public void InteractMirror()
     {
-        
+        if (playerInMirror)
+        {
+            SelectedInteractableObj.GetComponent<Animator>().SetTrigger("exitMirror");
+            playerInMirror = false;
+            playerVisible = true;
+            player.SetActive(true);
+        }
+        else
+        {
+            SelectedInteractableObj.GetComponent<Animator>().SetTrigger("enterMirror");
+            playerInMirror = true;
+            playerVisible = false;
+            GameObject selectedMirror = selectedInteractableObj;
+            player.SetActive(false);
+            selectedInteractableObj = selectedMirror;
+            StartCoroutine(MirrorMaxTimeCoroutine());
+        }
+    }
+    
+    IEnumerator MirrorMaxTimeCoroutine()
+    {
+        //MIRROR MAX TIME = 5 SECONDI
+        float maxTime = 5f;
+        //yield on a new YieldInstruction that waits for 5 seconds.
+        yield return new WaitForSeconds(maxTime);
+        if (playerInMirror)
+        {
+            InteractMirror();
+        }
+
     }
 }

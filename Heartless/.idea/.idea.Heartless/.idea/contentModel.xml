@@ -209,7 +209,6 @@
         </e>
         <e p="EnemyController.cs" t="Include" />
         <e p="GlobalGameManager.cs" t="Include" />
-        <e p="S_Mirror.cs" t="Include" />
         <e p="Script" t="Include">
           <e p="DialogeManager.cs" t="Include" />
           <e p="Dialogue.cs" t="Include" />
@@ -221,8 +220,10 @@
           <e p="Heart.cs" t="Include" />
           <e p="I_Interactable.cs" t="Include" />
           <e p="ManagerCunicoli.cs" t="Include" />
+          <e p="MyCamera.cs" t="Include" />
           <e p="PlayerController.cs" t="Include" />
           <e p="S_Grata.cs" t="Include" />
+          <e p="S_Mirror.cs" t="Include" />
         </e>
         <e p="TextMesh Pro" t="Include">
           <e p="Examples &amp; Extras" t="Include">
