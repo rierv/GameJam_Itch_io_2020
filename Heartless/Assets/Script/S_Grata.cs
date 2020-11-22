@@ -18,6 +18,9 @@ public class S_Grata : MonoBehaviour, I_Interactable
 
     public void Interact()
     {
-        GlobalGameManager.instance.InteractBotola();
+        GlobalGameManager.instance.Player.GetComponent<PlayerController>().enabled = false;
+        GlobalGameManager.instance.Player.GetComponent<Animator>().SetTrigger("enterBotola");
+        //STARTING THIS ANIMATION WILL TRIGGER InteractBotola()    
+        //GlobalGameManager.instance.InteractBotola();
     }
 }

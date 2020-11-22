@@ -1,19 +1,44 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.Experimental.Rendering.Universal;
 using UnityEngine.Tilemaps;
 
 public class GlobalGameManager : MonoBehaviour
 {
 
     public static GlobalGameManager instance;
-    
+    private GameObject player;
+
+    public GameObject Player
+    {
+        get => player;
+        set => player = value;
+    }
+
     [SerializeField]
     private bool isInCunicolo;
+
+    public bool IsInCunicolo
+    {
+        get => isInCunicolo;
+        set => isInCunicolo = value;
+    }
+
+    public bool PlayerVisible
+    {
+        get => playerVisible;
+        set => playerVisible = value;
+    }
+
+    [SerializeField] 
+    private bool playerVisible;
 
     public GameObject groundTileMap, wallTileMap, groundCunicoloTileMap, wallCunicoloTileMap;
 
     public GameObject groundLights, cunicoloLights;
+
+    public GameObject globalLight;
     
     private GameObject selectedInteractableObj;
 
@@ -35,9 +60,11 @@ public class GlobalGameManager : MonoBehaviour
         {
             //Necessario? Dipende come gestiamo livelli differenti
             //DontDestroyOnLoad(gameObject);
+
+            player = GameObject.FindWithTag("Player");
             
             instance = this;
-            isInCunicolo = false;
+            IsInCunicolo = false;
             
             groundTileMap.SetActive(true);
             wallTileMap.SetActive(true);
@@ -64,8 +91,10 @@ public class GlobalGameManager : MonoBehaviour
     
     private void EnterCunicolo()
     {
-        isInCunicolo = true;
-        GameObject.FindWithTag("Player").GetComponent<Animator>().SetTrigger("enterBotola");
+        IsInCunicolo = true;
+        globalLight.GetComponent<Light2D>().intensity = 0.25f;
+        cunicoloLights.SetActive(true);
+        groundLights.SetActive(false);
         groundCunicoloTileMap.SetActive(true);
         wallCunicoloTileMap.SetActive(true);
         wallTileMap.GetComponent<TilemapCollider2D>().enabled = false;
@@ -73,8 +102,10 @@ public class GlobalGameManager : MonoBehaviour
 
     private void ExitCunicolo()
     {
-        isInCunicolo = false;
-        GameObject.FindWithTag("Player").GetComponent<Animator>().SetTrigger("enterBotola");
+        IsInCunicolo = false;
+        globalLight.GetComponent<Light2D>().intensity = 0.5f;
+        cunicoloLights.SetActive(false);
+        groundLights.SetActive(true);
         groundCunicoloTileMap.SetActive(false);
         wallCunicoloTileMap.SetActive(false);
         wallTileMap.GetComponent<TilemapCollider2D>().enabled = true;
@@ -84,7 +115,7 @@ public class GlobalGameManager : MonoBehaviour
     {
         if (selectedInteractableObj)
         {
-            if (isInCunicolo)
+            if (IsInCunicolo)
             {
                 ExitCunicolo();
             }
@@ -92,6 +123,13 @@ public class GlobalGameManager : MonoBehaviour
             {
                 EnterCunicolo();
             }
+
+            player.GetComponent<PlayerController>().enabled = true;
         }
+    }
+
+    public void InteractMirror()
+    {
+        
     }
 }
