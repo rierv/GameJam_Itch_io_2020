@@ -22,7 +22,7 @@ public class FSM_Enemy : MonoBehaviour
     public float seekSpeed=2;
     float stadardSpeed;
     public float EnemyLengthofSight = 8;
-    void Start()
+    void Awake()
     {
         if (target == null) target = FindObjectOfType<PlayerController>().gameObject;
         stadardSpeed = GetComponent<Pathfinding.AIPath>().maxSpeed;
@@ -147,7 +147,7 @@ public class FSM_Enemy : MonoBehaviour
 
     public void WanderAround()
     {
-        if (Vector3.Distance(transform.position,aimHelper.transform.position)<1)
+        if (listOfSpots.Count > 0 && Vector3.Distance(transform.position,aimHelper.transform.position)<1)
         {
             aimHelper.transform.position = listOfSpots[curr];
             curr++;

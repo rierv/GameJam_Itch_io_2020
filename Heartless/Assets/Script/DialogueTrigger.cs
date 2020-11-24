@@ -43,16 +43,16 @@ public class DialogueTrigger : MonoBehaviour
     
     private void OnTriggerStay2D(Collider2D col)
     {
-        Debug.Log("coll");
+        //Debug.Log("coll");
         if(col.tag == "Player")
         {
-            Debug.Log("!!!!!!qqqqqqqqqqq");
+            //Debug.Log("!!!!!!qqqqqqqqqqq");
 
             canTalk = true;
         }
         else
         {
-            Debug.Log("!!!!!!!!!!!!!!!!");
+            //Debug.Log("!!!!!!!!!!!!!!!!");
         }
         
     }

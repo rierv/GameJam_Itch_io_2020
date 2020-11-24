@@ -728,78 +728,6 @@ TilemapRenderer:
   m_Mode: 0
   m_DetectChunkCullingBounds: 0
   m_MaskInteraction: 0
---- !u!1 &6582081849239559883
-GameObject:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  serializedVersion: 6
-  m_Component:
-  - component: {fileID: 6582081849239559877}
-  - component: {fileID: 6582081849239559882}
-  m_Layer: 0
-  m_Name: Global Light 2D
-  m_TagString: Untagged
-  m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
-  m_IsActive: 1
---- !u!4 &6582081849239559877
-Transform:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 6582081849239559883}
-  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: -3.2007823, y: -7.1162457, z: 13.906265}
-  m_LocalScale: {x: 1, y: 1, z: 1}
-  m_Children: []
-  m_Father: {fileID: 6582081850799227793}
-  m_RootOrder: 1
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &6582081849239559882
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 6582081849239559883}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 073797afb82c5a1438f328866b10b3f0, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  m_LightType: 4
-  m_BlendStyleIndex: 0
-  m_FalloffIntensity: 0.5
-  m_Color: {r: 1, g: 1, b: 1, a: 1}
-  m_Intensity: 0.5
-  m_LightVolumeOpacity: 0
-  m_ApplyToSortingLayers: e35e806ceb5eb952d551813d03bc4eb400000000c7c6bb61
-  m_LightCookieSprite: {fileID: 0}
-  m_UseNormalMap: 0
-  m_LightOrder: 0
-  m_AlphaBlendOnOverlap: 0
-  m_ShadowIntensity: 0
-  m_ShadowVolumeIntensity: 0
-  m_PointLightInnerAngle: 360
-  m_PointLightOuterAngle: 360
-  m_PointLightInnerRadius: 0
-  m_PointLightOuterRadius: 1
-  m_PointLightDistance: 3
-  m_PointLightQuality: 1
-  m_ShapeLightParametricSides: 5
-  m_ShapeLightParametricAngleOffset: 0
-  m_ShapeLightParametricRadius: 1
-  m_ShapeLightFalloffSize: 0.5
-  m_ShapeLightFalloffOffset: {x: 0, y: 0}
-  m_ShapePath:
-  - {x: -0.5, y: -0.5, z: 0}
-  - {x: 0.5, y: -0.5, z: 0}
-  - {x: 0.5, y: 0.5, z: 0}
-  - {x: -0.5, y: 0.5, z: 0}
 --- !u!1 &6582081849322827542
 GameObject:
   m_ObjectHideFlags: 0
@@ -4298,7 +4226,7 @@ TilemapRenderer:
   m_AutoUVMaxAngle: 89
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: 1387880171
-  m_SortingLayer: -5
+  m_SortingLayer: -4
   m_SortingOrder: 0
   m_ChunkSize: {x: 32, y: 32, z: 32}
   m_ChunkCullingBounds: {x: 0, y: 0, z: 0}
@@ -4339,7 +4267,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!4 &6582081849932561478
 Transform:
   m_ObjectHideFlags: 0
@@ -5020,13 +4948,14 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 6582081850799227793}
+  - component: {fileID: 7784116396957952663}
   m_Layer: 0
   m_Name: SecondLevelContainer
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!4 &6582081850799227793
 Transform:
   m_ObjectHideFlags: 0
@@ -5039,12 +4968,32 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 6582081850951726851}
-  - {fileID: 6582081849239559877}
   - {fileID: 3840840846609083282}
   - {fileID: 6311733278768598830}
   m_Father: {fileID: 0}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &7784116396957952663
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6582081850799227798}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: b9ba9bf7f6190d24a9b6d0bffb56f71a, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  groundTileMap: {fileID: 6582081850978879922}
+  wallTileMap: {fileID: 6582081849525292022}
+  groundCunicoloTileMap: {fileID: 6582081849106328476}
+  wallCunicoloTileMap: {fileID: 6582081850572356549}
+  groundLights: {fileID: 6582081850255264212}
+  cunicoloLights: {fileID: 6582081849322827542}
+  enemyContainer: {fileID: 6582081849932561479}
+  AStarObj: {fileID: 6311733278768598831}
+  objectsToHideInCunicolo: []
 --- !u!1 &6582081850951726848
 GameObject:
   m_ObjectHideFlags: 0
@@ -16948,7 +16897,7 @@ TilemapRenderer:
   m_AutoUVMaxAngle: 89
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: 1820352227
-  m_SortingLayer: -6
+  m_SortingLayer: -5
   m_SortingOrder: 0
   m_ChunkSize: {x: 32, y: 32, z: 32}
   m_ChunkCullingBounds: {x: 0, y: 0, z: 0}
@@ -17478,7 +17427,7 @@ PrefabInstance:
     - target: {fileID: 7932291363568970773, guid: e2c6fc78494b3594a98ec7e0e5d5f02b,
         type: 3}
       propertyPath: m_RootOrder
-      value: 2
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 7932291363568970773, guid: e2c6fc78494b3594a98ec7e0e5d5f02b,
         type: 3}
@@ -17975,10 +17924,20 @@ PrefabInstance:
       propertyPath: showGraphs
       value: 1
       objectReference: {fileID: 0}
+    - target: {fileID: 923105329722974614, guid: 8de1b472e8dcfde499f29e3055ba2655,
+        type: 3}
+      propertyPath: data.dataString
+      value: UEsDBBQAAAgIAAAIIey/pLtccwIAABwFAAALACQAZ3JhcGgwLmpzb24KACAAAAAAAAEAGAAAgD7V3rGdAQCAPtXesZ0BAIA+1d6xnQFlVE2TojAQ/StWzqsFgqJ722UcZw/zUeNszYVLJI2kDAmVhFFnyv++nYDCuF4M3a87771u+CJcmhpyq/Rac/aoGJCfI+LO5MeoTz7Ake6U3PBPuGDeObOlA1GPeaWWK4yHrsyoCqzm+S+5Ew4cYLCRvFC6WrEdpMpYg+GCCgOY0sq6aomhrxE54t946UpOeJom7vSJp2UwOuMxB2lB99BosnS/ebjsKsJoEiSLKA5mXeE4biHJfOo7NDIXtKqBOTl9ozjqGkQzD5MotEM4UbkSgpuOJbGn2ruQ0to0qBEBjFNU7ak5fAl8V1qnYFj8XBQGbGeJpqc7rtG8tiv5rVpHK2r2La8PKhpPIJjGnlTb9fE/wDj06UKr6uFycRi4S2zJ8/0rPeXU2IHnw/Ddd+aNPFCxp1sB7yXIJ7XWqpEMk1Y3rrQxML3rH6/a0hLyfR9vqd4Em7o3/DriSbSIw8UsWa7GQXIZGgo6ey+OqeDV1uEncRvYCOXd90sCGuf0B9n7FTJdX4w6Sn8NvNHdcNe6xD3XxmKqkywd161qtIOSlTfQSWtsqrQEH+4U1CCpsKcXbGNvB3qTG1x7k7mn7q3qLu9yl5flpsSHe3wQ3KRe1OE6OVOqwyOY8rmxgkvoSbvEE/qUKinbfRt6cinbNLqg+aBs13D2fc9IHiWLgi2TaAbTIt/S8XQxT0JgQRTMaQxsQfwicok6qXhpiXb24NRk31zi0l0+NqO1prXffabpYc0/KzWwnMtCbXINIJ/bDlfioPESfEfZinE0aAPWcunnTb4yIlS+B5ZdG2Ve6epoNc36Lhmp+YeyLpKR1H9dMnIm539QSwMEFAAACAgAAAgh7MA4cEJtAAAAeAAAAAkAJABtZXRhLmpzb24KACAAAAAAAAEAGAAAgD7V3rGdAQCAPtXesZ0BAIA+1d6xnQGrVipLLSrOzM9TslIw0TPSMzTVUVBKL0osyCgGihiCOKWZKSB2tFKysblFWoqlubFpqlFaclKirpGFmblhaoqBsYFZoklqioVSLFB9SWVBql9ibipET0BiSUZaZl5KZl66nntRZoo7yGil2FoAUEsBAi0AFAAACAgAAAgh7L+ku1xzAgAAHAUAAAsAJAAAAAAAAAAAAAAAAAAAAGdyYXBoMC5qc29uCgAgAAAAAAABABgAAIA+1d6xnQEAgD7V3rGdAQCAPtXesZ0BUEsBAi0AFAAACAgAAAgh7MA4cEJtAAAAeAAAAAkAJAAAAAAAAAAAAAAAwAIAAG1ldGEuanNvbgoAIAAAAAAAAQAYAACAPtXesZ0BAIA+1d6xnQEAgD7V3rGdAVBLBQYAAAAAAgACALgAAAB4AwAAAAA=
+      objectReference: {fileID: 0}
     - target: {fileID: 923105329722974616, guid: 8de1b472e8dcfde499f29e3055ba2655,
         type: 3}
       propertyPath: m_Name
       value: A*
+      objectReference: {fileID: 0}
+    - target: {fileID: 923105329722974616, guid: 8de1b472e8dcfde499f29e3055ba2655,
+        type: 3}
+      propertyPath: m_IsActive
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 923105329722974617, guid: 8de1b472e8dcfde499f29e3055ba2655,
         type: 3}
@@ -18018,7 +17977,7 @@ PrefabInstance:
     - target: {fileID: 923105329722974617, guid: 8de1b472e8dcfde499f29e3055ba2655,
         type: 3}
       propertyPath: m_RootOrder
-      value: 3
+      value: 2
       objectReference: {fileID: 0}
     - target: {fileID: 923105329722974617, guid: 8de1b472e8dcfde499f29e3055ba2655,
         type: 3}
@@ -18040,6 +17999,12 @@ PrefabInstance:
 --- !u!4 &6311733278768598830 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 923105329722974617, guid: 8de1b472e8dcfde499f29e3055ba2655,
+    type: 3}
+  m_PrefabInstance: {fileID: 6582081850312486583}
+  m_PrefabAsset: {fileID: 0}
+--- !u!1 &6311733278768598831 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 923105329722974616, guid: 8de1b472e8dcfde499f29e3055ba2655,
     type: 3}
   m_PrefabInstance: {fileID: 6582081850312486583}
   m_PrefabAsset: {fileID: 0}
