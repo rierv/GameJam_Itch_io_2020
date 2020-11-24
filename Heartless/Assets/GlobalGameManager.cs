@@ -45,26 +45,9 @@ public class GlobalGameManager : MonoBehaviour
     [SerializeField] 
     private bool playerVisible;
 
-    public GameObject groundTileMap, wallTileMap, groundCunicoloTileMap, wallCunicoloTileMap;
-
-    public GameObject groundLights, cunicoloLights;
-
-    public GameObject globalLight;
-
-    public GameObject[] groundObjects;
-
-    public GameObject enemyContainer;
-    
-    public GameObject level1Container, level2Container;
-    public GameObject groundTileMap2, walltileMap2, groundCunicoloTileMap2, wallCunicoloTileMap2;
-    public GameObject groundLights2, cunicoloLights2;
-    public GameObject[] groundObjects2;
-    public GameObject enemyContainer2;
-
-    private GameObject groundTileMap1, wallTileMap1, groundCunicoloTileMap1, wallCunicoloTilemap1;
-    private GameObject groundLights1, cunicoloLights1;
-    private GameObject[] groundObjects1;
-    private GameObject enemyContainer1;
+    public GameObject firstLevel;
+    public GameObject secondLevel;
+    private GameObject currentLevel;
     
     [SerializeField]
     private GameObject selectedInteractableObj;
@@ -77,6 +60,9 @@ public class GlobalGameManager : MonoBehaviour
 
 
     private int currentFloor;
+    private LevelScript currentLevelScript;
+    public GameObject globalLight;
+
 
     // Start is called before the first frame update
     void Awake()
@@ -90,6 +76,11 @@ public class GlobalGameManager : MonoBehaviour
         {
             player = GameObject.FindWithTag("Player");
             currentFloor = 1;
+            currentLevel = Instantiate(firstLevel);
+            //secondLevel = Instantiate(secondLevel);
+            //secondLevel.SetActive(false);
+            
+            currentLevelScript = currentLevel.GetComponent<LevelScript>();
             
             instance = this;
             IsInCunicolo = false;
@@ -97,32 +88,26 @@ public class GlobalGameManager : MonoBehaviour
             playerInMirror = false;
             playerVisible = true;
 
-            groundTileMap.SetActive(true);
-            wallTileMap.SetActive(true);
-            groundLights.SetActive(true);
-            foreach (var go in groundObjects)
+            currentLevelScript.groundTileMap.SetActive(true);
+            currentLevelScript.wallTileMap.SetActive(true);
+            currentLevelScript.groundLights.SetActive(true);
+            foreach (var go in currentLevelScript.objectsToHideInCunicolo)
             {
                 go.SetActive(true);
             }
             
-            groundCunicoloTileMap.SetActive(false);
-            wallCunicoloTileMap.SetActive(false);
-            cunicoloLights.SetActive(false);
+            currentLevelScript.groundCunicoloTileMap.SetActive(false);
+            currentLevelScript.wallCunicoloTileMap.SetActive(false);
+            currentLevelScript.cunicoloLights.SetActive(false);
+            
+            currentLevelScript.AStarObj.SetActive(true);
+            currentLevelScript.enemyContainer.SetActive(true);
             
             //SET ENEMY TARGET
-            foreach (Transform child in enemyContainer.transform)
+            foreach (Transform child in currentLevelScript.enemyContainer.transform)
             {
                 child.gameObject.GetComponentInChildren<FSM_Enemy>().target = player;
             }
-
-            groundTileMap1 = groundTileMap;
-            wallTileMap1 = wallTileMap;
-            groundCunicoloTileMap1 = groundCunicoloTileMap;
-            wallCunicoloTilemap1 = wallCunicoloTileMap;
-            groundLights1 = groundLights;
-            cunicoloLights1 = cunicoloLights;
-            groundObjects1 = groundObjects;
-            enemyContainer1 = enemyContainer;
         }
     }
 
@@ -143,14 +128,14 @@ public class GlobalGameManager : MonoBehaviour
     {
         IsInCunicolo = true;
         globalLight.GetComponent<Light2D>().intensity = 0.25f;
-        cunicoloLights.SetActive(true);
-        groundLights.SetActive(false);
-        foreach (var go in groundObjects)
+        currentLevelScript.cunicoloLights.SetActive(true);
+        currentLevelScript.groundLights.SetActive(false);
+        foreach (var go in currentLevelScript.objectsToHideInCunicolo)
         {
             go.SetActive(false);
         }
 
-        foreach (Transform child in enemyContainer.transform)
+        foreach (Transform child in currentLevelScript.enemyContainer.transform)
         {
             child.gameObject.layer = LayerMask.NameToLayer("noCollision"); //NO COLLISION
             child.gameObject.GetComponentInChildren<SpriteRenderer>().sortingLayerID =
@@ -160,22 +145,22 @@ public class GlobalGameManager : MonoBehaviour
                 child2.gameObject.layer = LayerMask.NameToLayer("noCollision"); //NO COLLISION
             }
         }
-        groundCunicoloTileMap.SetActive(true);
-        wallCunicoloTileMap.SetActive(true);
-        wallTileMap.GetComponent<TilemapCollider2D>().enabled = false;
+        currentLevelScript.groundCunicoloTileMap.SetActive(true);
+        currentLevelScript.wallCunicoloTileMap.SetActive(true);
+        currentLevelScript.wallTileMap.GetComponent<TilemapCollider2D>().enabled = false;
     }
 
     private void ExitCunicolo()
     {
         IsInCunicolo = false;
         globalLight.GetComponent<Light2D>().intensity = 0.5f;
-        cunicoloLights.SetActive(false);
-        groundLights.SetActive(true);
-        foreach (var go in groundObjects)
+        currentLevelScript.cunicoloLights.SetActive(false);
+        currentLevelScript.groundLights.SetActive(true);
+        foreach (var go in currentLevelScript.objectsToHideInCunicolo)
         {
             go.SetActive(true);
         }
-        foreach (Transform child in enemyContainer.transform)
+        foreach (Transform child in currentLevelScript.enemyContainer.transform)
         {
             child.gameObject.layer = LayerMask.NameToLayer("Enemy"); 
             child.gameObject.GetComponentInChildren<SpriteRenderer>().sortingLayerID =
@@ -185,9 +170,9 @@ public class GlobalGameManager : MonoBehaviour
                 child2.gameObject.layer = LayerMask.NameToLayer("Enemy");
             }
         }
-        groundCunicoloTileMap.SetActive(false);
-        wallCunicoloTileMap.SetActive(false);
-        wallTileMap.GetComponent<TilemapCollider2D>().enabled = true;
+        currentLevelScript.groundCunicoloTileMap.SetActive(false);
+        currentLevelScript.wallCunicoloTileMap.SetActive(false);
+        currentLevelScript.wallTileMap.GetComponent<TilemapCollider2D>().enabled = true;
     }
 
     public void InteractBotola()
@@ -243,109 +228,61 @@ public class GlobalGameManager : MonoBehaviour
 
     public void SwitchFloor()
     {
+        Debug.Log("Stop all coroutines");
+        StopAllCoroutines();
         Debug.Log("AOOOOOO " + currentFloor);
         IsInCunicolo = false;
         wasInCunicolo = false;
         playerInMirror = false;
         playerVisible = true;
         player.GetComponent<PlayerController>().RestartLevel();
+        
+        //currentLevelScript.enemyContainer.SetActive(false);
+        //currentLevelScript.AStarObj.SetActive(false);
+
+        //currentLevel.SetActive(false);
+        
         if (currentFloor == 1)
         {
-            level1Container.SetActive(false);
-            level2Container.SetActive(true);
-            groundTileMap = groundTileMap2;
-            wallTileMap = walltileMap2;
-            groundCunicoloTileMap = groundCunicoloTileMap2;
-            wallCunicoloTileMap = wallCunicoloTileMap2;
-            groundObjects = groundObjects2;
-        
-            groundLights = groundLights2;
-            cunicoloLights = cunicoloLights2;
-        
-            enemyContainer = enemyContainer2;
-        } 
-        else if (currentFloor == 2)
-        {
-            level2Container.SetActive(false);
-            level1Container.SetActive(true);
-
-            groundTileMap = groundTileMap1;
-            wallTileMap = wallTileMap1;
-            groundCunicoloTileMap = groundCunicoloTileMap1;
-            wallCunicoloTileMap = wallCunicoloTilemap1;
-            groundObjects = groundObjects1;
-        
-            groundLights = groundLights1;
-            cunicoloLights = cunicoloLights1;
-        
-            enemyContainer = enemyContainer1;
-        }
-        groundTileMap.SetActive(true);
-        wallTileMap.SetActive(true);
-        groundLights.SetActive(true);
-        foreach (var go in groundObjects)
-        {
-            go.SetActive(true);
-        }
-            
-        groundCunicoloTileMap.SetActive(false);
-        wallCunicoloTileMap.SetActive(false);
-        cunicoloLights.SetActive(false);
-
-        //SET ENEMY TARGET
-        foreach (Transform child in enemyContainer.transform)
-        {
-            child.gameObject.GetComponentInChildren<FSM_Enemy>().target = player;
-        }
-
-        if (currentFloor == 1)
-        {
+            DestroyImmediate(currentLevel);
+            GameObject nextLevel = Instantiate(secondLevel);
+            currentLevel = nextLevel;
             currentFloor = 2;
-        }
-        else
+        } else if (currentFloor == 2)
         {
+            DestroyImmediate(currentLevel);
+            GameObject nextLevel = Instantiate(firstLevel);
+            currentLevel = nextLevel;
             currentFloor = 1;
         }
-    }
-
-    public void GoToLevel2()
-    {
-        Debug.Log("AOOOOOOO");
-        level1Container.SetActive(false);
-        level2Container.SetActive(true);
         
-        IsInCunicolo = false;
-        wasInCunicolo = false;
-        playerInMirror = false;
-        playerVisible = true;
-
-        groundTileMap = groundTileMap2;
-        wallTileMap = walltileMap2;
-        groundCunicoloTileMap = groundCunicoloTileMap2;
-        wallCunicoloTileMap = wallCunicoloTileMap2;
-        groundObjects = groundObjects2;
+        currentLevel.SetActive(true);
+        currentLevelScript = currentLevel.GetComponent<LevelScript>();
         
-        groundLights = groundLights2;
-        cunicoloLights = cunicoloLights2;
         
-        enemyContainer = enemyContainer2;
-
-        groundTileMap.SetActive(true);
-        wallTileMap.SetActive(true);
-        groundLights.SetActive(true);
-        foreach (var go in groundObjects)
+        currentLevelScript.groundTileMap.SetActive(true);
+        currentLevelScript.wallTileMap.SetActive(true);
+        currentLevelScript.groundLights.SetActive(true);
+        foreach (var go in currentLevelScript.objectsToHideInCunicolo)
         {
             go.SetActive(true);
         }
             
-        groundCunicoloTileMap.SetActive(false);
-        wallCunicoloTileMap.SetActive(false);
-        cunicoloLights.SetActive(false);
-
+        currentLevelScript.groundCunicoloTileMap.SetActive(false);
+        currentLevelScript.wallCunicoloTileMap.SetActive(false);
+        currentLevelScript.cunicoloLights.SetActive(false);
+        
+        //A* e Enemy Container DEVONO essere inactive in tutti i prefab dei livelli
+        Debug.Log("Activate AStar");
+        currentLevelScript.AStarObj.SetActive(true);
+        Debug.Log("Activate Enemy Container");
+        currentLevelScript.enemyContainer.SetActive(true);
+        
         //SET ENEMY TARGET
-        foreach (Transform child in enemyContainer.transform)
+        foreach (Transform child in currentLevelScript.enemyContainer.transform)
         {
             child.gameObject.GetComponentInChildren<FSM_Enemy>().target = player;
+            child.gameObject.GetComponentInChildren<FSM_Enemy>().StartCoroutine("Patrol");
         }
     }
 }

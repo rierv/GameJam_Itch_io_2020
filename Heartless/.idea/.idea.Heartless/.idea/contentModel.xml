@@ -2,8 +2,8 @@
 <project version="4">
   <component name="ContentModelStore">
     <e p="C:\Users\Cubond\AppData\Local\JetBrains\Rider2020.2\extResources" t="IncludeRecursive" />
-    <e p="C:\Users\Cubond\AppData\Local\JetBrains\Rider2020.2\resharper-host\Local\Transient\Rider\v202\SolutionCaches\_Heartless.-1329478104.00" t="ExcludeRecursive" />
-    <e p="D:\GitRepos\GameJam_Itch_io_2020\Heartless" t="IncludeRecursive">
+    <e p="C:\Users\Cubond\AppData\Local\JetBrains\Rider2020.2\resharper-host\Local\Transient\Rider\v202\SolutionCaches\_Heartless.764539781.00" t="ExcludeRecursive" />
+    <e p="D:\GitRepos\Heartless\GameJam_Itch_io_2020\Heartless" t="IncludeRecursive">
       <e p="Assembly-CSharp.csproj" t="IncludeRecursive" />
       <e p="Assets" t="Include">
         <e p="AstarPathfindingProject" t="Include">
@@ -209,8 +209,10 @@
         </e>
         <e p="EnemyController.cs" t="Include" />
         <e p="GlobalGameManager.cs" t="Include" />
+        <e p="LevelScript.cs" t="Include" />
         <e p="Scala.cs" t="Include" />
         <e p="Script" t="Include">
+          <e p="AttivatoreBotole.cs" t="Include" />
           <e p="DialogeManager.cs" t="Include" />
           <e p="Dialogue.cs" t="Include" />
           <e p="DialogueTrigger.cs" t="Include" />

@@ -125,7 +125,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   Heart: {fileID: 9106385596177594231, guid: 2271e5581ab4d9d45b1a21880e669ecf, type: 3}
-  movementSpeed: 3
+  movementSpeed: 10
   startHeartCount: 1
 --- !u!212 &5226914310396984527
 SpriteRenderer:
