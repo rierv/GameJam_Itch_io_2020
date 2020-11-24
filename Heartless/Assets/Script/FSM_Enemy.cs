@@ -138,6 +138,7 @@ public class FSM_Enemy : MonoBehaviour
     // ACTIONS
     public void StartWander()
     {
+        aimHelper.transform.position = transform.position;
         GetComponent<Pathfinding.AIPath>().maxSpeed = stadardSpeed;
         ringStart = Time.realtimeSinceStartup;
         curr = 0;
