@@ -21,9 +21,10 @@ public class FSM_Enemy : MonoBehaviour
     GlobalGameManager GameManager;
     public float seekSpeed=2;
     float stadardSpeed;
+    public float EnemyLengthofSight = 8;
     void Start()
     {
-
+        if (target == null) target = FindObjectOfType<PlayerController>().gameObject;
         stadardSpeed = GetComponent<Pathfinding.AIPath>().maxSpeed;
 
         GameManager = GameObject.FindObjectOfType<GlobalGameManager>();
@@ -94,7 +95,7 @@ public class FSM_Enemy : MonoBehaviour
         Vector3 tmp = target.transform.position - transform.position;
         Vector2 dir = new Vector2(tmp.x, tmp.y);
         dir = dir.normalized;
-        RaycastHit2D hit = Physics2D.Raycast(transform.position+new Vector3(dir.x, dir.y, 0)*2, target.transform.position - transform.position, Vector2.Distance(target.transform.position, transform.position), layerMask);
+        RaycastHit2D hit = Physics2D.Raycast(transform.position+new Vector3(dir.x, dir.y, 0)*2, target.transform.position - transform.position, EnemyLengthofSight, layerMask);
         if (GameManager.PlayerVisible && !GameManager.IsInCunicolo && hit.collider&& hit.collider.gameObject.tag=="Player")//(target.transform.position - transform.position).magnitude <= range)
         {
             return true;
