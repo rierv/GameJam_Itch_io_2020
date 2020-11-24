@@ -10,6 +10,7 @@ public class Heart : MonoBehaviour
     float counter = 0;
     float heartAnimationSpeed = 1;
     public GameObject enemy=null;
+    public float heartAmmoSpeed = 10;
     // Start is called before the first frame update
     void Start()
     {
@@ -21,7 +22,7 @@ public class Heart : MonoBehaviour
     {
         counter = (Time.deltaTime * heartAnimationSpeed + counter)%360;
         if (destination != Vector3.zero) 
-            transform.position = Vector3.Lerp(transform.position, transform.position + destination, Time.deltaTime * 3);
+            transform.position = Vector3.Lerp(transform.position, transform.position + destination, Time.deltaTime * heartAmmoSpeed);
         else if(enemy)
         {
             Vector2 coord = new Vector2(Mathf.Sin(counter), Mathf.Cos(counter));

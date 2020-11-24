@@ -19,7 +19,7 @@ public class PlayerController : MonoBehaviour
     bool isAiming = false;
     float heartRadius = .6f;
     int heartCount = 1;
-    public int startHeartCount = 1;
+    int startHeartCount = 1;
     Vector3 startPosition;
     GlobalGameManager GameManager;
     Text txtHearts;
@@ -156,7 +156,7 @@ public class PlayerController : MonoBehaviour
 
 
 
-        spawnedHeart.transform.position = Vector3.Lerp(spawnedHeart.transform.position, MouseOffset, Time.deltaTime * 5);
+        spawnedHeart.transform.position = Vector3.Lerp(spawnedHeart.transform.position, MouseOffset, Time.deltaTime * 20);
 
     }
     private void OnCollisionEnter2D(Collision2D collision)
@@ -197,6 +197,7 @@ public class PlayerController : MonoBehaviour
             ep.SetStunned(false);
             ep.gameObject.GetComponent<Animator>().SetTrigger("idle");
         }
+        startPosition = transform.position;
         heartCount = startHeartCount;
         txtHearts.text = heartCount.ToString();
     }
