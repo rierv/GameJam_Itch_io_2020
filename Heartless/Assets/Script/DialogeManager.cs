@@ -18,6 +18,8 @@ public class DialogeManager : MonoBehaviour
 
     private string currentNPC;
 
+    private Dialogue currentDialogue;
+
     private bool nextButton = true;
 
 
@@ -50,23 +52,26 @@ public class DialogeManager : MonoBehaviour
 
     public void StartDialogue (Dialogue dialogue)
     {
-        currentNPC = dialogue.NPCname;
+        currentDialogue = dialogue;
+        currentNPC = dialogue.NPC_name;
 
         Time.timeScale = 0;
         boxIstance = Instantiate(DialogueBox, new Vector2(0, 0), Quaternion.identity);
         
-        Debug.Log("Starting con  with " + dialogue.NPCname);
+        Debug.Log("Starting con  with " + dialogue.NPC_name);
 
-        boxIstance.GetComponent<Transform>().GetChild(0).GetChild(4).GetComponent<Text>().text = dialogue.NPCname;
+        boxIstance.GetComponent<Transform>().GetChild(0).GetChild(4).GetComponent<Text>().text = dialogue.NPC_name;
 
         sentences.Clear();
 
-        foreach(string sentence in dialogue.sentences)
+        foreach(Line sentence in dialogue.sentences)
         {
-            sentences.Enqueue(sentence);
+            sentences.Enqueue(sentence.text);
         }
 
         DisplayNextSentence();
+
+        
     }
 
     public void DisplayNextSentence()
@@ -81,6 +86,7 @@ public class DialogeManager : MonoBehaviour
 
             string sentence = sentences.Dequeue();
             boxIstance.GetComponent<Transform>().GetChild(0).GetChild(3).GetComponent<Text>().text = sentence;
+        Debug.Log(sentence);
 
 
     }
@@ -90,6 +96,37 @@ public class DialogeManager : MonoBehaviour
     void EndDialogue()
     {
         Destroy(boxIstance);
+
+        if (!currentDialogue.nextDialogue.Equals(null))
+        {
+           
+
+            Dialogue next = currentDialogue.nextDialogue;
+
+            switch (currentNPC)
+            {
+                case "Yknip":
+                    NPCRosa.GetComponent<DialogueTrigger>().setNextDialogue(next);
+                    break;
+                case "Eulb":
+                    NPCBlue.GetComponent<DialogueTrigger>().setNextDialogue(next);
+                    break;
+                case "Neerg":
+                    Debug.Log("in sto if");
+                    NPCVerde.GetComponent<DialogueTrigger>().setNextDialogue(next);
+                    break;
+
+
+            }
+        } else if (!currentDialogue.nextQuestion.Equals(null))
+        {
+
+        }
+        else
+        {
+            Debug.LogError("errore");
+        }
+
         //sentences.Enqueue("CAZZO FAI ANCORA QUI");
         //sentences.Clear();
         if (currentNPC == "Yknip")

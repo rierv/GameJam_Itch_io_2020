@@ -465,12 +465,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 1a6b233240a1f224b886dca9779a63e5, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  dialogue:
-    NPCname: Neerg
-    sentences:
-    - sono verde
-    - come la droga
-    - di marijuana
+  dialogue: {fileID: 11400000, guid: 39851c6c5ef8edb4ab6befd9c04dbf76, type: 2}
   DManager: {fileID: 732275575}
 --- !u!61 &1190606763
 BoxCollider2D:

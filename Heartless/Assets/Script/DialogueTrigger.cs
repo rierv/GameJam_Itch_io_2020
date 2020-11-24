@@ -4,7 +4,9 @@ using UnityEngine;
 
 public class DialogueTrigger : MonoBehaviour
 {
-    public Dialogue dialogue;
+    [SerializeField]
+    private Dialogue dialogue;
+
     public GameObject DManager;
     private BoxCollider2D bc;
     private DialogeManager DMscript;
@@ -64,6 +66,11 @@ public class DialogueTrigger : MonoBehaviour
         canTalk = false;
         isTalking = false;
 
+    }
+
+    public void setNextDialogue(Dialogue d)
+    {
+        dialogue = d;
     }
 
 }
