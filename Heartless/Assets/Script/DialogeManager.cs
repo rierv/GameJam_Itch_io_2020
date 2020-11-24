@@ -14,6 +14,10 @@ public class DialogeManager : MonoBehaviour
     public GameObject NPCVerde;
     public GameObject NPCRosa;
 
+    public GameObject tutorial;
+
+    private string currentNPC;
+
     private bool nextButton = true;
 
 
@@ -46,7 +50,7 @@ public class DialogeManager : MonoBehaviour
 
     public void StartDialogue (Dialogue dialogue)
     {
-
+        currentNPC = dialogue.NPCname;
 
         Time.timeScale = 0;
         boxIstance = Instantiate(DialogueBox, new Vector2(0, 0), Quaternion.identity);
@@ -88,8 +92,19 @@ public class DialogeManager : MonoBehaviour
         Destroy(boxIstance);
         //sentences.Enqueue("CAZZO FAI ANCORA QUI");
         //sentences.Clear();
-     
-        NPCBlue.GetComponent<AttivatoreBotole>().EnableCunicolo();
+        if (currentNPC == "Yknip")
+        {
+            tutorial.SetActive(true);
+        } else if (currentNPC == "Eulb")
+        {
+            NPCBlue.GetComponent<AttivatoreBotole>().EnableCunicolo();
+        }
+        else if (currentNPC == "Neerg")
+        {
+      
+        }
+
+
         Time.timeScale = 1;
         Debug.Log("End");    
     }
