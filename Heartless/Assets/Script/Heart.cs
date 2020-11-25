@@ -54,10 +54,10 @@ public class Heart : MonoBehaviour
         gameObject.layer = 11;
         if (readyToHit && collision.gameObject.tag == "Enemy")
         {
-            Debug.Log(gameObject.layer);
+            //Debug.Log(gameObject.layer);
             collision.gameObject.GetComponentInChildren<EnemyController>().SetStunned(true);
             enemy = collision.gameObject;
-            Debug.Log(gameObject.layer);
+            //Debug.Log(gameObject.layer);
 
         }
     }

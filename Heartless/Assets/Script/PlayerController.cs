@@ -184,6 +184,13 @@ public class PlayerController : MonoBehaviour
         //Questo metodo viene chiamato alla fine dell'animazione "EnterBotola"
         GlobalGameManager.instance.InteractBotola();
     }
+    
+    private void EnablePlayerController()
+    {
+        Debug.Log("Enable Player Controller");
+        this.enabled = true;
+    }
+    
     public void RestartLevel()
     {
         

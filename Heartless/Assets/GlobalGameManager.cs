@@ -176,6 +176,7 @@ public class GlobalGameManager : MonoBehaviour
 
     public void InteractBotola()
     {
+        Debug.Log("GM interact botola");
         if (selectedInteractableObj)
         {
             if (WasInCunicolo)
@@ -187,9 +188,11 @@ public class GlobalGameManager : MonoBehaviour
                 EnterCunicolo();
             }
 
-            player.GetComponent<PlayerController>().enabled = true;
+            //player.GetComponent<PlayerController>().enabled = true;
         }
     }
+
+    
 
     public void InteractMirror()
     {
