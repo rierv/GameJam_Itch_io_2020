@@ -162,6 +162,7 @@ public class FSM_Enemy : MonoBehaviour
 
     public void BeStunned()
     {
+        aimHelper.transform.parent = transform.parent;
         aimHelper.transform.position = transform.position;
     }
 
