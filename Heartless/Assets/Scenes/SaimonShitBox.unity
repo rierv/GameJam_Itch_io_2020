@@ -364,14 +364,14 @@ PrefabInstance:
       objectReference: {fileID: 1190606759}
     - target: {fileID: 4932000623324068469, guid: 96149816f1479e647a7f597c36bf1b1c,
         type: 3}
-      propertyPath: tutorial
-      value: 
-      objectReference: {fileID: 1735373986}
-    - target: {fileID: 4932000623324068469, guid: 96149816f1479e647a7f597c36bf1b1c,
-        type: 3}
       propertyPath: NPCRosa
       value: 
       objectReference: {fileID: 5264541786949635424}
+    - target: {fileID: 4932000623324068469, guid: 96149816f1479e647a7f597c36bf1b1c,
+        type: 3}
+      propertyPath: tutorial
+      value: 
+      objectReference: {fileID: 1735373986}
     - target: {fileID: 4932000623324068470, guid: 96149816f1479e647a7f597c36bf1b1c,
         type: 3}
       propertyPath: m_Name

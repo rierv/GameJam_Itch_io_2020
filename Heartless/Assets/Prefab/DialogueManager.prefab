@@ -53,3 +53,4 @@ MonoBehaviour:
   ButtonPrefab: {fileID: 7704361590709847793, guid: d0d05607b44c49840a1db7a70ec17b6b,
     type: 3}
   tutorial: {fileID: 0}
+  isInDialogue: 0
