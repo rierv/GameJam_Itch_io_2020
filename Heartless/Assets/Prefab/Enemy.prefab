@@ -176,7 +176,7 @@ MonoBehaviour:
   - {x: 2, y: 2}
   - {x: -2, y: 0}
   Generator: {fileID: 0}
-  seekSpeed: 3.5
+  seekSpeed: 3
   EnemyLengthofSight: 8
 --- !u!114 &3471935749820772021
 MonoBehaviour:
