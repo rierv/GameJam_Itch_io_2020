@@ -10,11 +10,13 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: c44415c4f96d9b141b924b201dfe985e, type: 3}
-  m_Name: Prova
+  m_Name: 6
   m_EditorClassIdentifier: 
-  NPC_name: Yknip
+  NPC_name: Eulb
   sentences:
-  - text: ciao
+  - text: Presuntuso ed ingenuo, come tutti qui
+  - text: Le tue scelte ti condurranno all'oblio
+  - text: "ma \xE8 cos\xEC per tutti qui..."
   nextDialogue: {fileID: 11400000}
   nextQuestion: {fileID: 0}
   nextIsQuestion: 0
