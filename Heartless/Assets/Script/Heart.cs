@@ -39,6 +39,7 @@ public class Heart : MonoBehaviour
     public void Shoot(Vector3 origin)
     {
         destination = origin;
+        gameObject.layer = 17;
         //StartCoroutine(recuperateHeart());
         readyToHit = true;
     }

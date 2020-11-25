@@ -22,6 +22,8 @@ public class FSM_Enemy : MonoBehaviour
     public float seekSpeed=2;
     float stadardSpeed;
     public float EnemyLengthofSight = 8;
+    public float stunnTime = .7f;
+    bool exitStunnCoroutine = false;
     void Awake()
     {
         if (target == null) target = FindObjectOfType<PlayerController>().gameObject;
@@ -113,13 +115,21 @@ public class FSM_Enemy : MonoBehaviour
 
     public bool GetFree()
     {
-        if (heart == null)
+        if (heart == null && !exitStunnCoroutine)
         {
-            GetComponent<BoxCollider2D>().enabled = true;
-            stunned = false;
-            GetComponentInChildren<EnemyController>().stunned = false;
+            exitStunnCoroutine = true;
+            StartCoroutine(ExitStunnCoroutine());
         }
-        return heart==null;
+        
+        return heart==null&&!stunned;
+    }
+
+    IEnumerator ExitStunnCoroutine()
+    {
+        yield return new WaitForSeconds(stunnTime);
+        GetComponent<BoxCollider2D>().enabled = true;
+        stunned = false;
+        GetComponentInChildren<EnemyController>().stunned = false;
     }
 
     public bool isGeneratorBroken()
@@ -141,6 +151,7 @@ public class FSM_Enemy : MonoBehaviour
     // ACTIONS
     public void StartWander()
     {
+        exitStunnCoroutine = false;
         aimHelper.transform.parent = transform.parent;
         aimHelper.transform.position = transform.position;
         GetComponent<Pathfinding.AIPath>().maxSpeed = stadardSpeed;
