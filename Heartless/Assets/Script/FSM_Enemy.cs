@@ -96,7 +96,7 @@ public class FSM_Enemy : MonoBehaviour
         Vector2 dir = new Vector2(tmp.x, tmp.y);
         dir = dir.normalized;
         RaycastHit2D hit = Physics2D.Raycast(transform.position+new Vector3(dir.x, dir.y, 0)*2, target.transform.position - transform.position, EnemyLengthofSight, layerMask);
-        if (GameManager.PlayerVisible && !GameManager.IsInCunicolo && hit.collider&& hit.collider.gameObject.tag=="Player")//(target.transform.position - transform.position).magnitude <= range)
+        if (GameManager.PlayerVisible && !GameManager.IsInCunicolo && hit.collider&& hit.collider.gameObject.layer==8)//(target.transform.position - transform.position).magnitude <= range)
         {
             return true;
         }
@@ -168,12 +168,12 @@ public class FSM_Enemy : MonoBehaviour
 
     public void Boost()
     {
-        GetComponent<Pathfinding.AIPath>().maxSpeed = stadardSpeed*seekSpeed;
-        
+        //animation
     }
 
     public void RingAlarm()
     {
+        GetComponent<Pathfinding.AIPath>().maxSpeed = stadardSpeed * seekSpeed;
         aimHelper.transform.position = target.transform.position;
     }
 

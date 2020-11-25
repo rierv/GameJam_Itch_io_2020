@@ -168,7 +168,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   playerVisible: 1
   range: 4.8
-  reactionTime: 0.5
+  reactionTime: 0.2
   aimHelper: {fileID: 2073559774}
   target: {fileID: 0}
   switchTime: 0.1
@@ -176,8 +176,8 @@ MonoBehaviour:
   - {x: 2, y: 2}
   - {x: -2, y: 0}
   Generator: {fileID: 0}
-  seekSpeed: 3
-  EnemyLengthofSight: 10
+  seekSpeed: 3.5
+  EnemyLengthofSight: 8
 --- !u!114 &3471935749820772021
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -196,7 +196,7 @@ MonoBehaviour:
   startEndModifier:
     addPoints: 0
     exactStartPoint: 3
-    exactEndPoint: 3
+    exactEndPoint: 1
     useRaycasting: 0
     mask:
       serializedVersion: 2
@@ -221,7 +221,7 @@ MonoBehaviour:
   version: 2
   radius: 0.5
   height: 2
-  repathRate: 0.5
+  repathRate: 0.3
   canSearch: 1
   canMove: 1
   maxSpeed: 2
@@ -233,14 +233,14 @@ MonoBehaviour:
   orientation: 1
   enableRotation: 0
   targetCompatibility: {fileID: 0}
-  maxAcceleration: -2.5
+  maxAcceleration: 15
   rotationSpeed: 360
-  slowdownDistance: 0.4
-  pickNextWaypointDist: 0.7
-  endReachedDistance: 0.1
+  slowdownDistance: 0
+  pickNextWaypointDist: 0.2
+  endReachedDistance: 0
   alwaysDrawGizmos: 0
   slowWhenNotFacingTarget: 1
-  whenCloseToDestination: 1
+  whenCloseToDestination: 0
   constrainInsideGraph: 1
 --- !u!114 &3493485345302853663
 MonoBehaviour:
