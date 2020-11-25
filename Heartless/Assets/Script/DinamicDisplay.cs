@@ -15,7 +15,7 @@ public class DinamicDisplay : MonoBehaviour
     // Update is called once per frame
     private void OnTriggerStay2D(Collider2D other)
     {
-        Debug.Log("collisiion");
+        //Debug.Log("collisiion");
         if(other.tag == "Player")
         {
             sprite.enabled = true;
