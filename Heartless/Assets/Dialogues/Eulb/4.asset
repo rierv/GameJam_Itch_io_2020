@@ -10,11 +10,12 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: c44415c4f96d9b141b924b201dfe985e, type: 3}
-  m_Name: Prova
+  m_Name: 4
   m_EditorClassIdentifier: 
-  NPC_name: Yknip
+  NPC_name: Eulb
   sentences:
-  - text: ciao
-  nextDialogue: {fileID: 11400000}
+  - text: "E cos\xEC ho illuminato la tua via"
+  - text: Seguila per completare la tua ricerca
+  nextDialogue: {fileID: 11400000, guid: b216bca82090ccd41bb6fe02b7a075c9, type: 2}
   nextQuestion: {fileID: 0}
   nextIsQuestion: 0

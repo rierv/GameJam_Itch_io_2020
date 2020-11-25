@@ -12,7 +12,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: c44415c4f96d9b141b924b201dfe985e, type: 3}
   m_Name: Risposta B
   m_EditorClassIdentifier: 
-  NPC_name: Yknip
+  NPC_name: Neerg
   sentences:
   - text: rimani vicino per continuare a vederli
   nextDialogue: {fileID: 11400000}
