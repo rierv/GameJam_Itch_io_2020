@@ -168,7 +168,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   playerVisible: 1
   range: 4.8
-  reactionTime: 0.2
+  reactionTime: 0.1
   aimHelper: {fileID: 2073559774}
   target: {fileID: 0}
   switchTime: 0.1
@@ -221,7 +221,7 @@ MonoBehaviour:
   version: 2
   radius: 0.5
   height: 2
-  repathRate: 0.3
+  repathRate: 0.1
   canSearch: 1
   canMove: 1
   maxSpeed: 2
@@ -236,7 +236,7 @@ MonoBehaviour:
   maxAcceleration: 15
   rotationSpeed: 360
   slowdownDistance: 0
-  pickNextWaypointDist: 0.2
+  pickNextWaypointDist: 0.1
   endReachedDistance: 0
   alwaysDrawGizmos: 0
   slowWhenNotFacingTarget: 1
