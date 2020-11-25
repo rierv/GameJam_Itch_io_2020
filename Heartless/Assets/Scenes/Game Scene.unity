@@ -553,6 +553,11 @@ PrefabInstance:
       propertyPath: cameraSmooth
       value: 5
       objectReference: {fileID: 0}
+    - target: {fileID: 7337166689549608909, guid: 8c8b484ee1b38d342ae5923c0534e976,
+        type: 3}
+      propertyPath: cameraMovementonDirection
+      value: 5
+      objectReference: {fileID: 0}
     - target: {fileID: 7337166689549608918, guid: 8c8b484ee1b38d342ae5923c0534e976,
         type: 3}
       propertyPath: m_Name
