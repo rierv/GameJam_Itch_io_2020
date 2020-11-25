@@ -164,7 +164,7 @@ public class FSM_Enemy : MonoBehaviour
     {
         if (listOfSpots.Count > 0 && Vector3.Distance(transform.position,aimHelper.transform.position)<1)
         {
-            aimHelper.transform.position = listOfSpots[curr];
+            aimHelper.transform.position =new Vector3( listOfSpots[curr].x, listOfSpots[curr].y) +transform.parent.position;
             curr++;
             curr = curr % listOfSpots.Count;
         }
