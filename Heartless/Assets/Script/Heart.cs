@@ -11,10 +11,11 @@ public class Heart : MonoBehaviour
     float heartAnimationSpeed = 1;
     public GameObject enemy=null;
     public float heartAmmoSpeed = 10;
-    bool readyToHit = false;
+    public bool readyToHit = false;
     // Start is called before the first frame update
     void Start()
     {
+        readyToHit = false;
         startingScale = transform.localScale;
     }
 
@@ -38,7 +39,7 @@ public class Heart : MonoBehaviour
     public void Shoot(Vector3 origin)
     {
         destination = origin;
-        StartCoroutine(recuperateHeart());
+        //StartCoroutine(recuperateHeart());
         readyToHit = true;
     }
 
@@ -50,11 +51,10 @@ public class Heart : MonoBehaviour
     private void OnCollisionEnter2D(Collision2D collision)
     {
         destination = Vector3.zero;
+        gameObject.layer = 11;
         if (readyToHit && collision.gameObject.tag == "Enemy")
         {
             Debug.Log(gameObject.layer);
-            readyToHit = false;
-            gameObject.layer = 11;
             collision.gameObject.GetComponentInChildren<EnemyController>().SetStunned(true);
             enemy = collision.gameObject;
             Debug.Log(gameObject.layer);

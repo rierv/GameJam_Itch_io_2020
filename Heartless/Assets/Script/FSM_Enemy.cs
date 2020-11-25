@@ -89,7 +89,7 @@ public class FSM_Enemy : MonoBehaviour
 
     public bool EnemiesAround()
     {
-        int layerMask = ~LayerMask.GetMask("Nemico");
+        int layerMask = ~LayerMask.GetMask("Enemy");
 
         Debug.DrawRay(transform.position, target.transform.position - transform.position, Color.red); //debug ray to see the ray
         Vector3 tmp = target.transform.position - transform.position;
@@ -106,6 +106,8 @@ public class FSM_Enemy : MonoBehaviour
 
     public bool GetHit()
     {
+        if(stunned) GetComponent<BoxCollider2D>().enabled = false;
+
         return stunned;
     }
 
@@ -113,6 +115,7 @@ public class FSM_Enemy : MonoBehaviour
     {
         if (heart == null)
         {
+            GetComponent<BoxCollider2D>().enabled = true;
             stunned = false;
             GetComponentInChildren<EnemyController>().stunned = false;
         }
@@ -179,8 +182,11 @@ public class FSM_Enemy : MonoBehaviour
 
     private void OnCollisionEnter2D(Collision2D collision)
     {
-        if (collision.gameObject.tag == "Heart")
+        if (collision.gameObject.tag == "Heart"&&collision.gameObject.GetComponent<Heart>().readyToHit)
         {
+            collision.gameObject.GetComponent<Heart>().readyToHit = false;
+            collision.gameObject.layer = 11;
+
             stunned = true;
             heart = collision.gameObject;
             fsm.Update();

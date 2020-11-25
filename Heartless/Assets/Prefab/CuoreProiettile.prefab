@@ -118,6 +118,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 1e13e44e1b6fbe54f811d62f9dca0a89, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  enemy: {fileID: 0}
+  heartAmmoSpeed: 14
+  readyToHit: 0
 --- !u!50 &5626698917203705939
 Rigidbody2D:
   serializedVersion: 4
