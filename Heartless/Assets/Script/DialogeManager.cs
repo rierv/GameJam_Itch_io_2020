@@ -69,18 +69,23 @@ public class DialogeManager : MonoBehaviour
         DisplayNextSentence();
 
 
+
     }
 
     public void DisplayNextSentence()
     {
-        if (sentences.Count == 0)
+        if (isInDialogue)
         {
-            EndDialogue();
-            return;
+            if (sentences.Count == 0)
+            {
+                EndDialogue();
+                return;
+            }
+            Debug.Log(sentences.Count);
+            string sentence = sentences.Dequeue();
+            dialogueBoxIstance.GetComponent<Transform>().GetChild(0).GetChild(3).GetComponent<Text>().text = sentence;
+            Debug.Log(sentence + "in ququq<.   " + sentences.Count);
         }
-        string sentence = sentences.Dequeue();
-        dialogueBoxIstance.GetComponent<Transform>().GetChild(0).GetChild(3).GetComponent<Text>().text = sentence;
-        Debug.Log(sentence);
     }
 
     public void StartQuestion(Question question)
@@ -142,7 +147,7 @@ public class DialogeManager : MonoBehaviour
         isInDialogue = false;
 
         Dialogue next = d;
-        Debug.Log(next.sentences[0].text);
+        
 
         switch (currentNPC)
         {
@@ -165,6 +170,7 @@ public class DialogeManager : MonoBehaviour
     {
         Destroy(dialogueBoxIstance);
         isInDialogue = false;
+        Debug.Log("enddialogue");
 
         if (currentDialogue.nextIsQuestion)
         {
@@ -179,24 +185,21 @@ public class DialogeManager : MonoBehaviour
             {
                 case "Yknip":
                     NPCRosa.GetComponent<DialogueTrigger>().setNextDialogue(next);
-                    NPCRosa.GetComponent<DialogueTrigger>().isTalking = false;
+                 
                     break;
                 case "Eulb":
-                    NPCBlue.GetComponent<DialogueTrigger>().setNextDialogue(next);
-
-                    Debug.Log(NPCBlue.GetComponent<DialogueTrigger>().isTalking);
-                    NPCBlue.GetComponent<DialogueTrigger>().isTalking = false;
-                    Debug.Log(NPCBlue.GetComponent<DialogueTrigger>().isTalking);
+                    NPCBlue.GetComponent<DialogueTrigger>().setNextDialogue(next);                
                     break;
                 case "Neerg":
-                    Debug.Log(NPCVerde.GetComponent<DialogueTrigger>().isTalking);
+                    
                     NPCVerde.GetComponent<DialogueTrigger>().setNextDialogue(next);
-                    NPCVerde.GetComponent<DialogueTrigger>().isTalking = false;
-                    Debug.Log(NPCVerde.GetComponent<DialogueTrigger>().isTalking);
+              
                     break;
             }
+
+            Time.timeScale = 1;
         }
 
-        Time.timeScale = 1;
+          
     }
 }

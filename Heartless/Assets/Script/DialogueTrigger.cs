@@ -24,9 +24,11 @@ public class DialogueTrigger : MonoBehaviour
 
     void Update()
     {
-        if (Input.GetKeyDown(KeyCode.Z) && canTalk &&!isTalking)
+
+        if (Input.GetKeyDown(KeyCode.Z) && canTalk && !isTalking)
         {
             TriggerDialogue();
+            Debug.Log("trigger");
         }
     }
 
@@ -44,19 +46,12 @@ public class DialogueTrigger : MonoBehaviour
      
     }
     
-    private void OnTriggerStay2D(Collider2D col)
+    private void OnTriggerEnter2D(Collider2D col)
     {
         if(col.tag == "Player")
         {
-            //Debug.Log("!!!!!!qqqqqqqqqqq");
-
             canTalk = true;
         }
-        else
-        {
-            //Debug.Log("!!!!!!!!!!!!!!!!");
-        }
-        
     }
   
     
@@ -64,6 +59,7 @@ public class DialogueTrigger : MonoBehaviour
     private void OnTriggerExit2D(Collider2D other)
     {
         canTalk = false;
+        isTalking = false;
 
     }
 

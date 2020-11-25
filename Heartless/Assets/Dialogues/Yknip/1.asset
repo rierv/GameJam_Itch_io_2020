@@ -10,12 +10,13 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: c44415c4f96d9b141b924b201dfe985e, type: 3}
-  m_Name: Risposta A
+  m_Name: 1
   m_EditorClassIdentifier: 
-  NPC_name: Neerg
+  NPC_name: Yknip
   sentences:
-  - text: ti mostrer iui comandi di giioco
-  - text: ssssssssss
-  nextDialogue: {fileID: 11400000, guid: 42a34595cc26cfc42b45b009a9d76d0f, type: 2}
-  nextQuestion: {fileID: 0}
-  nextIsQuestion: 0
+  - text: Oh quale malaugurato destino mio caro
+  - text: "Quale grandissima tragedia si abbatter\xE0 su di te se non sai manco come
+      si gioca"
+  nextDialogue: {fileID: 0}
+  nextQuestion: {fileID: 11400000, guid: 6a21e3548bdf1f34280e42e1088aa1d8, type: 2}
+  nextIsQuestion: 1
