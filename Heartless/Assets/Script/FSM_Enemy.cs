@@ -141,6 +141,7 @@ public class FSM_Enemy : MonoBehaviour
     // ACTIONS
     public void StartWander()
     {
+        aimHelper.transform.parent = transform.parent;
         aimHelper.transform.position = transform.position;
         GetComponent<Pathfinding.AIPath>().maxSpeed = stadardSpeed;
         ringStart = Time.realtimeSinceStartup;
@@ -172,12 +173,14 @@ public class FSM_Enemy : MonoBehaviour
     public void Boost()
     {
         //animation
+        GetComponent<Pathfinding.AIPath>().maxSpeed = stadardSpeed * seekSpeed;
+        aimHelper.transform.position = target.transform.position;
+        aimHelper.transform.parent = target.transform;
     }
 
     public void RingAlarm()
     {
-        GetComponent<Pathfinding.AIPath>().maxSpeed = stadardSpeed * seekSpeed;
-        aimHelper.transform.position = target.transform.position;
+        
     }
 
     private void OnCollisionEnter2D(Collision2D collision)
