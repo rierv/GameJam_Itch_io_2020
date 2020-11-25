@@ -143,6 +143,7 @@ public class PlayerController : MonoBehaviour
     private void CreateHeart()
     {
         spawnedHeart = Instantiate(Heart, transform.position, Quaternion.identity);
+        //spawnedHeart.GetComponent<Heart>().readyToHit = true;
     }
 
     void Aim()

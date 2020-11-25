@@ -15,7 +15,8 @@ public class Heart : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-        readyToHit = false;
+        readyToHit = true;
+        gameObject.layer = 17;
         startingScale = transform.localScale;
     }
 
@@ -39,9 +40,7 @@ public class Heart : MonoBehaviour
     public void Shoot(Vector3 origin)
     {
         destination = origin;
-        gameObject.layer = 17;
         //StartCoroutine(recuperateHeart());
-        readyToHit = true;
     }
 
     IEnumerator recuperateHeart()

@@ -14,7 +14,7 @@ GameObject:
   - component: {fileID: 4360164904852392036}
   - component: {fileID: 5626698917203705939}
   - component: {fileID: 2382251495197668533}
-  m_Layer: 8
+  m_Layer: 17
   m_Name: CuoreProiettile
   m_TagString: Heart
   m_Icon: {fileID: 0}
