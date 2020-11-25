@@ -11,6 +11,7 @@ public class Heart : MonoBehaviour
     float heartAnimationSpeed = 1;
     public GameObject enemy=null;
     public float heartAmmoSpeed = 10;
+    bool readyToHit = false;
     // Start is called before the first frame update
     void Start()
     {
@@ -38,21 +39,26 @@ public class Heart : MonoBehaviour
     {
         destination = origin;
         StartCoroutine(recuperateHeart());
+        readyToHit = true;
     }
 
     IEnumerator recuperateHeart()
     {
-        yield return new WaitForSeconds(1);
+        yield return new WaitForSeconds(.25f);
         gameObject.layer = 0;
     }
     private void OnCollisionEnter2D(Collision2D collision)
     {
         destination = Vector3.zero;
-        if (collision.gameObject.tag == "Enemy")
+        if (readyToHit && collision.gameObject.tag == "Enemy")
         {
+            Debug.Log(gameObject.layer);
+            readyToHit = false;
             gameObject.layer = 11;
             collision.gameObject.GetComponentInChildren<EnemyController>().SetStunned(true);
             enemy = collision.gameObject;
+            Debug.Log(gameObject.layer);
+
         }
     }
 }
