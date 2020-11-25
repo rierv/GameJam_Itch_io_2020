@@ -12,7 +12,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: c44415c4f96d9b141b924b201dfe985e, type: 3}
   m_Name: 5
   m_EditorClassIdentifier: 
-  NPC_name: Neerg
+  NPC_name: Eulb
   sentences:
   - text: Ritrovati...
   nextDialogue: {fileID: 11400000}

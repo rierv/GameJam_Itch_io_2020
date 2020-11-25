@@ -18,6 +18,6 @@ MonoBehaviour:
       alla staticit\xE0"
   - text: Ma non tu. Tu stai ancora cercando. Sei in costante movimento
   - text: Lascia allora che apra i tuoi occhi su percorsi piu rapidi.
-  nextDialogue: {fileID: 11400000}
-  nextQuestion: {fileID: 0}
-  nextIsQuestion: 0
+  nextDialogue: {fileID: 0}
+  nextQuestion: {fileID: 11400000, guid: 369ea50bdbefe7043904c41ac49cd3bc, type: 2}
+  nextIsQuestion: 1
