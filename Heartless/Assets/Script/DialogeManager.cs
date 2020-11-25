@@ -104,11 +104,13 @@ public class DialogeManager : MonoBehaviour
         foreach (Choice choice in question.choicesList)
         {
             GameObject newButton = Instantiate(ButtonPrefab, new Vector2(0, 0), Quaternion.identity);
+            newButton.SetActive(true);
             newButton.transform.SetParent(buttonContainer);
             newButton.GetComponentInChildren<Text>().text = choice.choice;
 
 
             newButton.GetComponent<Button>().onClick.AddListener(() => this.EndQuestion(choice.nextDialogue));
+            Debug.Log("set choice");
      
             if (choice.activateQuest)
             {
@@ -141,7 +143,7 @@ public class DialogeManager : MonoBehaviour
         
     }
 
-    void EndQuestion(Dialogue d)
+    public void EndQuestion(Dialogue d)
     {
         Destroy(questionBoxIstance);
         isInDialogue = false;
@@ -166,7 +168,7 @@ public class DialogeManager : MonoBehaviour
 
 
 
-    void EndDialogue()
+    public void EndDialogue()
     {
         Destroy(dialogueBoxIstance);
         isInDialogue = false;
