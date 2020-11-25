@@ -11,7 +11,7 @@ public class DialogueTrigger : MonoBehaviour
     private BoxCollider2D bc;
     private DialogeManager DMscript;
     private bool canTalk;
-    private bool isTalking;
+    public bool isTalking;
     
 
     private void Start()
@@ -24,7 +24,7 @@ public class DialogueTrigger : MonoBehaviour
 
     void Update()
     {
-        if (Input.GetKeyDown(KeyCode.Z) && canTalk)
+        if (Input.GetKeyDown(KeyCode.Z) && canTalk &&!isTalking)
         {
             TriggerDialogue();
         }
@@ -37,15 +37,15 @@ public class DialogueTrigger : MonoBehaviour
     {
         if (!isTalking)
         {
-            DMscript.StartDialogue(dialogue);
             isTalking = true;
+            DMscript.StartDialogue(dialogue);
+            
         }
      
     }
     
     private void OnTriggerStay2D(Collider2D col)
     {
-        //Debug.Log("coll");
         if(col.tag == "Player")
         {
             //Debug.Log("!!!!!!qqqqqqqqqqq");
@@ -64,7 +64,6 @@ public class DialogueTrigger : MonoBehaviour
     private void OnTriggerExit2D(Collider2D other)
     {
         canTalk = false;
-        isTalking = false;
 
     }
 

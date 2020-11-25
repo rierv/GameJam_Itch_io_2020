@@ -45,3 +45,11 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   DialogueBox: {fileID: 2016025891158449569, guid: 9daedc775bbade5409720df06aab179c,
     type: 3}
+  QuestionBox: {fileID: 2016025891158449569, guid: 2edb254ec491dde4e99057b20e23ea69,
+    type: 3}
+  NPCBlue: {fileID: 0}
+  NPCVerde: {fileID: 0}
+  NPCRosa: {fileID: 0}
+  ButtonPrefab: {fileID: 7704361590709847793, guid: d0d05607b44c49840a1db7a70ec17b6b,
+    type: 3}
+  tutorial: {fileID: 0}

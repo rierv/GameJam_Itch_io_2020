@@ -23,33 +23,26 @@ public class DialogeManager : MonoBehaviour
 
     private Dialogue currentDialogue;
 
-    private bool nextButton = true;
 
 
 
     private Queue<string> sentences;
 
     bool ready = false;
+    public bool isInDialogue;
 
     // Start is called before the first frame update
-    void Start()
+    void Awake()
     {
+        isInDialogue = false;
         sentences = new Queue<string>();
-
-
-
     }
 
     void Update()
     {
         if (Input.GetKeyDown(KeyCode.Z))
         {
-            if (ready) DisplayNextSentence();
-            else
-            {
-
-                ready = true;
-            }
+            if (isInDialogue) DisplayNextSentence();
         }
     }
 
@@ -72,6 +65,7 @@ public class DialogeManager : MonoBehaviour
             sentences.Enqueue(sentence.text);
         }
 
+        isInDialogue = true;
         DisplayNextSentence();
 
 
@@ -91,7 +85,6 @@ public class DialogeManager : MonoBehaviour
 
     public void StartQuestion(Question question)
     {
-        Time.timeScale = 0;
         currentDialogue = null;
         questionBoxIstance = Instantiate(QuestionBox, new Vector2(0, 0), Quaternion.identity);
         questionBoxIstance.GetComponent<Transform>().GetChild(0).GetChild(2).GetComponent<Text>().text = question.questionText;
@@ -102,7 +95,7 @@ public class DialogeManager : MonoBehaviour
     {
 
         Transform buttonContainer = questionBoxIstance.GetComponent<Transform>().GetChild(0).GetChild(3);
-        int index = 0;
+       
         foreach (Choice choice in question.choicesList)
         {
             GameObject newButton = Instantiate(ButtonPrefab, new Vector2(0, 0), Quaternion.identity);
@@ -111,7 +104,7 @@ public class DialogeManager : MonoBehaviour
 
 
             newButton.GetComponent<Button>().onClick.AddListener(() => this.EndQuestion(choice.nextDialogue));
-            newButton.GetComponent<Button>().onClick.AddListener(Click);
+     
             if (choice.activateQuest)
             {
                 switch (question.NPC_name)
@@ -120,27 +113,33 @@ public class DialogeManager : MonoBehaviour
                         newButton.GetComponent<Button>().onClick.AddListener(RosaEvent);
                         break;
                     case "Eulb":
-                        newButton.GetComponent<Button>().onClick.AddListener(RosaEvent);
+                        newButton.GetComponent<Button>().onClick.AddListener(BlueEvent);
                         break;
                     case "Neerg":
-                        newButton.GetComponent<Button>().onClick.AddListener(RosaEvent);
+                        newButton.GetComponent<Button>().onClick.AddListener(GreenEvent);
                         break;
                 }
             }
         }
     }
-    void Click()
-    {
-        Debug.Log("click");
-    }
+   
     void RosaEvent()
     {
         tutorial.SetActive(true);
+    }
+    void BlueEvent()
+    {
+        NPCBlue.GetComponent<AttivatoreBotole>().EnableCunicolo();
+    }
+    void GreenEvent()
+    {
+        
     }
 
     void EndQuestion(Dialogue d)
     {
         Destroy(questionBoxIstance);
+        isInDialogue = false;
 
         Dialogue next = d;
         Debug.Log(next.sentences[0].text);
@@ -154,7 +153,6 @@ public class DialogeManager : MonoBehaviour
                 NPCBlue.GetComponent<DialogueTrigger>().setNextDialogue(next);
                 break;
             case "Neerg":
-                Debug.Log("in sto if");
                 NPCVerde.GetComponent<DialogueTrigger>().setNextDialogue(next);
                 break;
         }
@@ -166,6 +164,7 @@ public class DialogeManager : MonoBehaviour
     void EndDialogue()
     {
         Destroy(dialogueBoxIstance);
+        isInDialogue = false;
 
         if (currentDialogue.nextIsQuestion)
         {
@@ -180,12 +179,20 @@ public class DialogeManager : MonoBehaviour
             {
                 case "Yknip":
                     NPCRosa.GetComponent<DialogueTrigger>().setNextDialogue(next);
+                    NPCRosa.GetComponent<DialogueTrigger>().isTalking = false;
                     break;
                 case "Eulb":
                     NPCBlue.GetComponent<DialogueTrigger>().setNextDialogue(next);
+
+                    Debug.Log(NPCBlue.GetComponent<DialogueTrigger>().isTalking);
+                    NPCBlue.GetComponent<DialogueTrigger>().isTalking = false;
+                    Debug.Log(NPCBlue.GetComponent<DialogueTrigger>().isTalking);
                     break;
                 case "Neerg":
+                    Debug.Log(NPCVerde.GetComponent<DialogueTrigger>().isTalking);
                     NPCVerde.GetComponent<DialogueTrigger>().setNextDialogue(next);
+                    NPCVerde.GetComponent<DialogueTrigger>().isTalking = false;
+                    Debug.Log(NPCVerde.GetComponent<DialogueTrigger>().isTalking);
                     break;
             }
         }

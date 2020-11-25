@@ -10,11 +10,14 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: c44415c4f96d9b141b924b201dfe985e, type: 3}
-  m_Name: Risposta A
+  m_Name: 3
   m_EditorClassIdentifier: 
-  NPC_name: Neerg
+  NPC_name: Eulb
   sentences:
-  - text: ti mostrer iui comandi di giioco
+  - text: "Da quando lo smarrimento \xE8 diventato totale la realt\xE0 mi costringe
+      alla staticit\xE0"
+  - text: Ma non tu. Tu stai ancora cercando. Sei in costante movimento
+  - text: Lascia allora che apra i tuoi occhi su percorsi piu rapidi.
   nextDialogue: {fileID: 0}
-  nextQuestion: {fileID: 11400000, guid: e25ceff69079bbd4c82efcf91966f7a5, type: 2}
+  nextQuestion: {fileID: 11400000, guid: 369ea50bdbefe7043904c41ac49cd3bc, type: 2}
   nextIsQuestion: 1

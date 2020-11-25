@@ -10,14 +10,14 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: b197eafebf2111b46ae1e29c6f5c86f7, type: 3}
-  m_Name: Domanda
+  m_Name: Q1
   m_EditorClassIdentifier: 
-  NPC_name: Neerg
-  questionText: Li vuoi vedere?
+  NPC_name: Elub
+  questionText: Vuoi apire i tuoi occhi?
   choicesList:
   - choice: Si
     activateQuest: 1
-    nextDialogue: {fileID: 11400000, guid: 42a34595cc26cfc42b45b009a9d76d0f, type: 2}
+    nextDialogue: {fileID: 11400000, guid: 6432ab65cb7fa934990cdfc1e97c5b81, type: 2}
   - choice: No
     activateQuest: 0
-    nextDialogue: {fileID: 11400000, guid: e897badad79b8724e8349d7eb8153e63, type: 2}
+    nextDialogue: {fileID: 11400000, guid: f94a56ffe1d902049847f3c4fd895de7, type: 2}
