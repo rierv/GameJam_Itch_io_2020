@@ -17,4 +17,5 @@ public class Dialogue: ScriptableObject
     public Line[] sentences;
     public Dialogue nextDialogue;
     public Question nextQuestion;
+    public bool nextIsQuestion;
 }

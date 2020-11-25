@@ -7,12 +7,15 @@ using UnityEngine.UI;
 public class DialogeManager : MonoBehaviour
 {
 
- 
+
     public GameObject DialogueBox;
-    private GameObject boxIstance;
+    public GameObject QuestionBox;
+    private GameObject dialogueBoxIstance;
+    private GameObject questionBoxIstance;
     public GameObject NPCBlue;
     public GameObject NPCVerde;
     public GameObject NPCRosa;
+    public GameObject ButtonPrefab;
 
     public GameObject tutorial;
 
@@ -32,9 +35,9 @@ public class DialogeManager : MonoBehaviour
     void Start()
     {
         sentences = new Queue<string>();
-        
 
-      
+
+
     }
 
     void Update()
@@ -44,63 +47,133 @@ public class DialogeManager : MonoBehaviour
             if (ready) DisplayNextSentence();
             else
             {
-                
+
                 ready = true;
             }
         }
     }
 
-    public void StartDialogue (Dialogue dialogue)
+    public void StartDialogue(Dialogue dialogue)
     {
         currentDialogue = dialogue;
         currentNPC = dialogue.NPC_name;
 
         Time.timeScale = 0;
-        boxIstance = Instantiate(DialogueBox, new Vector2(0, 0), Quaternion.identity);
-        
+        dialogueBoxIstance = Instantiate(DialogueBox, new Vector2(0, 0), Quaternion.identity);
+
         Debug.Log("Starting con  with " + dialogue.NPC_name);
 
-        boxIstance.GetComponent<Transform>().GetChild(0).GetChild(4).GetComponent<Text>().text = dialogue.NPC_name;
+        dialogueBoxIstance.GetComponent<Transform>().GetChild(0).GetChild(4).GetComponent<Text>().text = dialogue.NPC_name;
 
         sentences.Clear();
 
-        foreach(Line sentence in dialogue.sentences)
+        foreach (Line sentence in dialogue.sentences)
         {
             sentences.Enqueue(sentence.text);
         }
 
         DisplayNextSentence();
 
-        
+
     }
 
     public void DisplayNextSentence()
     {
-        if(sentences.Count == 0)
+        if (sentences.Count == 0)
         {
-
             EndDialogue();
             return;
-        } 
-        
-
-            string sentence = sentences.Dequeue();
-            boxIstance.GetComponent<Transform>().GetChild(0).GetChild(3).GetComponent<Text>().text = sentence;
+        }
+        string sentence = sentences.Dequeue();
+        dialogueBoxIstance.GetComponent<Transform>().GetChild(0).GetChild(3).GetComponent<Text>().text = sentence;
         Debug.Log(sentence);
+    }
+
+    public void StartQuestion(Question question)
+    {
+        Time.timeScale = 0;
+        currentDialogue = null;
+        questionBoxIstance = Instantiate(QuestionBox, new Vector2(0, 0), Quaternion.identity);
+        questionBoxIstance.GetComponent<Transform>().GetChild(0).GetChild(2).GetComponent<Text>().text = question.questionText;
+        SetChoices(question);
+    }
+
+    private void SetChoices(Question question)
+    {
+
+        Transform buttonContainer = questionBoxIstance.GetComponent<Transform>().GetChild(0).GetChild(3);
+        int index = 0;
+        foreach (Choice choice in question.choicesList)
+        {
+            GameObject newButton = Instantiate(ButtonPrefab, new Vector2(0, 0), Quaternion.identity);
+            newButton.transform.SetParent(buttonContainer);
+            newButton.GetComponentInChildren<Text>().text = choice.choice;
 
 
+            newButton.GetComponent<Button>().onClick.AddListener(() => this.EndQuestion(choice.nextDialogue));
+            newButton.GetComponent<Button>().onClick.AddListener(Click);
+            if (choice.activateQuest)
+            {
+                switch (question.NPC_name)
+                {
+                    case "Yknip":
+                        newButton.GetComponent<Button>().onClick.AddListener(RosaEvent);
+                        break;
+                    case "Eulb":
+                        newButton.GetComponent<Button>().onClick.AddListener(RosaEvent);
+                        break;
+                    case "Neerg":
+                        newButton.GetComponent<Button>().onClick.AddListener(RosaEvent);
+                        break;
+                }
+            }
+        }
+    }
+    void Click()
+    {
+        Debug.Log("click");
+    }
+    void RosaEvent()
+    {
+        tutorial.SetActive(true);
+    }
+
+    void EndQuestion(Dialogue d)
+    {
+        Destroy(questionBoxIstance);
+
+        Dialogue next = d;
+        Debug.Log(next.sentences[0].text);
+
+        switch (currentNPC)
+        {
+            case "Yknip":
+                NPCRosa.GetComponent<DialogueTrigger>().setNextDialogue(next);
+                break;
+            case "Eulb":
+                NPCBlue.GetComponent<DialogueTrigger>().setNextDialogue(next);
+                break;
+            case "Neerg":
+                Debug.Log("in sto if");
+                NPCVerde.GetComponent<DialogueTrigger>().setNextDialogue(next);
+                break;
+        }
+        Time.timeScale = 1;
     }
 
 
 
     void EndDialogue()
     {
-        Destroy(boxIstance);
+        Destroy(dialogueBoxIstance);
 
-        if (!currentDialogue.nextDialogue.Equals(null))
+        if (currentDialogue.nextIsQuestion)
         {
-           
+            StartQuestion(currentDialogue.nextQuestion);
 
+        }
+        else
+        {
             Dialogue next = currentDialogue.nextDialogue;
 
             switch (currentNPC)
@@ -112,37 +185,11 @@ public class DialogeManager : MonoBehaviour
                     NPCBlue.GetComponent<DialogueTrigger>().setNextDialogue(next);
                     break;
                 case "Neerg":
-                    Debug.Log("in sto if");
                     NPCVerde.GetComponent<DialogueTrigger>().setNextDialogue(next);
                     break;
-
-
             }
-        } else if (!currentDialogue.nextQuestion.Equals(null))
-        {
-
         }
-        else
-        {
-            Debug.LogError("errore");
-        }
-
-        //sentences.Enqueue("CAZZO FAI ANCORA QUI");
-        //sentences.Clear();
-        if (currentNPC == "Yknip")
-        {
-            tutorial.SetActive(true);
-        } else if (currentNPC == "Eulb")
-        {
-            NPCBlue.GetComponent<AttivatoreBotole>().EnableCunicolo();
-        }
-        else if (currentNPC == "Neerg")
-        {
-      
-        }
-
 
         Time.timeScale = 1;
-        Debug.Log("End");    
     }
 }

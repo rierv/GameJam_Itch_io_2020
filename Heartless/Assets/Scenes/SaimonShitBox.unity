@@ -345,6 +345,18 @@ PrefabInstance:
       propertyPath: NPCVerde
       value: 
       objectReference: {fileID: 1190606759}
+    - target: {fileID: 4932000623324068469, guid: 96149816f1479e647a7f597c36bf1b1c,
+        type: 3}
+      propertyPath: ButtonPrefab
+      value: 
+      objectReference: {fileID: 7704361590709847793, guid: d0d05607b44c49840a1db7a70ec17b6b,
+        type: 3}
+    - target: {fileID: 4932000623324068469, guid: 96149816f1479e647a7f597c36bf1b1c,
+        type: 3}
+      propertyPath: QuestionBox
+      value: 
+      objectReference: {fileID: 2016025891158449569, guid: 2edb254ec491dde4e99057b20e23ea69,
+        type: 3}
     - target: {fileID: 4932000623324068470, guid: 96149816f1479e647a7f597c36bf1b1c,
         type: 3}
       propertyPath: m_Name

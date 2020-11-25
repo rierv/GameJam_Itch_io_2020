@@ -10,12 +10,11 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: c44415c4f96d9b141b924b201dfe985e, type: 3}
-  m_Name: Prova
+  m_Name: Risposta B
   m_EditorClassIdentifier: 
   NPC_name: Yknip
   sentences:
-  - text: ciao
-  - text: gradrami neglio occhi
-  nextDialogue: {fileID: 11400000, guid: 37bec7271e869cb4dbfd94512acd0934, type: 2}
-  nextQuestion: {fileID: 11400000, guid: e25ceff69079bbd4c82efcf91966f7a5, type: 2}
+  - text: rimani vicino per continuare a vederli
+  nextDialogue: {fileID: 11400000}
+  nextQuestion: {fileID: 0}
   nextIsQuestion: 0

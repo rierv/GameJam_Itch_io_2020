@@ -1,0 +1,23 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: b197eafebf2111b46ae1e29c6f5c86f7, type: 3}
+  m_Name: Domanda
+  m_EditorClassIdentifier: 
+  NPC_name: Yknip
+  questionText: Li vuoi vedere?
+  choicesList:
+  - choice: Si
+    activateQuest: 1
+    nextDialogue: {fileID: 11400000, guid: 42a34595cc26cfc42b45b009a9d76d0f, type: 2}
+  - choice: No
+    activateQuest: 0
+    nextDialogue: {fileID: 11400000, guid: e897badad79b8724e8349d7eb8153e63, type: 2}
