@@ -52,10 +52,10 @@ public class Heart : MonoBehaviour
     {
         destination = Vector3.zero;
         gameObject.layer = 11;
-        if (readyToHit && collision.gameObject.tag == "Enemy")
+        if (readyToHit && collision.gameObject.tag == "Enemy" && !collision.gameObject.GetComponent<FSM_Enemy>().exitStunnCoroutine)
         {
             //Debug.Log(gameObject.layer);
-            collision.gameObject.GetComponentInChildren<EnemyController>().SetStunned(true);
+            collision.gameObject.GetComponent<EnemyController>().SetStunned(true);
             enemy = collision.gameObject;
             //Debug.Log(gameObject.layer);
 

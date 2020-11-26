@@ -15,7 +15,6 @@ public class FSM_Enemy : MonoBehaviour
     private Color initialColor;
     public List<Vector2> listOfSpots;
     int curr = 0;
-    bool stunned = false;
     GameObject heart;
     public GameObject Generator;
     GlobalGameManager GameManager;
@@ -23,7 +22,9 @@ public class FSM_Enemy : MonoBehaviour
     float stadardSpeed;
     public float EnemyLengthofSight = 8;
     public float stunnTime = .7f;
-    bool exitStunnCoroutine = false;
+    public bool exitStunnCoroutine = false;
+    bool stunned = false;
+
     void Awake()
     {
         if (target == null) target = FindObjectOfType<PlayerController>().gameObject;
@@ -197,7 +198,7 @@ public class FSM_Enemy : MonoBehaviour
 
     private void OnCollisionEnter2D(Collision2D collision)
     {
-        if (collision.gameObject.tag == "Heart"&&collision.gameObject.GetComponent<Heart>().readyToHit)
+        if (collision.gameObject.tag == "Heart"&&collision.gameObject.GetComponent<Heart>().readyToHit&&!stunned && !exitStunnCoroutine)
         {
             collision.gameObject.GetComponent<Heart>().readyToHit = false;
             collision.gameObject.layer = 11;
