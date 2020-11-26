@@ -47,6 +47,9 @@ TagManager:
   - name: Walls
     uniqueID: 1387880171
     locked: 0
+  - name: NemiciWhenInCunicolo
+    uniqueID: 1715023563
+    locked: 0
   - name: CunicoliGround
     uniqueID: 1031885269
     locked: 0

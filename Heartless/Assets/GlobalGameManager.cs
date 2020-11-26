@@ -137,8 +137,9 @@ public class GlobalGameManager : MonoBehaviour
         foreach (Transform child in currentLevelScript.enemyContainer.transform)
         {
             child.gameObject.layer = LayerMask.NameToLayer("noCollision"); //NO COLLISION
-            child.gameObject.GetComponentInChildren<SpriteRenderer>().sortingLayerID =
-                SortingLayer.NameToID("NemiciWhenInCunicolo");
+            SpriteRenderer sr = child.gameObject.GetComponentInChildren<SpriteRenderer>();
+            sr.sortingLayerID = SortingLayer.NameToID("NemiciWhenInCunicolo");
+            sr.color = new Color(0,0,0, 0.7f);
             foreach (Transform child2 in child.transform)
             {
                 child2.gameObject.layer = LayerMask.NameToLayer("noCollision"); //NO COLLISION
@@ -162,8 +163,9 @@ public class GlobalGameManager : MonoBehaviour
         foreach (Transform child in currentLevelScript.enemyContainer.transform)
         {
             child.gameObject.layer = LayerMask.NameToLayer("Enemy"); 
-            child.gameObject.GetComponentInChildren<SpriteRenderer>().sortingLayerID =
-                SortingLayer.NameToID("Player");
+            SpriteRenderer sr = child.gameObject.GetComponentInChildren<SpriteRenderer>();
+            sr.sortingLayerID = SortingLayer.NameToID("Player");
+            sr.color = Color.white;
             foreach (Transform child2 in child.transform)
             {
                 child2.gameObject.layer = LayerMask.NameToLayer("Enemy");
