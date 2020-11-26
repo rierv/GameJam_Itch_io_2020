@@ -33639,6 +33639,11 @@ PrefabInstance:
       propertyPath: DManager
       value: 
       objectReference: {fileID: 8578781505697649162}
+    - target: {fileID: 1800228707, guid: 9089784123ccde6409c7f37c08c1509d, type: 3}
+      propertyPath: dialogue
+      value: 
+      objectReference: {fileID: 11400000, guid: 16e62826f9a7c914388c07eff230e734,
+        type: 2}
     - target: {fileID: 1307624629004659572, guid: 9089784123ccde6409c7f37c08c1509d,
         type: 3}
       propertyPath: m_LocalPosition.x

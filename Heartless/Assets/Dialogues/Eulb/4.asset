@@ -15,7 +15,8 @@ MonoBehaviour:
   NPC_name: Eulb
   sentences:
   - text: "E cos\xEC ho illuminato la tua via"
+  - text: "E cos\xEC ho illuminato la tua via"
   - text: Seguila per completare la tua ricerca
-  nextDialogue: {fileID: 11400000, guid: b216bca82090ccd41bb6fe02b7a075c9, type: 2}
+  nextDialogue: {fileID: 11400000}
   nextQuestion: {fileID: 0}
   nextIsQuestion: 0

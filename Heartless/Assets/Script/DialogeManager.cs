@@ -136,6 +136,7 @@ public class DialogeManager : MonoBehaviour
     }
     void BlueEvent()
     {
+       
         NPCBlue.GetComponent<AttivatoreBotole>().EnableCunicolo();
     }
     void GreenEvent()

@@ -12,7 +12,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: b197eafebf2111b46ae1e29c6f5c86f7, type: 3}
   m_Name: Q1
   m_EditorClassIdentifier: 
-  NPC_name: Elub
+  NPC_name: Eulb
   questionText: Vuoi apire i tuoi occhi?
   choicesList:
   - choice: Si
