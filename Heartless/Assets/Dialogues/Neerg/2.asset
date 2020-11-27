@@ -10,11 +10,12 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: c44415c4f96d9b141b924b201dfe985e, type: 3}
-  m_Name: Risposta B
+  m_Name: 2
   m_EditorClassIdentifier: 
   NPC_name: Neerg
   sentences:
-  - text: rimani vicino per continuare a vederli
-  nextDialogue: {fileID: 11400000}
-  nextQuestion: {fileID: 0}
-  nextIsQuestion: 0
+  - text: Comunque ti faccio attivare il buco se vuoi
+  - text: Quello ci sta
+  nextDialogue: {fileID: 0}
+  nextQuestion: {fileID: 11400000, guid: e25ceff69079bbd4c82efcf91966f7a5, type: 2}
+  nextIsQuestion: 1

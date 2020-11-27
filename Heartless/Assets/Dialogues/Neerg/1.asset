@@ -10,11 +10,13 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: c44415c4f96d9b141b924b201dfe985e, type: 3}
-  m_Name: Prova
+  m_Name: 1
   m_EditorClassIdentifier: 
-  NPC_name: Yknip
+  NPC_name: Neerg
   sentences:
-  - text: ciao
-  nextDialogue: {fileID: 11400000}
+  - text: Ciao sono Neerg
+  - text: Questi dialoghi sono da completare
+  - text: Later
+  nextDialogue: {fileID: 11400000, guid: 39851c6c5ef8edb4ab6befd9c04dbf76, type: 2}
   nextQuestion: {fileID: 0}
   nextIsQuestion: 0
