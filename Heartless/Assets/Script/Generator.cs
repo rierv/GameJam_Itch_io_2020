@@ -10,7 +10,23 @@ public class Generator : MonoBehaviour, I_Interactable
     float timer = 0;
     public float breakTime = 2;
     public GameObject linkedLight;
-    
+    bool watching = false;
+    private void Update()
+    {
+        if (broken&& watching &&linkedLight != null)
+
+        {
+            Camera.main.transform.position = Vector3.MoveTowards(Camera.main.transform.position, linkedLight.transform.position, 2);
+            if(Vector3.Distance(Camera.main.transform.position, linkedLight.transform.position) < 1)
+            {
+                watching = false;
+                GetComponent<Animator>().SetTrigger("break");
+                linkedLight.GetComponentInChildren<Light2D>().enabled = false;
+                StartCoroutine(timeDelay());
+            }
+        }
+    }
+
     public void PlayerEnterRange()
     {
         GlobalGameManager.instance.SelectedInteractableObj = gameObject;
@@ -25,15 +41,19 @@ public class Generator : MonoBehaviour, I_Interactable
     {
         if (!broken)
         {
+            Time.timeScale = 0.03f;
+            watching = true;
             broken = true;
-            GetComponent<Animator>().SetTrigger("break");
-            if (linkedLight != null)
-            {
-                linkedLight.GetComponentInChildren<Light2D>().enabled = false;
-            }
+            
         }
     }
-    
+
+    IEnumerator timeDelay()
+    {
+        yield return new WaitForSeconds(0.03f);
+        Time.timeScale = 1f;
+    }
+
     private void OnTriggerStay2D(Collider2D collision)
     {
         if (collision.gameObject.tag == "Enemy")

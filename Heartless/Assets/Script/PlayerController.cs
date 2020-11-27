@@ -19,7 +19,7 @@ public class PlayerController : MonoBehaviour
     bool isAiming = false;
     float heartRadius = 1f;
     int heartCount = 1;
-    int startHeartCount = 1;
+    public int startHeartCount = 1;
     public Vector3 startPosition;
     GlobalGameManager GameManager;
     Text txtHearts;
@@ -29,11 +29,11 @@ public class PlayerController : MonoBehaviour
         txtHearts = GetComponentInChildren<Text>();
         GameManager = GameObject.FindObjectOfType<GlobalGameManager>();
         startPosition = transform.position;
-        startHeartCount = heartCount;
+        heartCount = startHeartCount;
         rb2d = GetComponent<Rigidbody2D>();
         playerAnimator = GetComponent<Animator>();
         lastAnimationTriggered = "idle";
-        txtHearts.text = heartCount.ToString();
+        txtHearts.text = startHeartCount.ToString();
     }
 
     // Update is called once per frame

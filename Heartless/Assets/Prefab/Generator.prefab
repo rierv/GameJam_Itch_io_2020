@@ -12,7 +12,7 @@ GameObject:
   - component: {fileID: 6236073852577233374}
   - component: {fileID: 1047385541366463069}
   - component: {fileID: 3125477063688177489}
-  m_Layer: 0
+  m_Layer: 18
   m_Name: GeneratorOutline
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -127,7 +127,7 @@ GameObject:
   - component: {fileID: 8776395223838886821}
   - component: {fileID: 8776395223838886825}
   - component: {fileID: 7388776546752969064}
-  m_Layer: 0
+  m_Layer: 18
   m_Name: Generator
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -214,6 +214,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   broken: 0
+  breakTime: 2
   linkedLight: {fileID: 0}
 --- !u!95 &8776395223838886821
 Animator:

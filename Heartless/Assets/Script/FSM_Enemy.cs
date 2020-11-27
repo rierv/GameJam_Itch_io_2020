@@ -93,7 +93,7 @@ public class FSM_Enemy : MonoBehaviour
 
     public bool EnemiesAround()
     {
-        int layerMask = ~LayerMask.GetMask("Enemy");
+        int layerMask = ~LayerMask.GetMask("Enemy") & ~LayerMask.GetMask("Generator");
 
         Debug.DrawRay(transform.position, target.transform.position - transform.position, Color.red); //debug ray to see the ray
         Vector3 tmp = target.transform.position - transform.position;

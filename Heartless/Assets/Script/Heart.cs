@@ -51,8 +51,11 @@ public class Heart : MonoBehaviour
     }
     private void OnCollisionEnter2D(Collision2D collision)
     {
-        destination = Vector3.zero;
-        gameObject.layer = 11;
+        if (destination != Vector3.zero)
+        {
+            destination = Vector3.zero;
+            gameObject.layer = 11;
+        }
         if (readyToHit && collision.gameObject.tag == "Enemy" && !collision.gameObject.GetComponent<FSM_Enemy>().exitStunnCoroutine)
         {
             //Debug.Log(gameObject.layer);
