@@ -8,7 +8,7 @@ public class Generator : MonoBehaviour, I_Interactable
 {
     public bool broken = false;
     float timer = 0;
-
+    public float breakTime = 2;
     public GameObject linkedLight;
     
     public void PlayerEnterRange()

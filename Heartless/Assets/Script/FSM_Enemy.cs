@@ -193,7 +193,7 @@ public class FSM_Enemy : MonoBehaviour
 
     public void RingAlarm()
     {
-        aimHelper.transform.localPosition = (target.transform.position-transform.position);
+        aimHelper.transform.localPosition = (target.transform.position-transform.position).normalized*2;
     }
 
     private void OnCollisionEnter2D(Collision2D collision)
