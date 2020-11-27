@@ -18,6 +18,7 @@ public class DialogeManager : MonoBehaviour
     public GameObject ButtonPrefab;
 
     public GameObject tutorial;
+    public GameObject buco;
 
     private string currentNPC;
 
@@ -141,7 +142,7 @@ public class DialogeManager : MonoBehaviour
     }
     void GreenEvent()
     {
-        
+        buco.SetActive(true);
     }
 
     public void EndQuestion(Dialogue d)
