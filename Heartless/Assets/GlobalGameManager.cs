@@ -239,10 +239,10 @@ public class GlobalGameManager : MonoBehaviour
         playerVisible = true;
         player.GetComponent<PlayerController>().RestartLevel();
         
-        //currentLevelScript.enemyContainer.SetActive(false);
-        //currentLevelScript.AStarObj.SetActive(false);
+        currentLevelScript.enemyContainer.SetActive(false);
+        currentLevelScript.AStarObj.SetActive(false);
 
-        //currentLevel.SetActive(false);
+        currentLevel.SetActive(false);
         
         if (currentFloor == 1)
         {
