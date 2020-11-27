@@ -17,7 +17,7 @@ public class PlayerController : MonoBehaviour
     private Animator playerAnimator;
     private string lastAnimationTriggered;
     bool isAiming = false;
-    float heartRadius = .6f;
+    float heartRadius = 1f;
     int heartCount = 1;
     int startHeartCount = 1;
     public Vector3 startPosition;
