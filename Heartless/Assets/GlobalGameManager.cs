@@ -105,11 +105,6 @@ public class GlobalGameManager : MonoBehaviour
             currentLevelScript.AStarObj.SetActive(true);
             currentLevelScript.enemyContainer.SetActive(true);
             
-            //SET ENEMY TARGET
-            foreach (Transform child in currentLevelScript.enemyContainer.transform)
-            {
-                child.gameObject.GetComponentInChildren<FSM_Enemy>().target = player;
-            }
         }
     }
 
@@ -285,11 +280,10 @@ public class GlobalGameManager : MonoBehaviour
         Debug.Log("Activate Enemy Container");
         currentLevelScript.enemyContainer.SetActive(true);
         
-        //SET ENEMY TARGET
-        foreach (Transform child in currentLevelScript.enemyContainer.transform)
+        if(bucozzoRotto&&currentFloor==1)
         {
-            child.gameObject.GetComponentInChildren<FSM_Enemy>().target = player;
-            child.gameObject.GetComponentInChildren<FSM_Enemy>().StartCoroutine("Patrol");
+            //GameObject.Find("Enemy (7)").SetActive(false);
+            GameObject.Find("Enemy (11)").SetActive(false);
         }
     }
 }

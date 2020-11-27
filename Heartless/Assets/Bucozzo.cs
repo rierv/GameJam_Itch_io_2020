@@ -5,6 +5,7 @@ using UnityEngine;
 
 public class Bucozzo : MonoBehaviour
 {
+    public Vector3 destination;
     // Update is called once per frame
     void OnEnable()
     {
@@ -36,6 +37,7 @@ public class Bucozzo : MonoBehaviour
     {
         if (other.gameObject.CompareTag("Player"))
         {
+            GameObject.FindObjectOfType<PlayerController>().startPosition = destination;
             GetComponent<BoxCollider2D>().enabled = false;
             GlobalGameManager.instance.SwitchFloor();
         }

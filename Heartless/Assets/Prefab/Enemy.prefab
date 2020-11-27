@@ -168,7 +168,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   playerVisible: 1
   range: 4.8
-  reactionTime: 0.4
+  reactionTime: 0.6
   aimHelper: {fileID: 2073559774}
   target: {fileID: 0}
   switchTime: 0.1
@@ -178,6 +178,8 @@ MonoBehaviour:
   Generator: {fileID: 0}
   seekSpeed: 3
   EnemyLengthofSight: 8
+  stunnTime: 0.7
+  exitStunnCoroutine: 0
 --- !u!114 &3471935749820772021
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -221,7 +223,7 @@ MonoBehaviour:
   version: 2
   radius: 0.5
   height: 2
-  repathRate: 0.4
+  repathRate: 0.3
   canSearch: 1
   canMove: 1
   maxSpeed: 2

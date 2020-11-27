@@ -4,6 +4,8 @@ using UnityEngine;
 
 public class Scala : MonoBehaviour, I_Interactable
 {
+    public Vector3 destination=Vector3.zero;
+    
     public void PlayerEnterRange()
     {
         GlobalGameManager.instance.SelectedInteractableObj = gameObject;
@@ -16,6 +18,7 @@ public class Scala : MonoBehaviour, I_Interactable
 
     public void Interact()
     {
+        GameObject.FindObjectOfType<PlayerController>().startPosition = destination;
         GlobalGameManager.instance.SwitchFloor();
     }
 }

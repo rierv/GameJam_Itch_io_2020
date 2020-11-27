@@ -20,7 +20,7 @@ public class PlayerController : MonoBehaviour
     float heartRadius = .6f;
     int heartCount = 1;
     int startHeartCount = 1;
-    Vector3 startPosition;
+    public Vector3 startPosition;
     GlobalGameManager GameManager;
     Text txtHearts;
     // Start is called before the first frame update
@@ -173,7 +173,6 @@ public class PlayerController : MonoBehaviour
 
             if(!collision.gameObject.GetComponent<EnemyController>().stunned&& GameManager.PlayerVisible && !GameManager.IsInCunicolo)
             {
-                transform.position = startPosition;
                 startHeartCount = startHeartCount + 1;
                 RestartLevel();
             }
@@ -205,7 +204,7 @@ public class PlayerController : MonoBehaviour
             ep.SetStunned(false);
             ep.gameObject.GetComponent<Animator>().SetTrigger("idle");
         }
-        startPosition = transform.position;
+        transform.position = startPosition;
         heartCount = startHeartCount;
         txtHearts.text = heartCount.ToString();
     }
