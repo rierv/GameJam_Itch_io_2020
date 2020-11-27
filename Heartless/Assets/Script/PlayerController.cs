@@ -200,6 +200,7 @@ public class PlayerController : MonoBehaviour
         }
         foreach (EnemyController ep in FindObjectsOfType<EnemyController>())
         {
+            ep.GetComponent<BoxCollider2D>().enabled = true;
             ep.gameObject.transform.localPosition = Vector3.zero;
             ep.SetStunned(false);
             ep.gameObject.GetComponent<Animator>().SetTrigger("idle");

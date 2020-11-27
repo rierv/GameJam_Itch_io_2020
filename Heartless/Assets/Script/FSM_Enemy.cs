@@ -23,10 +23,11 @@ public class FSM_Enemy : MonoBehaviour
     public float EnemyLengthofSight = 8;
     public float stunnTime = .7f;
     public bool exitStunnCoroutine = false;
-    bool stunned = false;
+    bool isStunned = false;
 
     void Awake()
     {
+        
         if (target == null) target = FindObjectOfType<PlayerController>().gameObject;
         stadardSpeed = GetComponent<Pathfinding.AIPath>().maxSpeed;
 
@@ -109,9 +110,9 @@ public class FSM_Enemy : MonoBehaviour
 
     public bool GetHit()
     {
-        if(stunned) GetComponent<BoxCollider2D>().enabled = false;
+        if(isStunned) GetComponent<BoxCollider2D>().enabled = false;
 
-        return stunned;
+        return isStunned;
     }
 
     public bool GetFree()
@@ -122,14 +123,14 @@ public class FSM_Enemy : MonoBehaviour
             StartCoroutine(ExitStunnCoroutine());
         }
         
-        return heart==null&&!stunned;
+        return heart==null&&!isStunned;
     }
 
     IEnumerator ExitStunnCoroutine()
     {
         yield return new WaitForSeconds(stunnTime);
         GetComponent<BoxCollider2D>().enabled = true;
-        stunned = false;
+        isStunned = false;
         GetComponentInChildren<EnemyController>().stunned = false;
     }
 
@@ -198,12 +199,12 @@ public class FSM_Enemy : MonoBehaviour
 
     private void OnCollisionEnter2D(Collision2D collision)
     {
-        if (collision.gameObject.tag == "Heart"&&collision.gameObject.GetComponent<Heart>().readyToHit&&!stunned && !exitStunnCoroutine)
+        if (collision.gameObject.tag == "Heart"&&collision.gameObject.GetComponent<Heart>().readyToHit&&!isStunned && !exitStunnCoroutine)
         {
             collision.gameObject.GetComponent<Heart>().readyToHit = false;
             collision.gameObject.layer = 11;
 
-            stunned = true;
+            isStunned = true;
             heart = collision.gameObject;
             fsm.Update();
         }
