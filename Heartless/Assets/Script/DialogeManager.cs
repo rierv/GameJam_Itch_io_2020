@@ -142,7 +142,7 @@ public class DialogeManager : MonoBehaviour
     }
     void GreenEvent()
     {
-        buco.SetActive(true);
+        buco.GetComponent<Bucozzo>().BreakBucozzo();
     }
 
     public void EndQuestion(Dialogue d)

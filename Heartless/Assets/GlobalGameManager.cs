@@ -62,6 +62,8 @@ public class GlobalGameManager : MonoBehaviour
     private LevelScript currentLevelScript;
     public GameObject globalLight;
 
+    public bool bucozzoRotto;
+
 
     // Start is called before the first frame update
     void Awake()
@@ -76,6 +78,7 @@ public class GlobalGameManager : MonoBehaviour
             player = GameObject.FindWithTag("Player");
             currentFloor = 1;
             currentLevel = Instantiate(firstLevel);
+            bucozzoRotto = false;
             //secondLevel = Instantiate(secondLevel);
             //secondLevel.SetActive(false);
             
@@ -248,13 +251,13 @@ public class GlobalGameManager : MonoBehaviour
         
         if (currentFloor == 1)
         {
-            DestroyImmediate(currentLevel);
+            Destroy(currentLevel);
             GameObject nextLevel = Instantiate(secondLevel);
             currentLevel = nextLevel;
             currentFloor = 2;
         } else if (currentFloor == 2)
         {
-            DestroyImmediate(currentLevel);
+            Destroy(currentLevel);
             GameObject nextLevel = Instantiate(firstLevel);
             currentLevel = nextLevel;
             currentFloor = 1;
