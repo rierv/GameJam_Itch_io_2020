@@ -17,11 +17,10 @@ MonoBehaviour:
   - text: Sorry... I mistook you for someone else
   - text: 'You must have just arrived, or you would roam heartless in the labyrinth
       like the other souls '
-  - text: "My soul too is wandering Heartlessl in the labyrinth. \nIf you meet her
-      you will have to be careful."
-  - text: Like all other Heartless souls she will be attracted to yours
-  - text: "Oh, maybe I know who you are. \nI must have seen your body a long time
-      ago..."
+  - text: "My soul is an Heartless of the labyrinth too. \nIf you meet her you will
+      have to be care"
+  - text: Like all other Heartless souls she will be attracted to your heart
+  - text: But.. wait.. maybe I know who you are!!!
   nextDialogue: {fileID: 0}
   nextQuestion: {fileID: 11400000, guid: 896694bf8c6e2c64a82e196806c934be, type: 2}
   nextIsQuestion: 1

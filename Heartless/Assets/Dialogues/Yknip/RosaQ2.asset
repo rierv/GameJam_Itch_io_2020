@@ -13,12 +13,11 @@ MonoBehaviour:
   m_Name: RosaQ2
   m_EditorClassIdentifier: 
   NPC_name: Yknip
-  questionText: Do you want to learn to use your heart or do you want to learn to
-    hide?
+  questionText: What do you want to learn?
   choicesList:
-  - choice: Heart
+  - choice: How to use my heart
     activateQuest: 0
     nextDialogue: {fileID: 11400000, guid: db6cff99d21d0bd40b878d37ad5f3d84, type: 2}
-  - choice: 'Hide '
+  - choice: About the labyrinth
     activateQuest: 0
     nextDialogue: {fileID: 11400000, guid: 4ba19cdafda84aa448a5edbfb065dbd8, type: 2}

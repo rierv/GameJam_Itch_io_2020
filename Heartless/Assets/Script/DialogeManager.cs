@@ -55,8 +55,6 @@ public class DialogeManager : MonoBehaviour
         Time.timeScale = 0;
         dialogueBoxIstance = Instantiate(DialogueBox, new Vector2(0, 0), Quaternion.identity);
 
-        Debug.Log("Starting con  with " + dialogue.NPC_name);
-
         dialogueBoxIstance.GetComponent<Transform>().GetChild(0).GetChild(4).GetComponent<Text>().text = dialogue.NPC_name;
 
         sentences.Clear();
@@ -82,10 +80,8 @@ public class DialogeManager : MonoBehaviour
                 EndDialogue();
                 return;
             }
-            Debug.Log(sentences.Count);
             string sentence = sentences.Dequeue();
             dialogueBoxIstance.GetComponent<Transform>().GetChild(0).GetChild(3).GetComponent<Text>().text = sentence;
-            Debug.Log(sentence + "in ququq<.   " + sentences.Count);
         }
     }
 
@@ -111,7 +107,6 @@ public class DialogeManager : MonoBehaviour
 
 
             newButton.GetComponent<Button>().onClick.AddListener(() => this.EndQuestion(choice.nextDialogue));
-            Debug.Log("set choice");
      
             if (choice.activateQuest)
             {
@@ -157,6 +152,7 @@ public class DialogeManager : MonoBehaviour
         {
             case "Yknip":
                 NPCRosa.GetComponent<DialogueTrigger>().setNextDialogue(next);
+                NPCRosa.GetComponent<DialogueTrigger>().isTalking = false;
                 break;
             case "Eulb":
                 NPCBlue.GetComponent<DialogueTrigger>().setNextDialogue(next);
@@ -174,7 +170,6 @@ public class DialogeManager : MonoBehaviour
     {
         Destroy(dialogueBoxIstance);
         isInDialogue = false;
-        Debug.Log("enddialogue");
 
         if (currentDialogue.nextIsQuestion)
         {
@@ -189,7 +184,9 @@ public class DialogeManager : MonoBehaviour
             {
                 case "Yknip":
                     NPCRosa.GetComponent<DialogueTrigger>().setNextDialogue(next);
-                 
+                    NPCRosa.GetComponent<DialogueTrigger>().isTalking = false;
+                    NPCRosa.GetComponent<DialogueTrigger>().stopFuckingTalking = true;
+
                     break;
                 case "Eulb":
                     NPCBlue.GetComponent<DialogueTrigger>().setNextDialogue(next);                

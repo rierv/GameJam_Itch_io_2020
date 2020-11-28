@@ -12,7 +12,7 @@ public class DialogueTrigger : MonoBehaviour
     private DialogeManager DMscript;
     private bool canTalk;
     public bool isTalking;
-    
+    public bool stopFuckingTalking = false;
 
     private void Start()
     {
@@ -25,11 +25,11 @@ public class DialogueTrigger : MonoBehaviour
     void Update()
     {
 
-        if (Input.GetKeyDown(KeyCode.Z) && canTalk && !isTalking)
+        if (Input.GetKeyDown(KeyCode.Z) && canTalk && !isTalking && !stopFuckingTalking)
         {
             TriggerDialogue();
-            Debug.Log("trigger");
         }
+        else if (stopFuckingTalking) stopFuckingTalking = false;
     }
 
 
@@ -37,13 +37,10 @@ public class DialogueTrigger : MonoBehaviour
 
     public void  TriggerDialogue()
     {
-        if (!isTalking)
-        {
-            isTalking = true;
-            DMscript.StartDialogue(dialogue);
-            
-        }
-     
+        
+        isTalking = true;
+        DMscript.StartDialogue(dialogue);
+           
     }
     
     private void OnTriggerEnter2D(Collider2D col)

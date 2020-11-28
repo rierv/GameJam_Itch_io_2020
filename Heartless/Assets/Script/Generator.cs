@@ -16,7 +16,7 @@ public class Generator : MonoBehaviour, I_Interactable
         if (broken&& watching &&linkedLight != null)
 
         {
-            Camera.main.transform.position = Vector3.MoveTowards(Camera.main.transform.position, linkedLight.transform.position, 2);
+            Camera.main.transform.position = Vector3.MoveTowards(Camera.main.transform.position, linkedLight.transform.position, .5f);
             if(Vector3.Distance(Camera.main.transform.position, linkedLight.transform.position) < 1)
             {
                 watching = false;
