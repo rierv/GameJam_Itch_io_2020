@@ -208,5 +208,9 @@ public class PlayerController : MonoBehaviour
         transform.position = startPosition;
         heartCount = startHeartCount;
         txtHearts.text = heartCount.ToString();
+        foreach (Generator g in FindObjectsOfType<Generator>())
+        {
+            g.broken = false;
+        }
     }
 }

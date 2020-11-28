@@ -30452,6 +30452,11 @@ PrefabInstance:
       propertyPath: listOfSpots.Array.data[1].x
       value: 2
       objectReference: {fileID: 0}
+    - target: {fileID: 5218175571345683424, guid: 29a7baa01148e4346adb23265640e36c,
+        type: 3}
+      propertyPath: EnemyLengthofSight
+      value: 5
+      objectReference: {fileID: 0}
     - target: {fileID: 7801180264074507812, guid: 29a7baa01148e4346adb23265640e36c,
         type: 3}
       propertyPath: m_Name
@@ -30465,7 +30470,7 @@ PrefabInstance:
     - target: {fileID: 7801180264074507813, guid: 29a7baa01148e4346adb23265640e36c,
         type: 3}
       propertyPath: m_LocalPosition.y
-      value: -11.36
+      value: -12.9
       objectReference: {fileID: 0}
     - target: {fileID: 7801180264074507813, guid: 29a7baa01148e4346adb23265640e36c,
         type: 3}
@@ -30980,7 +30985,7 @@ PrefabInstance:
     - target: {fileID: 7801180264074507813, guid: 29a7baa01148e4346adb23265640e36c,
         type: 3}
       propertyPath: m_LocalPosition.y
-      value: -8.432063
+      value: -7.35
       objectReference: {fileID: 0}
     - target: {fileID: 7801180264074507813, guid: 29a7baa01148e4346adb23265640e36c,
         type: 3}
@@ -33073,7 +33078,7 @@ PrefabInstance:
     - target: {fileID: 8776395223838886826, guid: e429dfab755b08f4499bc843096a615c,
         type: 3}
       propertyPath: breakTime
-      value: 12
+      value: 20
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: e429dfab755b08f4499bc843096a615c, type: 3}
@@ -33164,7 +33169,7 @@ PrefabInstance:
     - target: {fileID: 8776395223838886826, guid: e429dfab755b08f4499bc843096a615c,
         type: 3}
       propertyPath: breakTime
-      value: 4
+      value: 6
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: e429dfab755b08f4499bc843096a615c, type: 3}
@@ -33727,6 +33732,11 @@ PrefabInstance:
         type: 3}
       propertyPath: listOfSpots.Array.data[1].x
       value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 5218175571345683424, guid: 29a7baa01148e4346adb23265640e36c,
+        type: 3}
+      propertyPath: EnemyLengthofSight
+      value: 5
       objectReference: {fileID: 0}
     - target: {fileID: 7801180264074507812, guid: 29a7baa01148e4346adb23265640e36c,
         type: 3}
