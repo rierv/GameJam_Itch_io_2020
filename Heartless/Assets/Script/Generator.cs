@@ -59,7 +59,7 @@ public class Generator : MonoBehaviour, I_Interactable
         if (collision.gameObject.tag == "Enemy")
         {
             timer += Time.deltaTime;
-            if (timer > 1)
+            if (timer > breakTime)
             {
                 broken = false;
                 timer = 0;
