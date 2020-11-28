@@ -1,0 +1,26 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c44415c4f96d9b141b924b201dfe985e, type: 3}
+  m_Name: Rosa1.3bis
+  m_EditorClassIdentifier: 
+  NPC_name: Yknip
+  sentences:
+  - text: The bad news is that the labyrinth is teeming with the heartless and you
+      risk being devoured with every step
+  - text: 'The good one is that you wont wander aimlessly.
+
+      I saw your body
+      in there, surrounded by ruins, in the center of this floor of the labyrinth'
+  - text: If you want I can teach you how you can reach it
+  nextDialogue: {fileID: 0}
+  nextQuestion: {fileID: 11400000, guid: e2f7cb6fa3dbe5c4ab9ad269c2443d3f, type: 2}
+  nextIsQuestion: 1

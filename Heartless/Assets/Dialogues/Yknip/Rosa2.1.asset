@@ -1,0 +1,26 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c44415c4f96d9b141b924b201dfe985e, type: 3}
+  m_Name: Rosa2.1
+  m_EditorClassIdentifier: 
+  NPC_name: Yknip
+  sentences:
+  - text: "Your heart can be extracted and used as a shield by holding down the left
+      mouse button \nThen fired by pressing the right one"
+  - text: When the enemies touch your heart they will remain harmless and your heart
+      will begin to revolve around them
+  - text: You can take it back at any time by touching it, but this will awaken the
+      hatred of the heartless and soon they will come back to hunt you
+  - text: You only have one heart, try to use it well
+  nextDialogue: {fileID: 0}
+  nextQuestion: {fileID: 11400000, guid: e2f7cb6fa3dbe5c4ab9ad269c2443d3f, type: 2}
+  nextIsQuestion: 1

@@ -10,14 +10,15 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: b197eafebf2111b46ae1e29c6f5c86f7, type: 3}
-  m_Name: 2
+  m_Name: RosaQ1
   m_EditorClassIdentifier: 
   NPC_name: Yknip
-  questionText: Vuoi imparare a giocare?
+  questionText: I have two news for you, one good and one bad. Which one do you want
+    to hear first?
   choicesList:
-  - choice: Si
-    activateQuest: 1
-    nextDialogue: {fileID: 11400000, guid: 4adc24678077c46419b1848ff411187e, type: 2}
-  - choice: No
+  - choice: Good one
     activateQuest: 0
-    nextDialogue: {fileID: 11400000, guid: bd9966cf50419c14e9d6a35e3973e582, type: 2}
+    nextDialogue: {fileID: 11400000, guid: dd8c1ea033794514795d38a685f7ae4b, type: 2}
+  - choice: Bad one
+    activateQuest: 0
+    nextDialogue: {fileID: 11400000, guid: 8894f4a41cd23554c9b9583cc3d51560, type: 2}

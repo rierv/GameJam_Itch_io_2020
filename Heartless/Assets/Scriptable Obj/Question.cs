@@ -16,6 +16,7 @@ public struct Choice
 public class Question : ScriptableObject
 {
     public string NPC_name;
+    [TextArea(2, 5)]
     public string questionText;
     [SerializeField]
     public Choice[] choicesList;
