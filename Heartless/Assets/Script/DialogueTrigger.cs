@@ -6,7 +6,7 @@ public class DialogueTrigger : MonoBehaviour
 {
     [SerializeField]
     private Dialogue dialogue;
-
+    private Question question;
     public GameObject DManager;
     private BoxCollider2D bc;
     private DialogeManager DMscript;
@@ -39,8 +39,11 @@ public class DialogueTrigger : MonoBehaviour
     {
         
         isTalking = true;
-        DMscript.StartDialogue(dialogue);
-           
+
+        if (dialogue) DMscript.StartDialogue(dialogue);
+        else if (question) DMscript.StartQuestion(question);
+
+
     }
     
     private void OnTriggerEnter2D(Collider2D col)
@@ -63,6 +66,12 @@ public class DialogueTrigger : MonoBehaviour
     public void setNextDialogue(Dialogue d)
     {
         dialogue = d;
+        question = null;
+    }
+    public void setNextQuestion(Question d)
+    {
+        question = d;
+        dialogue = null;
     }
 
 }

@@ -178,40 +178,44 @@ public class DialogeManager : MonoBehaviour
         Destroy(dialogueBoxIstance);
         isInDialogue = false;
 
+        DialogueTrigger dt = null;
+
+        switch (currentNPC)
+        {
+            case "Yknip":
+                dt = NPCRosa.GetComponent<DialogueTrigger>();
+                break;
+            case "Eulb":
+                dt = NPCBlue.GetComponent<DialogueTrigger>();
+                break;
+            case "Neerg":
+
+                dt = NPCVerde.GetComponent<DialogueTrigger>();
+                break;
+            case "Yknip - Surprised":
+
+                dt = NPCRosa2.GetComponent<DialogueTrigger>();
+                break;
+
+        }
+
         if (currentDialogue.nextIsQuestion)
         {
-            StartQuestion(currentDialogue.nextQuestion);
+            Question next = currentDialogue.nextQuestion;
 
+            dt.setNextQuestion(next);
+        
         }
         else
         {
             Dialogue next = currentDialogue.nextDialogue;
-            DialogueTrigger dt=null;
 
-            switch (currentNPC)
-            {
-                case "Yknip":
-                    dt = NPCRosa.GetComponent<DialogueTrigger>();
-                    break;
-                case "Eulb":
-                    dt = NPCBlue.GetComponent<DialogueTrigger>();
-                    break;
-                case "Neerg":
-
-                    dt = NPCVerde.GetComponent<DialogueTrigger>();
-                    break;
-                case "Yknip - Surprised":
-
-                    dt = NPCRosa2.GetComponent<DialogueTrigger>();
-                    break;
-
-            }
             dt.setNextDialogue(next);
-            dt.isTalking = false;
-            dt.stopFuckingTalking = true;
-            Time.timeScale = 1;
+            
         }
+        dt.isTalking = false;
+        dt.stopFuckingTalking = true;
+        Time.timeScale = 1;
 
-          
     }
 }
