@@ -175,6 +175,7 @@ public class PlayerController : MonoBehaviour
             {
                 //PLAYER DIE
                 playerAnimator.SetTrigger("die");
+                GetComponent<AudioSource>().Play();
                 this.enabled = false;
                 /*
                 //ANIMATION WILL CALL PlayerDie()
