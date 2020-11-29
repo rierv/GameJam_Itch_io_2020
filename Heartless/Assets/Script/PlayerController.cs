@@ -173,14 +173,28 @@ public class PlayerController : MonoBehaviour
 
             if(!collision.gameObject.GetComponent<EnemyController>().stunned&& GameManager.PlayerVisible && !GameManager.IsInCunicolo)
             {
+                //PLAYER DIE
+                playerAnimator.SetTrigger("die");
+                this.enabled = false;
+                /*
+                //ANIMATION WILL CALL PlayerDie()
                 startHeartCount = startHeartCount + 1;
                 RestartLevel();
                 GetComponent<Rigidbody2D>().velocity = Vector2.zero;
                 GlobalGameManager.instance.currentFloor = GlobalGameManager.instance.currentFloor % 2 + 1;
                 GlobalGameManager.instance.SwitchFloor();
-
+                */
             }
         }
+    }
+
+    private void PlayerDie()
+    {
+        startHeartCount = startHeartCount + 1;
+        RestartLevel();
+        GetComponent<Rigidbody2D>().velocity = Vector2.zero;
+        GlobalGameManager.instance.currentFloor = GlobalGameManager.instance.currentFloor % 2 + 1;
+        GlobalGameManager.instance.SwitchFloor();
     }
 
     private void NotifyGGMBotolaInteraction()
@@ -206,6 +220,7 @@ public class PlayerController : MonoBehaviour
         transform.position = startPosition;
         heartCount = startHeartCount;
         txtHearts.text = heartCount.ToString();
-        
+        playerAnimator.SetTrigger("respawn");
+        this.enabled = false;
     }
 }
