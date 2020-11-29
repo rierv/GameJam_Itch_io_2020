@@ -122,6 +122,8 @@ MonoBehaviour:
   enemy: {fileID: 0}
   heartAmmoSpeed: 14
   readyToHit: 0
+  audioOnEnemy: {fileID: 8300000, guid: f5421661f59f04d47bf048c207779050, type: 3}
+  audioOnWalls: {fileID: 8300000, guid: d0e9411d04f9e6d44a82b51c23921bf7, type: 3}
 --- !u!50 &5626698917203705939
 Rigidbody2D:
   serializedVersion: 4

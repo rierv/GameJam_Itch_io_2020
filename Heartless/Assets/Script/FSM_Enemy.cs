@@ -24,6 +24,8 @@ public class FSM_Enemy : MonoBehaviour
     public float stunnTime = .7f;
     public bool exitStunnCoroutine = false;
     bool isStunned = false;
+    public AudioClip soundEnemyloseHeart;
+    public AudioClip soundEnemyseesPlayer;
 
     void Awake()
     {
@@ -129,6 +131,7 @@ public class FSM_Enemy : MonoBehaviour
     IEnumerator ExitStunnCoroutine()
     {
         yield return new WaitForSeconds(stunnTime);
+        GetComponent<AudioSource>().PlayOneShot(soundEnemyloseHeart);
         GetComponent<BoxCollider2D>().enabled = true;
         isStunned = false;
         GetComponentInChildren<EnemyController>().stunned = false;
@@ -179,6 +182,7 @@ public class FSM_Enemy : MonoBehaviour
         aimHelper.transform.position = transform.position;
     }
 
+
     public void Fix()
     {
         aimHelper.transform.position = Generator.transform.position;
@@ -187,6 +191,8 @@ public class FSM_Enemy : MonoBehaviour
     public void Boost()
     {
         //animation
+
+        GetComponent<AudioSource>().PlayOneShot(soundEnemyseesPlayer);
         GetComponent<Pathfinding.AIPath>().maxSpeed = stadardSpeed * seekSpeed;
         aimHelper.transform.position = target.transform.position;
         aimHelper.transform.parent = target.transform;
