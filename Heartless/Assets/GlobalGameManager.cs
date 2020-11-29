@@ -120,7 +120,10 @@ public class GlobalGameManager : MonoBehaviour
         {
             if (selectedInteractableObj)
             {
-                selectedInteractableObj.GetComponent<I_Interactable>().Interact();
+                if (player.GetComponent<PlayerController>().enabled)
+                {
+                    selectedInteractableObj.GetComponent<I_Interactable>().Interact();
+                }
             }
         }
         if (Input.GetKeyDown(KeyCode.Escape))
@@ -187,18 +190,13 @@ public class GlobalGameManager : MonoBehaviour
     {
         GetComponent<AudioSource>().PlayOneShot(soundEnterBotola);
         Debug.Log("GM interact botola");
-        if (selectedInteractableObj)
+        if (WasInCunicolo)
         {
-            if (WasInCunicolo)
-            {
-                ExitCunicolo();
-            }
-            else
-            {
-                EnterCunicolo();
-            }
-
-            //player.GetComponent<PlayerController>().enabled = true;
+            ExitCunicolo();
+        }
+        else
+        {
+            EnterCunicolo();
         }
     }
 

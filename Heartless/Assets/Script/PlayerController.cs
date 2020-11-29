@@ -205,6 +205,7 @@ public class PlayerController : MonoBehaviour
     private void NotifyGGMBotolaInteraction()
     {
         //Questo metodo viene chiamato alla fine dell'animazione "EnterBotola"
+        Debug.Log("NOTIFY GM Botola");
         GlobalGameManager.instance.InteractBotola();
     }
     

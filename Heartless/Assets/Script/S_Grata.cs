@@ -21,8 +21,8 @@ public class S_Grata : MonoBehaviour, I_Interactable
     public void Interact()
     {
         GetComponent<AudioSource>().PlayOneShot(audio);
-        Debug.Log(GetComponent<AudioSource>().isPlaying);
-        Debug.Log(audio);
+        //Debug.Log(GetComponent<AudioSource>().isPlaying);
+        //Debug.Log(audio);
         GlobalGameManager.instance.WasInCunicolo = GlobalGameManager.instance.IsInCunicolo;
         GlobalGameManager.instance.IsInCunicolo = true;
         GlobalGameManager.instance.Player.GetComponent<PlayerController>().enabled = false;
