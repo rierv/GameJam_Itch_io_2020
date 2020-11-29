@@ -96,7 +96,7 @@ public class FSM_Enemy : MonoBehaviour
 
     public bool EnemiesAround()
     {
-        int layerMask = ~LayerMask.GetMask("Enemy") & ~LayerMask.GetMask("Generator");
+        int layerMask = ~LayerMask.GetMask("Enemy") & ~LayerMask.GetMask("Generator") & ~LayerMask.GetMask("Botola");
 
         Debug.DrawRay(transform.position, target.transform.position - transform.position, Color.red); //debug ray to see the ray
         Vector3 tmp = target.transform.position - transform.position;
@@ -133,7 +133,6 @@ public class FSM_Enemy : MonoBehaviour
     {
         yield return new WaitForSeconds(stunnTime);
         GetComponent<AudioSource>().PlayOneShot(soundEnemyloseHeart);
-        GetComponent<BoxCollider2D>().enabled = true;
         isStunned = false;
         GetComponentInChildren<EnemyController>().stunned = false;
     }
@@ -158,6 +157,7 @@ public class FSM_Enemy : MonoBehaviour
     public void StartWander()
     {
         exitStunnCoroutine = false;
+        GetComponent<BoxCollider2D>().enabled = true;
         aimHelper.transform.parent = transform.parent;
         aimHelper.transform.position = transform.position;
         GetComponent<Pathfinding.AIPath>().maxSpeed = stadardSpeed;
@@ -203,6 +203,8 @@ public class FSM_Enemy : MonoBehaviour
         GetComponent<Pathfinding.AIPath>().maxSpeed = stadardSpeed * seekSpeed;
         aimHelper.transform.position = target.transform.position;
         aimHelper.transform.parent = target.transform;
+        fsm.Update();
+
     }
 
     public void RingAlarm()

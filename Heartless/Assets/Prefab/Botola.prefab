@@ -13,7 +13,7 @@ GameObject:
   - component: {fileID: 1009224770}
   - component: {fileID: 3106578138071765592}
   - component: {fileID: 8981878926743280072}
-  m_Layer: 0
+  m_Layer: 19
   m_Name: Botola
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -227,7 +227,7 @@ GameObject:
   - component: {fileID: 7683429729293822291}
   - component: {fileID: 7683429729293822290}
   - component: {fileID: 7683429729293822289}
-  m_Layer: 0
+  m_Layer: 19
   m_Name: GrataOutline
   m_TagString: Untagged
   m_Icon: {fileID: 0}

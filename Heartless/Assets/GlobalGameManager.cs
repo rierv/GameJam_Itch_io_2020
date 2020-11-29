@@ -189,6 +189,7 @@ public class GlobalGameManager : MonoBehaviour
     public void InteractBotola()
     {
         GetComponent<AudioSource>().PlayOneShot(soundEnterBotola);
+        player.GetComponent<Rigidbody2D>().velocity = Vector3.zero;
         Debug.Log("GM interact botola");
         if (WasInCunicolo)
         {
