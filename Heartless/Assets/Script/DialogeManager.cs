@@ -16,6 +16,8 @@ public class DialogeManager : MonoBehaviour
     public GameObject NPCVerde;
     public GameObject NPCRosa;
     public GameObject NPCRosa2;
+    public GameObject NPCPurple;
+    public GameObject NPCPurple2;
     public GameObject ButtonPrefab;
 
     public GameObject tutorial;
@@ -88,6 +90,7 @@ public class DialogeManager : MonoBehaviour
 
     public void StartQuestion(Question question)
     {
+        Time.timeScale = 0;
         currentDialogue = null;
         questionBoxIstance = Instantiate(QuestionBox, new Vector2(0, 0), Quaternion.identity);
         questionBoxIstance.GetComponent<Transform>().GetChild(0).GetChild(2).GetComponent<Text>().text = question.questionText;
@@ -122,6 +125,12 @@ public class DialogeManager : MonoBehaviour
                     case "Neerg":
                         newButton.GetComponent<Button>().onClick.AddListener(GreenEvent);
                         break;
+                    case "Elprup":
+                        newButton.GetComponent<Button>().onClick.AddListener(PurpleEvent);
+                        break;
+                    case "Elprup - Scared":
+                        newButton.GetComponent<Button>().onClick.AddListener(PurpleEvent);
+                        break;
                 }
             }
         }
@@ -139,6 +148,10 @@ public class DialogeManager : MonoBehaviour
     void GreenEvent()
     {
         buco.GetComponent<Bucozzo>().BreakBucozzo();
+    }
+    void PurpleEvent()
+    {
+        UnityEngine.SceneManagement.SceneManager.LoadScene("Game Scene");
     }
 
     public void EndQuestion(Dialogue d)
@@ -163,6 +176,12 @@ public class DialogeManager : MonoBehaviour
             case "Yknip - Surprised":
 
                 dt = NPCRosa2.GetComponent<DialogueTrigger>();
+                break;
+            case "Elprup":
+                dt = NPCPurple.GetComponent<DialogueTrigger>();
+                break;
+            case "Elprup - Scared":
+                dt = NPCPurple2.GetComponent<DialogueTrigger>();
                 break;
         }
         dt.setNextDialogue(next);
@@ -195,6 +214,12 @@ public class DialogeManager : MonoBehaviour
             case "Yknip - Surprised":
 
                 dt = NPCRosa2.GetComponent<DialogueTrigger>();
+                break;
+            case "Elprup":
+                dt = NPCPurple.GetComponent<DialogueTrigger>();
+                break;
+            case "Elprup - Scared":
+                dt = NPCPurple2.GetComponent<DialogueTrigger>();
                 break;
 
         }

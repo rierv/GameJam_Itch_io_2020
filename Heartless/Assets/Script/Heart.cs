@@ -16,6 +16,7 @@ public class Heart : MonoBehaviour
     
     void Start()
     {
+        GetComponent<AudioSource>().Play();
         readyToHit = true;
         gameObject.layer = 17;
         startingScale = transform.localScale;

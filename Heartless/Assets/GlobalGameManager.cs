@@ -295,8 +295,11 @@ public class GlobalGameManager : MonoBehaviour
         }
         if(player.GetComponent<PlayerController>().startHeartCount>startingHearts && currentFloor == 1)
         {
-            GameObject.Find("NPC Rosa").SetActive(false);
-            GameObject.Find("NPCs").transform.GetChild(2).gameObject.SetActive(true);
+            Transform tmp = GameObject.Find("NPCs").transform;
+            tmp.GetChild(0).gameObject.SetActive(false);
+            tmp.GetChild(2).gameObject.SetActive(false);
+            tmp.GetChild(3).gameObject.SetActive(true);
+            tmp.GetChild(4).gameObject.SetActive(true);
         }
     }
 }

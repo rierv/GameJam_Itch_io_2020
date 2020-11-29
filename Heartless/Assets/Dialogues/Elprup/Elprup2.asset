@@ -1,0 +1,27 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c44415c4f96d9b141b924b201dfe985e, type: 3}
+  m_Name: Elprup2
+  m_EditorClassIdentifier: 
+  NPC_name: Elprup - Scared
+  sentences:
+  - text: 'But .. Is it really you? You don''t quite look like you .. Do you recognize
+      me? do you know what i am? '
+  - text: 'I feel an enormous energy emanating from you but you seem to be losing
+      your mind .. '
+  - text: 'How do you say? Mauled? Have you been mauled several times to get here?
+      Did they tear your heart to pieces? but it''s terrible! '
+  - text: I don't know how you still have your heart, but I know for sure that we
+      should run away right away! Now!
+  nextDialogue: {fileID: 0}
+  nextQuestion: {fileID: 11400000, guid: 47c91617a9e96224b94e7b32e2ae5b62, type: 2}
+  nextIsQuestion: 1
