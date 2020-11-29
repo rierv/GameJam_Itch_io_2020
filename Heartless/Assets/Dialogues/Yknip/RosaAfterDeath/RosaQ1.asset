@@ -10,14 +10,14 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: b197eafebf2111b46ae1e29c6f5c86f7, type: 3}
-  m_Name: RosaQ2
+  m_Name: RosaQ1
   m_EditorClassIdentifier: 
   NPC_name: Yknip
   questionText: What do you want to learn?
   choicesList:
   - choice: Heart
     activateQuest: 0
-    nextDialogue: {fileID: 11400000, guid: db6cff99d21d0bd40b878d37ad5f3d84, type: 2}
+    nextDialogue: {fileID: 11400000, guid: 79a65517ae63d3347bd36a9901291c76, type: 2}
   - choice: Labyrinth
     activateQuest: 0
-    nextDialogue: {fileID: 11400000, guid: 4ba19cdafda84aa448a5edbfb065dbd8, type: 2}
+    nextDialogue: {fileID: 11400000, guid: a1664e6f22a7ca24d8a3b32fe0f30fd7, type: 2}

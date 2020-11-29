@@ -13,11 +13,11 @@ MonoBehaviour:
   m_Name: 3
   m_EditorClassIdentifier: 
   NPC_name: Neerg
-  questionText: Vuoi attivare il buco?
+  questionText: Are you ready?
   choicesList:
-  - choice: Si
+  - choice: ..yes
     activateQuest: 1
     nextDialogue: {fileID: 11400000, guid: 37bec7271e869cb4dbfd94512acd0934, type: 2}
-  - choice: No
+  - choice: ....
     activateQuest: 0
     nextDialogue: {fileID: 11400000, guid: 42a34595cc26cfc42b45b009a9d76d0f, type: 2}

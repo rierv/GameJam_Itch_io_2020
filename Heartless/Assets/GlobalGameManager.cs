@@ -58,12 +58,12 @@ public class GlobalGameManager : MonoBehaviour
     }
 
 
-    private int currentFloor;
+    public int currentFloor;
     private LevelScript currentLevelScript;
     public GameObject globalLight;
 
     public bool bucozzoRotto;
-
+    private int startingHearts;
 
     // Start is called before the first frame update
     void Awake()
@@ -76,6 +76,7 @@ public class GlobalGameManager : MonoBehaviour
         else
         {
             player = GameObject.FindWithTag("Player");
+            startingHearts = player.GetComponent<PlayerController>().startHeartCount;
             currentFloor = 1;
             currentLevel = Instantiate(firstLevel);
             bucozzoRotto = false;
@@ -119,8 +120,13 @@ public class GlobalGameManager : MonoBehaviour
                 selectedInteractableObj.GetComponent<I_Interactable>().Interact();
             }
         }
+        if (Input.GetKeyDown(KeyCode.Escape))
+        {
+            UnityEngine.SceneManagement.SceneManager.LoadScene("Game Scene");
+        }
+
     }
-    
+
     private void EnterCunicolo()
     {
         IsInCunicolo = true;
@@ -282,8 +288,13 @@ public class GlobalGameManager : MonoBehaviour
         
         if(bucozzoRotto&&currentFloor==1)
         {
-            //GameObject.Find("Enemy (7)").SetActive(false);
             GameObject.Find("Enemy (11)").SetActive(false);
+            //SPAWN BUCOZZO AL PIANO DI SOTTO
+        }
+        if(player.GetComponent<PlayerController>().startHeartCount>startingHearts && currentFloor == 1)
+        {
+            GameObject.Find("NPC Rosa").SetActive(false);
+            GameObject.Find("NPCs").transform.GetChild(2).gameObject.SetActive(true);
         }
     }
 }

@@ -14,10 +14,9 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   NPC_name: Eulb
   sentences:
-  - text: "Da quando lo smarrimento \xE8 diventato totale la realt\xE0 mi costringe
-      alla staticit\xE0"
-  - text: Ma non tu. Tu stai ancora cercando. Sei in costante movimento
-  - text: Lascia allora che apra i tuoi occhi su percorsi piu rapidi.
-  nextDialogue: {fileID: 0}
-  nextQuestion: {fileID: 11400000, guid: 369ea50bdbefe7043904c41ac49cd3bc, type: 2}
-  nextIsQuestion: 1
+  - text: Thing? is that really your body? this thing is really romantic ..
+  - text: All the souls here are driven insane but not you. You are still looking.
+      You are in constant motion
+  nextDialogue: {fileID: 11400000, guid: b216bca82090ccd41bb6fe02b7a075c9, type: 2}
+  nextQuestion: {fileID: 0}
+  nextIsQuestion: 0

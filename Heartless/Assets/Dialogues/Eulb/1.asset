@@ -14,10 +14,10 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   NPC_name: Eulb
   sentences:
-  - text: "Ah TU... \nProprio come noi..."
-  - text: "Ritrovarsi non \xE8 facile, e pi\xF9 ti cerchi pi\xF9 rischia di diventare
-      difficile"
-  - text: "Come puoi vedere, questo luogo ne \xE8 la prova..."
+  - text: How did you get this far? I believed that no soul with a heart could get
+      to this point of the maze
+  - text: Surely my soul did not
+  - text: Finding oneself is not easy, this place is only a confirmation of that
   nextDialogue: {fileID: 11400000, guid: ab09447bfb5fc7c4195f9201b3ae150a, type: 2}
   nextQuestion: {fileID: 0}
   nextIsQuestion: 0

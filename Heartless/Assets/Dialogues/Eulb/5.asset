@@ -14,7 +14,15 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   NPC_name: Eulb
   sentences:
-  - text: Ritrovati...
-  nextDialogue: {fileID: 11400000}
-  nextQuestion: {fileID: 0}
-  nextIsQuestion: 0
+  - text: 'Let me help you. '
+  - text: 'To distract all the guards in the room below, you''ll need to break both
+      the timed light-generators on this level. '
+  - text: 'You''ll want to start with the one on my right, and then go around following
+      the perimeter of the maze. '
+  - text: ' I''ll create a tunnel next to the generator to make it easier for you
+      to reach the second generator in the room to the south- east. '
+  - text: Basically you have to do a running round of the piano! but you should be
+      able to overcome all the guards unharmed
+  nextDialogue: {fileID: 0}
+  nextQuestion: {fileID: 11400000, guid: 369ea50bdbefe7043904c41ac49cd3bc, type: 2}
+  nextIsQuestion: 1

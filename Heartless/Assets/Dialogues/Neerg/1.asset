@@ -14,9 +14,9 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   NPC_name: Neerg
   sentences:
-  - text: Ciao sono Neerg
-  - text: Questi dialoghi sono da completare
-  - text: Later
+  - text: Ugh .. What a tiredness .. I've been sitting here for ages ..
+  - text: 'As a body without a soul I can only move a few centimeters .. '
+  - text: But the boredom becomes so much that you start to feel really tired
   nextDialogue: {fileID: 11400000, guid: 39851c6c5ef8edb4ab6befd9c04dbf76, type: 2}
   nextQuestion: {fileID: 0}
   nextIsQuestion: 0

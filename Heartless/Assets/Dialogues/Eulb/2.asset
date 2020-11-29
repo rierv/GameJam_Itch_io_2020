@@ -14,9 +14,10 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   NPC_name: Eulb
   sentences:
-  - text: Io sono Eulb, o quanto meno lo sono stato
-  - text: Anche io come te, come tutti quanti qui, stavo cercando
-  - text: E come te, come tutti qui, mi sono perso
+  - text: 'I am Eulb, another of the forgotten. Perhaps the most forgotten, being
+      in this remote corner .. '
+  - text: The only body even more unfortunate is the one that the heartless guards
+      in the room below
   nextDialogue: {fileID: 11400000, guid: 89abe388356bc9f4ca662bf5e4e6b188, type: 2}
   nextQuestion: {fileID: 0}
   nextIsQuestion: 0

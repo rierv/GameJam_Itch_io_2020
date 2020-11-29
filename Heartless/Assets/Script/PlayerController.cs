@@ -175,6 +175,10 @@ public class PlayerController : MonoBehaviour
             {
                 startHeartCount = startHeartCount + 1;
                 RestartLevel();
+                GetComponent<Rigidbody2D>().velocity = Vector2.zero;
+                GlobalGameManager.instance.currentFloor = GlobalGameManager.instance.currentFloor % 2 + 1;
+                GlobalGameManager.instance.SwitchFloor();
+
             }
         }
     }
@@ -198,19 +202,10 @@ public class PlayerController : MonoBehaviour
         {
             Destroy(h.gameObject);
         }
-        foreach (EnemyController ep in FindObjectsOfType<EnemyController>())
-        {
-            ep.GetComponent<BoxCollider2D>().enabled = true;
-            ep.gameObject.transform.localPosition = Vector3.zero;
-            ep.SetStunned(false);
-            ep.gameObject.GetComponent<Animator>().SetTrigger("idle");
-        }
+        
         transform.position = startPosition;
         heartCount = startHeartCount;
         txtHearts.text = heartCount.ToString();
-        foreach (Generator g in FindObjectsOfType<Generator>())
-        {
-            g.broken = false;
-        }
+        
     }
 }

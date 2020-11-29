@@ -14,8 +14,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   NPC_name: Neerg
   sentences:
-  - text: Comunque ti faccio attivare il buco se vuoi
-  - text: Quello ci sta
-  nextDialogue: {fileID: 0}
-  nextQuestion: {fileID: 11400000, guid: e25ceff69079bbd4c82efcf91966f7a5, type: 2}
-  nextIsQuestion: 1
+  - text: What is it, what do you want? You certainly are not my soul
+  - text: That heartless one has already forgotten me here to feed the worms
+  nextDialogue: {fileID: 11400000, guid: faf0f560c7190e148bfac21387ce98d1, type: 2}
+  nextQuestion: {fileID: 0}
+  nextIsQuestion: 0

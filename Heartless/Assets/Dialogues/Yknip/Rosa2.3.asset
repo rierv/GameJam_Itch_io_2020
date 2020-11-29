@@ -10,11 +10,11 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: c44415c4f96d9b141b924b201dfe985e, type: 3}
-  m_Name: 4
+  m_Name: Rosa2.3
   m_EditorClassIdentifier: 
-  NPC_name: Neerg
+  NPC_name: 
   sentences:
-  - text: DOOOONEEEEEE I'm a fkn destroyer
-  nextDialogue: {fileID: 11400000}
-  nextQuestion: {fileID: 0}
-  nextIsQuestion: 0
+  - text: You're back!
+  nextDialogue: {fileID: 0}
+  nextQuestion: {fileID: 11400000, guid: e2f7cb6fa3dbe5c4ab9ad269c2443d3f, type: 2}
+  nextIsQuestion: 1

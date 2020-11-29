@@ -1,0 +1,26 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c44415c4f96d9b141b924b201dfe985e, type: 3}
+  m_Name: 2.2
+  m_EditorClassIdentifier: 
+  NPC_name: Neerg
+  sentences:
+  - text: 'insist? Do you really want to befriend a corpse? Ok, I''ll give you a
+      hand .. as long as you go away! '
+  - text: See those cracks? i dug a hundred years and i think the floor is ready
+      to collapse ..
+  - text: It could make it easier to cross the floor above .. but be careful not
+      to fall into it!
+  - text: 
+  nextDialogue: {fileID: 0}
+  nextQuestion: {fileID: 11400000, guid: e25ceff69079bbd4c82efcf91966f7a5, type: 2}
+  nextIsQuestion: 1

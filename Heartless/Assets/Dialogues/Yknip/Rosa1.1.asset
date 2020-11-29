@@ -15,8 +15,8 @@ MonoBehaviour:
   NPC_name: Yknip
   sentences:
   - text: "Oh... is... you? My soul? \nI've been waiting for you for a long time.."
-  - text: Oh no. It's not you. You must be another soul otherwise we would have already
-      become one
+  - text: Oh no. It's not you. You must be another soul... otherwise we would have
+      already become one
   nextDialogue: {fileID: 11400000, guid: f93f28dfb33f31c4c8757c3d90a472b4, type: 2}
   nextQuestion: {fileID: 0}
   nextIsQuestion: 0

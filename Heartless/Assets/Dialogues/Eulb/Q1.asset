@@ -13,11 +13,11 @@ MonoBehaviour:
   m_Name: Q1
   m_EditorClassIdentifier: 
   NPC_name: Eulb
-  questionText: Vuoi apire i tuoi occhi?
+  questionText: Did you understand what i told you?
   choicesList:
-  - choice: Si
+  - choice: Yes
     activateQuest: 1
     nextDialogue: {fileID: 11400000, guid: 6432ab65cb7fa934990cdfc1e97c5b81, type: 2}
-  - choice: No
+  - choice: Not really..
     activateQuest: 0
-    nextDialogue: {fileID: 11400000, guid: f94a56ffe1d902049847f3c4fd895de7, type: 2}
+    nextDialogue: {fileID: 11400000, guid: b216bca82090ccd41bb6fe02b7a075c9, type: 2}
