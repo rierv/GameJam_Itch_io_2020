@@ -12,7 +12,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: b197eafebf2111b46ae1e29c6f5c86f7, type: 3}
   m_Name: RosaQ1
   m_EditorClassIdentifier: 
-  NPC_name: Yknip
+  NPC_name: Yknip - Surprised
   questionText: What do you want to learn?
   choicesList:
   - choice: Heart

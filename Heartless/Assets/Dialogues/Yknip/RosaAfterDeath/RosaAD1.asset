@@ -12,7 +12,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: c44415c4f96d9b141b924b201dfe985e, type: 3}
   m_Name: RosaAD1
   m_EditorClassIdentifier: 
-  NPC_name: 
+  NPC_name: Yknip - Surprised
   sentences:
   - text: 'UAAAAAAAAAAAAAAAAAAAAAA it looks like you are the chosen one! '
   - text: 'Every time the souls of the damned catch you, you become stronger! '

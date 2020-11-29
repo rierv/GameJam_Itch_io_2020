@@ -20,7 +20,6 @@ MonoBehaviour:
       to collapse ..
   - text: It could make it easier to cross the floor above .. but be careful not
       to fall into it!
-  - text: 
   nextDialogue: {fileID: 0}
   nextQuestion: {fileID: 11400000, guid: e25ceff69079bbd4c82efcf91966f7a5, type: 2}
   nextIsQuestion: 1

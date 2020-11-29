@@ -15,6 +15,7 @@ public class DialogeManager : MonoBehaviour
     public GameObject NPCBlue;
     public GameObject NPCVerde;
     public GameObject NPCRosa;
+    public GameObject NPCRosa2;
     public GameObject ButtonPrefab;
 
     public GameObject tutorial;
@@ -146,21 +147,27 @@ public class DialogeManager : MonoBehaviour
         isInDialogue = false;
 
         Dialogue next = d;
-        
+        DialogueTrigger dt = null;
 
         switch (currentNPC)
         {
             case "Yknip":
-                NPCRosa.GetComponent<DialogueTrigger>().setNextDialogue(next);
-                NPCRosa.GetComponent<DialogueTrigger>().isTalking = false;
+                dt = NPCRosa.GetComponent<DialogueTrigger>();
                 break;
             case "Eulb":
-                NPCBlue.GetComponent<DialogueTrigger>().setNextDialogue(next);
+                dt = NPCBlue.GetComponent<DialogueTrigger>();
                 break;
             case "Neerg":
-                NPCVerde.GetComponent<DialogueTrigger>().setNextDialogue(next);
+                dt = NPCVerde.GetComponent<DialogueTrigger>();
+                break;
+            case "Yknip - Surprised":
+
+                dt = NPCRosa2.GetComponent<DialogueTrigger>();
                 break;
         }
+        dt.setNextDialogue(next);
+        dt.isTalking = false;
+
         Time.timeScale = 1;
     }
 
@@ -179,25 +186,29 @@ public class DialogeManager : MonoBehaviour
         else
         {
             Dialogue next = currentDialogue.nextDialogue;
+            DialogueTrigger dt=null;
 
             switch (currentNPC)
             {
                 case "Yknip":
-                    NPCRosa.GetComponent<DialogueTrigger>().setNextDialogue(next);
-                    NPCRosa.GetComponent<DialogueTrigger>().isTalking = false;
-                    NPCRosa.GetComponent<DialogueTrigger>().stopFuckingTalking = true;
-
+                    dt = NPCRosa.GetComponent<DialogueTrigger>();
                     break;
                 case "Eulb":
-                    NPCBlue.GetComponent<DialogueTrigger>().setNextDialogue(next);                
+                    dt = NPCBlue.GetComponent<DialogueTrigger>();
                     break;
                 case "Neerg":
-                    
-                    NPCVerde.GetComponent<DialogueTrigger>().setNextDialogue(next);
-              
-                    break;
-            }
 
+                    dt = NPCVerde.GetComponent<DialogueTrigger>();
+                    break;
+                case "Yknip - Surprised":
+
+                    dt = NPCRosa2.GetComponent<DialogueTrigger>();
+                    break;
+
+            }
+            dt.setNextDialogue(next);
+            dt.isTalking = false;
+            dt.stopFuckingTalking = true;
             Time.timeScale = 1;
         }
 

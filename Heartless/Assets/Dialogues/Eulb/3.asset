@@ -14,7 +14,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   NPC_name: Eulb
   sentences:
-  - text: Thing? is that really your body? this thing is really romantic ..
+  - text: Whaaat?? is that really your body? this thing is really romantic ..
   - text: All the souls here are driven insane but not you. You are still looking.
       You are in constant motion
   nextDialogue: {fileID: 11400000, guid: b216bca82090ccd41bb6fe02b7a075c9, type: 2}

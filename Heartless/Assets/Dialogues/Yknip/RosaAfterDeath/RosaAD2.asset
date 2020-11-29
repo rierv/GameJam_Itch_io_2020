@@ -12,7 +12,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: c44415c4f96d9b141b924b201dfe985e, type: 3}
   m_Name: RosaAD2
   m_EditorClassIdentifier: 
-  NPC_name: Yknip
+  NPC_name: Yknip - Surprised
   sentences:
   - text: 'In the level there are several objects with which you can interact by
       pressing the bar space key.
@@ -28,5 +28,5 @@ MonoBehaviour:
       here on the right. \nI recommend you start there, you will have the opportunity
       to put my advice into practice"
   nextDialogue: {fileID: 0}
-  nextQuestion: {fileID: 11400000, guid: e2f7cb6fa3dbe5c4ab9ad269c2443d3f, type: 2}
+  nextQuestion: {fileID: 11400000, guid: d6b0eb09f39428344b929370f2ffca19, type: 2}
   nextIsQuestion: 1
