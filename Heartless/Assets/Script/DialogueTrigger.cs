@@ -13,6 +13,8 @@ public class DialogueTrigger : MonoBehaviour
     private bool canTalk;
     public bool isTalking;
     public bool stopFuckingTalking = false;
+    public AudioClip audioDialogue;
+    public AudioClip audioQuestion;
 
     private void Start()
     {
@@ -25,7 +27,7 @@ public class DialogueTrigger : MonoBehaviour
     void Update()
     {
 
-        if (Input.GetKeyDown(KeyCode.Z) && canTalk && !isTalking && !stopFuckingTalking)
+        if (Input.GetKeyDown(KeyCode.Space) && canTalk && !isTalking && !stopFuckingTalking)
         {
             TriggerDialogue();
         }
@@ -37,16 +39,24 @@ public class DialogueTrigger : MonoBehaviour
 
     public void  TriggerDialogue()
     {
-        
+
         isTalking = true;
 
-        if (dialogue) DMscript.StartDialogue(dialogue);
-        else if (question) DMscript.StartQuestion(question);
+        if (dialogue)
+        {
+            GlobalGameManager.instance.GetComponent<AudioSource>().PlayOneShot(audioDialogue);
+            DMscript.StartDialogue(dialogue);
+        }
+        else if (question)
+        {
+            DMscript.StartQuestion(question);
+            GlobalGameManager.instance.GetComponent<AudioSource>().PlayOneShot(audioQuestion);
+        }
 
 
-    }
-    
-    private void OnTriggerEnter2D(Collider2D col)
+        }
+
+        private void OnTriggerEnter2D(Collider2D col)
     {
         if(col.tag == "Player")
         {

@@ -44,7 +44,7 @@ public class DialogeManager : MonoBehaviour
 
     void Update()
     {
-        if (Input.GetKeyDown(KeyCode.Z))
+        if (Input.GetKeyDown(KeyCode.Space))
         {
             if (isInDialogue) DisplayNextSentence();
         }

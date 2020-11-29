@@ -11,6 +11,7 @@ public class Generator : MonoBehaviour, I_Interactable
     public float breakTime = 2;
     public GameObject linkedLight;
     bool watching = false;
+    public AudioClip audio;
     private void Update()
     {
         if (broken&& watching &&linkedLight != null)
@@ -41,6 +42,7 @@ public class Generator : MonoBehaviour, I_Interactable
     {
         if (!broken)
         {
+            GlobalGameManager.instance.GetComponent<AudioSource>().PlayOneShot(audio);
             Time.timeScale = 0.03f;
             watching = true;
             broken = true;

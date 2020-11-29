@@ -216,6 +216,7 @@ MonoBehaviour:
   broken: 0
   breakTime: 2
   linkedLight: {fileID: 0}
+  audio: {fileID: 8300000, guid: 92de9fe3dbfbb9648846366832639e5c, type: 3}
 --- !u!95 &8776395223838886821
 Animator:
   serializedVersion: 3

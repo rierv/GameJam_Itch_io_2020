@@ -65,6 +65,9 @@ public class GlobalGameManager : MonoBehaviour
     public bool bucozzoRotto;
     private int startingHearts;
 
+    public AudioClip soundEnterBotola;
+    public AudioClip soundEnterMirror;
+
     // Start is called before the first frame update
     void Awake()
     {
@@ -182,6 +185,7 @@ public class GlobalGameManager : MonoBehaviour
 
     public void InteractBotola()
     {
+        GetComponent<AudioSource>().PlayOneShot(soundEnterBotola);
         Debug.Log("GM interact botola");
         if (selectedInteractableObj)
         {
@@ -202,6 +206,8 @@ public class GlobalGameManager : MonoBehaviour
 
     public void InteractMirror()
     {
+        GetComponent<AudioSource>().PlayOneShot(soundEnterMirror);
+
         if (playerInMirror)
         {
             SelectedInteractableObj.GetComponent<Animator>().SetTrigger("exitMirror");
@@ -293,7 +299,8 @@ public class GlobalGameManager : MonoBehaviour
             Transform macerie = GameObject.Find("MacerieBucozzo").transform;
             for (int i = 0; i < macerie.childCount; i++) macerie.GetChild(i).gameObject.SetActive(true);
         }
-        if(player.GetComponent<PlayerController>().startHeartCount>startingHearts && currentFloor == 1)
+        player.GetComponent<PlayerController>().enabled = true;
+        if (player.GetComponent<PlayerController>().startHeartCount>startingHearts && currentFloor == 1)
         {
             Transform tmp = GameObject.Find("NPCs").transform;
             tmp.GetChild(0).gameObject.SetActive(false);

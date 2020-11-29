@@ -72,7 +72,7 @@ SpriteRenderer:
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: 0
   m_SortingLayer: 0
-  m_SortingOrder: 0
+  m_SortingOrder: 10
   m_Sprite: {fileID: 5084661014962647745, guid: c73c585410f9a154ab0b1a891ed75a89,
     type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
@@ -126,3 +126,6 @@ MonoBehaviour:
   dialogue: {fileID: 11400000, guid: 8491c5f2929aee94f83f97d93dd8c872, type: 2}
   DManager: {fileID: 0}
   isTalking: 0
+  stopFuckingTalking: 0
+  audioDialogue: {fileID: 8300000, guid: a91d211036488484480d4f48b97f0609, type: 3}
+  audioQuestion: {fileID: 8300000, guid: c9faebf4db9aa1a418004fc7ac543343, type: 3}

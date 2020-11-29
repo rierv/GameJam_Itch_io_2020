@@ -5,7 +5,8 @@ using UnityEngine;
 public class Scala : MonoBehaviour, I_Interactable
 {
     public Vector3 destination=Vector3.zero;
-    
+    public AudioClip audio;
+
     public void PlayerEnterRange()
     {
         GlobalGameManager.instance.SelectedInteractableObj = gameObject;
@@ -18,6 +19,7 @@ public class Scala : MonoBehaviour, I_Interactable
 
     public void Interact()
     {
+        GlobalGameManager.instance.GetComponent<AudioSource>().PlayOneShot(audio);
         GameObject.FindObjectOfType<PlayerController>().startPosition = destination;
         GlobalGameManager.instance.SwitchFloor();
     }

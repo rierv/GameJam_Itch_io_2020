@@ -26,7 +26,7 @@ public class FSM_Enemy : MonoBehaviour
     bool isStunned = false;
     public AudioClip soundEnemyloseHeart;
     public AudioClip soundEnemyseesPlayer;
-
+    public AudioClip soundEnemygetStunned;
     void Awake()
     {
         
@@ -40,6 +40,7 @@ public class FSM_Enemy : MonoBehaviour
         FSMState seek = new FSMState(); //alarm
 
         wander.enterActions.Add(StartWander);
+        stunned.enterActions.Add(StartStunned);
         stunned.stayActions.Add(BeStunned);
         wander.stayActions.Add(WanderAround);
         seek.enterActions.Add(Boost);
@@ -174,6 +175,12 @@ public class FSM_Enemy : MonoBehaviour
             curr = curr % listOfSpots.Count;
         }
         //reachPoint(currentSpot);
+    }
+
+    public void StartStunned()
+    {
+        GetComponent<AudioSource>().PlayOneShot(soundEnemygetStunned);
+
     }
 
     public void BeStunned()

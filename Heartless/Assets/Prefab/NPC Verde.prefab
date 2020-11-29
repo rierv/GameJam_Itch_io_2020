@@ -126,3 +126,6 @@ MonoBehaviour:
   dialogue: {fileID: 0}
   DManager: {fileID: 0}
   isTalking: 0
+  stopFuckingTalking: 0
+  audioDialogue: {fileID: 8300000, guid: a91d211036488484480d4f48b97f0609, type: 3}
+  audioQuestion: {fileID: 8300000, guid: c9faebf4db9aa1a418004fc7ac543343, type: 3}

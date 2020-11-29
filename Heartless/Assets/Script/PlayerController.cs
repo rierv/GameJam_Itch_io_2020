@@ -23,6 +23,8 @@ public class PlayerController : MonoBehaviour
     public Vector3 startPosition;
     GlobalGameManager GameManager;
     Text txtHearts;
+    bool dead=false;
+    public AudioClip soundDie;
     // Start is called before the first frame update
     void Awake()
     {
@@ -52,7 +54,6 @@ public class PlayerController : MonoBehaviour
         if (isAiming)
         {
             if (spawnedHeart && spawnedHeart.GetComponent<Heart>().enemy == null) Aim();
-            else isAiming = false;
 
         }
         if (isAiming && Input.GetMouseButtonUp(0))
@@ -167,6 +168,7 @@ public class PlayerController : MonoBehaviour
             Destroy(collision.gameObject);
             heartCount++;
             txtHearts.text = heartCount.ToString();
+            if(!isAiming|| spawnedHeart.GetComponent<Heart>().enemy==null) GetComponent<AudioSource>().Play();
         }
         if (collision.gameObject.tag == "Enemy")
         {
@@ -174,9 +176,11 @@ public class PlayerController : MonoBehaviour
             if(!collision.gameObject.GetComponent<EnemyController>().stunned&& GameManager.PlayerVisible && !GameManager.IsInCunicolo)
             {
                 //PLAYER DIE
+                GetComponent<CapsuleCollider2D>().enabled = false;
                 playerAnimator.SetTrigger("die");
-                GetComponent<AudioSource>().Play();
+                GetComponent<AudioSource>().PlayOneShot(soundDie);
                 this.enabled = false;
+                dead = true;
                 /*
                 //ANIMATION WILL CALL PlayerDie()
                 startHeartCount = startHeartCount + 1;
@@ -221,7 +225,12 @@ public class PlayerController : MonoBehaviour
         transform.position = startPosition;
         heartCount = startHeartCount;
         txtHearts.text = heartCount.ToString();
-        playerAnimator.SetTrigger("respawn");
+        if (dead)
+        {
+            GetComponent<CapsuleCollider2D>().enabled = true;
+            playerAnimator.SetTrigger("respawn");
+            dead = false;
+        }
         this.enabled = false;
     }
 }

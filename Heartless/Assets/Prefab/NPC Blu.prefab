@@ -73,7 +73,7 @@ SpriteRenderer:
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: 0
   m_SortingLayer: 0
-  m_SortingOrder: 0
+  m_SortingOrder: 10
   m_Sprite: {fileID: -6131185593638097393, guid: c73c585410f9a154ab0b1a891ed75a89,
     type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
@@ -124,8 +124,12 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 1a6b233240a1f224b886dca9779a63e5, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  dialogue: {fileID: 11400000, guid: 39851c6c5ef8edb4ab6befd9c04dbf76, type: 2}
+  dialogue: {fileID: 11400000, guid: 16e62826f9a7c914388c07eff230e734, type: 2}
   DManager: {fileID: 0}
+  isTalking: 0
+  stopFuckingTalking: 0
+  audioDialogue: {fileID: 8300000, guid: a91d211036488484480d4f48b97f0609, type: 3}
+  audioQuestion: {fileID: 8300000, guid: c9faebf4db9aa1a418004fc7ac543343, type: 3}
 --- !u!114 &6654688778436156406
 MonoBehaviour:
   m_ObjectHideFlags: 0

@@ -13,7 +13,6 @@ public class Heart : MonoBehaviour
     public float heartAmmoSpeed = 10;
     public bool readyToHit = false;
     // Start is called before the first frame update
-    public AudioClip audioOnEnemy;
     public AudioClip audioOnWalls;
     void Start()
     {
@@ -63,7 +62,6 @@ public class Heart : MonoBehaviour
             collision.gameObject.GetComponent<EnemyController>().SetStunned(true);
             enemy = collision.gameObject;
             //Debug.Log(gameObject.layer);
-            GetComponent<AudioSource>().PlayOneShot(audioOnEnemy);
         }
         else GetComponent<AudioSource>().PlayOneShot(audioOnWalls);
     }

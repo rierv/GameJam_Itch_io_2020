@@ -184,7 +184,8 @@ MonoBehaviour:
   soundEnemyloseHeart: {fileID: 8300000, guid: c5c159893fb807f4493ec7da04a6a0f1, type: 3}
   soundEnemyseesPlayer: {fileID: 8300000, guid: 03110e1cf38afd44da342d3922484dae,
     type: 3}
-  soundEnemygoesfixGenerator: {fileID: 0}
+  soundEnemygetStunned: {fileID: 8300000, guid: f5421661f59f04d47bf048c207779050,
+    type: 3}
 --- !u!114 &3471935749820772021
 MonoBehaviour:
   m_ObjectHideFlags: 0
