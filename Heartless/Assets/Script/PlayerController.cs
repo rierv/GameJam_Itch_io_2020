@@ -54,7 +54,7 @@ public class PlayerController : MonoBehaviour
         if (isAiming)
         {
             if (spawnedHeart && spawnedHeart.GetComponent<Heart>().enemy == null) Aim();
-
+            else isAiming = false;
         }
         if (isAiming && Input.GetMouseButtonUp(0))
         {
