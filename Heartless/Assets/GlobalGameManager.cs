@@ -290,6 +290,8 @@ public class GlobalGameManager : MonoBehaviour
         {
             GameObject.Find("Enemy (11)").SetActive(false);
             //SPAWN BUCOZZO AL PIANO DI SOTTO
+            Transform macerie = GameObject.Find("MacerieBucozzo").transform;
+            for (int i = 0; i < macerie.childCount; i++) macerie.GetChild(i).gameObject.SetActive(true);
         }
         if(player.GetComponent<PlayerController>().startHeartCount>startingHearts && currentFloor == 1)
         {

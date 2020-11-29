@@ -56,7 +56,7 @@ public class Generator : MonoBehaviour, I_Interactable
 
     private void OnTriggerStay2D(Collider2D collision)
     {
-        if (collision.gameObject.tag == "Enemy")
+        if (collision.gameObject.tag == "Enemy" && !collision.GetComponent<EnemyController>().stunned)
         {
             timer += Time.deltaTime;
             if (timer > breakTime)
