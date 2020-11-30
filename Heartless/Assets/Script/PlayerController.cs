@@ -172,7 +172,7 @@ public class PlayerController : MonoBehaviour
         }
         if (collision.gameObject.tag == "Enemy")
         {
-
+            Debug.Log("Collision w/ Enemy");
             if(!collision.gameObject.GetComponent<EnemyController>().stunned&& GameManager.PlayerVisible && !GameManager.IsInCunicolo)
             {
                 //PLAYER DIE
@@ -205,7 +205,7 @@ public class PlayerController : MonoBehaviour
     private void NotifyGGMBotolaInteraction()
     {
         //Questo metodo viene chiamato alla fine dell'animazione "EnterBotola"
-        Debug.Log("NOTIFY GM Botola");
+        //Debug.Log("NOTIFY GM Botola");
         GlobalGameManager.instance.InteractBotola();
     }
     
@@ -213,6 +213,19 @@ public class PlayerController : MonoBehaviour
     {
         Debug.Log("Enable Player Controller");
         this.enabled = true;
+    }
+
+    public void DisablePlayerCollider()
+    {
+        GetComponent<CapsuleCollider2D>().enabled = false;
+        //GetComponent<Rigidbody2D>().isKinematic = true;
+    }
+
+    public void EnablePlayerCollider()
+    {
+        GetComponent<CapsuleCollider2D>().enabled = true;
+        //GetComponent<Rigidbody2D>().isKinematic = false;
+
     }
     
     public void RestartLevel()

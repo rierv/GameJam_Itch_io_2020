@@ -20,12 +20,14 @@ public class S_Grata : MonoBehaviour, I_Interactable
 
     public void Interact()
     {
+        Debug.Log("Botola Interaction");
         GetComponent<AudioSource>().PlayOneShot(audio);
         GameObject.Find("Player").GetComponent<Rigidbody2D>().velocity = Vector3.zero;
         //Debug.Log(GetComponent<AudioSource>().isPlaying);
         //Debug.Log(audio);
         GlobalGameManager.instance.WasInCunicolo = GlobalGameManager.instance.IsInCunicolo;
         GlobalGameManager.instance.IsInCunicolo = true;
+        GlobalGameManager.instance.Player.GetComponent<PlayerController>().DisablePlayerCollider();
         GlobalGameManager.instance.Player.GetComponent<PlayerController>().enabled = false;
         GlobalGameManager.instance.Player.GetComponent<Animator>().SetTrigger("enterBotola");
         //STARTING THIS ANIMATION WILL TRIGGER InteractBotola()    

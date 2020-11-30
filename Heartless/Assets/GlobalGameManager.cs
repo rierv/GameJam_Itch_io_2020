@@ -190,7 +190,7 @@ public class GlobalGameManager : MonoBehaviour
     {
         GetComponent<AudioSource>().PlayOneShot(soundEnterBotola);
         player.GetComponent<Rigidbody2D>().velocity = Vector3.zero;
-        Debug.Log("GM interact botola");
+        //Debug.Log("GM interact botola");
         if (WasInCunicolo)
         {
             ExitCunicolo();
@@ -241,9 +241,9 @@ public class GlobalGameManager : MonoBehaviour
 
     public void SwitchFloor()
     {
-        Debug.Log("Stop all coroutines");
+        //Debug.Log("Stop all coroutines");
         StopAllCoroutines();
-        Debug.Log("AOOOOOO " + currentFloor);
+        //Debug.Log("AOOOOOO " + currentFloor);
         IsInCunicolo = false;
         wasInCunicolo = false;
         playerInMirror = false;
@@ -286,9 +286,9 @@ public class GlobalGameManager : MonoBehaviour
         currentLevelScript.cunicoloLights.SetActive(false);
         
         //A* e Enemy Container DEVONO essere inactive in tutti i prefab dei livelli
-        Debug.Log("Activate AStar");
+        //Debug.Log("Activate AStar");
         currentLevelScript.AStarObj.SetActive(true);
-        Debug.Log("Activate Enemy Container");
+        //Debug.Log("Activate Enemy Container");
         currentLevelScript.enemyContainer.SetActive(true);
         
         if(bucozzoRotto&&currentFloor==1)
