@@ -28,7 +28,7 @@ public class DisplayOutline : MonoBehaviour
         if (other.gameObject.CompareTag("Player"))
         {
             GetComponent<SpriteRenderer>().enabled = false;
-            gameObject.GetComponentInParent<I_Interactable>().PlayerExitRange();
+            if(gameObject.GetComponentInParent<I_Interactable>()!=null) gameObject.GetComponentInParent<I_Interactable>().PlayerExitRange();
         }
     }
 }

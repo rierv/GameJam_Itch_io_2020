@@ -39,7 +39,7 @@ public class Bucozzo : MonoBehaviour
         {
             GameObject.FindObjectOfType<PlayerController>().startPosition = destination;
             GetComponent<BoxCollider2D>().enabled = false;
-            GlobalGameManager.instance.SwitchFloor();
+            GlobalGameManager.instance.SwitchFloor(1);
         }
     }
 }

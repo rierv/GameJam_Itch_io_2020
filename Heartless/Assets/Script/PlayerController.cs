@@ -198,8 +198,7 @@ public class PlayerController : MonoBehaviour
         startHeartCount = startHeartCount + 1;
         RestartLevel();
         GetComponent<Rigidbody2D>().velocity = Vector2.zero;
-        GlobalGameManager.instance.currentFloor = GlobalGameManager.instance.currentFloor % 2 + 1;
-        GlobalGameManager.instance.SwitchFloor();
+        GlobalGameManager.instance.SwitchFloor(GlobalGameManager.instance.currentFloor);
     }
 
     private void NotifyGGMBotolaInteraction()

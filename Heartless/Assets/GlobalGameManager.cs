@@ -44,6 +44,7 @@ public class GlobalGameManager : MonoBehaviour
     [SerializeField] 
     private bool playerVisible;
 
+    public GameObject tutorialLevel;
     public GameObject firstLevel;
     public GameObject secondLevel;
     private GameObject currentLevel;
@@ -80,8 +81,8 @@ public class GlobalGameManager : MonoBehaviour
         {
             player = GameObject.FindWithTag("Player");
             startingHearts = player.GetComponent<PlayerController>().startHeartCount;
-            currentFloor = 1;
-            currentLevel = Instantiate(firstLevel);
+            currentFloor = 0;
+            currentLevel = Instantiate(tutorialLevel);
             bucozzoRotto = false;
             //secondLevel = Instantiate(secondLevel);
             //secondLevel.SetActive(false);
@@ -239,7 +240,7 @@ public class GlobalGameManager : MonoBehaviour
 
     }
 
-    public void SwitchFloor()
+    public void SwitchFloor(int nextFloor)
     {
         //Debug.Log("Stop all coroutines");
         StopAllCoroutines();
@@ -254,21 +255,23 @@ public class GlobalGameManager : MonoBehaviour
         currentLevelScript.AStarObj.SetActive(false);
 
         currentLevel.SetActive(false);
-        
-        if (currentFloor == 1)
+
+        Destroy(currentLevel);
+
+        if (nextFloor == 1)
         {
-            Destroy(currentLevel);
-            GameObject nextLevel = Instantiate(secondLevel);
-            currentLevel = nextLevel;
-            currentFloor = 2;
-        } else if (currentFloor == 2)
-        {
-            Destroy(currentLevel);
-            GameObject nextLevel = Instantiate(firstLevel);
-            currentLevel = nextLevel;
-            currentFloor = 1;
+            currentLevel = Instantiate(firstLevel);
         }
-        
+        else if (nextFloor == 2)
+        {
+            currentLevel = Instantiate(secondLevel);
+        }
+        else
+        {
+            currentLevel = Instantiate(tutorialLevel);
+        }
+        currentFloor = nextFloor;
+
         currentLevel.SetActive(true);
         currentLevelScript = currentLevel.GetComponent<LevelScript>();
         

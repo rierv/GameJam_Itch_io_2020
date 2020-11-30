@@ -14,7 +14,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   NPC_name: Yknip - Surprised
   sentences:
-  - text: 'UAAAAAAAAAAAAAAAAAAAAAA it looks like you are the chosen one! '
+  - text: 'WAAAAAT? it looks like you are the chosen one! '
   - text: 'Every time the souls of the damned catch you, you become stronger! '
   - text: I'm afraid this is not a safe process for you or your body anyway ..
   - text: If you want to find it remember that it is in the center of this level!

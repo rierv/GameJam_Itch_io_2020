@@ -6,6 +6,7 @@ public class Scala : MonoBehaviour, I_Interactable
 {
     public Vector3 destination=Vector3.zero;
     public AudioClip audio;
+    public int nextFloor;
 
     public void PlayerEnterRange()
     {
@@ -21,6 +22,6 @@ public class Scala : MonoBehaviour, I_Interactable
     {
         GlobalGameManager.instance.GetComponent<AudioSource>().PlayOneShot(audio);
         GameObject.FindObjectOfType<PlayerController>().startPosition = destination;
-        GlobalGameManager.instance.SwitchFloor();
+        GlobalGameManager.instance.SwitchFloor(nextFloor);
     }
 }

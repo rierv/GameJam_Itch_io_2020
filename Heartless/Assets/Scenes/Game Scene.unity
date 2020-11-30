@@ -503,6 +503,12 @@ PrefabInstance:
       propertyPath: soundEnterMirror
       value: 
       objectReference: {fileID: 8300000, guid: f25887b6539f5e04091a44eaa9064649, type: 3}
+    - target: {fileID: 6843053647904315268, guid: 5aff41ee1e4ba3a4cb301196d1819121,
+        type: 3}
+      propertyPath: tutorialLevel
+      value: 
+      objectReference: {fileID: 2713929766340108287, guid: 85f32411b6a972044ab1afcacc8f99ff,
+        type: 3}
     - target: {fileID: 6843053647904315269, guid: 5aff41ee1e4ba3a4cb301196d1819121,
         type: 3}
       propertyPath: m_Name
