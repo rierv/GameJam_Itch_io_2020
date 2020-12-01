@@ -18,6 +18,10 @@ public class DialogeManager : MonoBehaviour
     public GameObject NPCRosa2;
     public GameObject NPCPurple;
     public GameObject NPCPurple2;
+
+    public GameObject NPCStrange;
+    public GameObject NPCStrange2;
+
     public GameObject ButtonPrefab;
 
     public GameObject tutorial;
@@ -28,7 +32,7 @@ public class DialogeManager : MonoBehaviour
     private Dialogue currentDialogue;
 
 
-
+    PlayerController pc;
 
     private Queue<string> sentences;
 
@@ -38,6 +42,7 @@ public class DialogeManager : MonoBehaviour
     // Start is called before the first frame update
     void Awake()
     {
+        pc = GameObject.FindObjectOfType<PlayerController>();
         isInDialogue = false;
         sentences = new Queue<string>();
     }
@@ -52,6 +57,8 @@ public class DialogeManager : MonoBehaviour
 
     public void StartDialogue(Dialogue dialogue)
     {
+        pc.enabled = false;
+
         currentDialogue = dialogue;
         currentNPC = dialogue.NPC_name;
 
@@ -90,6 +97,8 @@ public class DialogeManager : MonoBehaviour
 
     public void StartQuestion(Question question)
     {
+        pc.enabled = false;
+
         Time.timeScale = 0;
         currentDialogue = null;
         questionBoxIstance = Instantiate(QuestionBox, new Vector2(0, 0), Quaternion.identity);
@@ -156,6 +165,8 @@ public class DialogeManager : MonoBehaviour
 
     public void EndQuestion(Dialogue d)
     {
+        pc.enabled = true;
+
         Destroy(questionBoxIstance);
         isInDialogue = false;
 
@@ -194,6 +205,8 @@ public class DialogeManager : MonoBehaviour
 
     public void EndDialogue()
     {
+        pc.enabled = true;
+
         Destroy(dialogueBoxIstance);
         isInDialogue = false;
 
@@ -221,6 +234,13 @@ public class DialogeManager : MonoBehaviour
             case "Elprup - Scared":
                 dt = NPCPurple2.GetComponent<DialogueTrigger>();
                 break;
+            case "A Strange Corpse":
+                dt = NPCStrange.GetComponent<DialogueTrigger>();
+                break;
+            case "Another Strange Corpse":
+                dt = NPCStrange2.GetComponent<DialogueTrigger>();
+                break;
+
 
         }
 

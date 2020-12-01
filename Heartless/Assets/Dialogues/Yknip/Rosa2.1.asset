@@ -15,7 +15,8 @@ MonoBehaviour:
   NPC_name: Yknip
   sentences:
   - text: "Your heart can be extracted and used as a shield by holding down the left
-      mouse button \nThen fired by pressing the right one"
+      mouse button.\nThen fired by realising it. You can \rhide it again by pressing
+      the right click."
   - text: When the enemies touch your heart they will remain harmless and your heart
       will begin to revolve around them
   - text: You can take it back at any time by touching it, but this will awaken the

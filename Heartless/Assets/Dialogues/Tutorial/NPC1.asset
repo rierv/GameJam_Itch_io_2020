@@ -1,0 +1,37 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c44415c4f96d9b141b924b201dfe985e, type: 3}
+  m_Name: NPC1
+  m_EditorClassIdentifier: 
+  NPC_name: A Strange Corpse
+  sentences:
+  - text: uh .. here comes another unfortunate ..
+  - text: I wonder how long you will last down here, in the realm of the mind. Here
+      the souls of the heartless roam forever, forgetting us, their bodies, like
+      old boxes.
+  - text: The only thing he cares about is devouring the hearts of newcomers. You
+      have just arrived and you carry a healthy and strong heart.
+  - text: 'It will draw heartless ones to you, but it remains your strongest weapon
+      against them. Use left click to extract the power of love from your heart,
+      release to throw it. '
+  - text: 'If it hits a heartless one it will stun him! Each time you get busted
+      you will start over from the last checkpoint with an additional power of love.
+      Beware, being captured many times could have negative effects on your soul,
+      so try to NEVER GET CAUGHT! '
+  - text: 'If the enemies have captured you and you want to restart the game to complete
+      the game with your soul unharmed, press the "Canc/Delete" on the keyboard.
+
+'
+  - text: Good luck
+  nextDialogue: {fileID: 11400000}
+  nextQuestion: {fileID: 0}
+  nextIsQuestion: 0

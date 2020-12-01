@@ -1,0 +1,26 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c44415c4f96d9b141b924b201dfe985e, type: 3}
+  m_Name: NPC2
+  m_EditorClassIdentifier: 
+  NPC_name: Another Strange Corpse
+  sentences:
+  - text: 'well it may seem absurd, but almost all the souls who arrived here are
+      already heartbroken! '
+  - text: 'I am pleased to see that you know how to do it. '
+  - text: 'Now you will have to overcome a group of opponents .. I do not recommend
+      facing them head-on, unless you already have so much power of love! '
+  - text: Try interacting with the hatches and then the light generator, it should
+      distract the enemies and attract them on itself!
+  nextDialogue: {fileID: 11400000}
+  nextQuestion: {fileID: 0}
+  nextIsQuestion: 0

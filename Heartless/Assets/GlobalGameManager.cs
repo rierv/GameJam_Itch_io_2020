@@ -127,9 +127,13 @@ public class GlobalGameManager : MonoBehaviour
                 }
             }
         }
-        if (Input.GetKeyDown(KeyCode.Escape))
+        if (Input.GetKeyDown(KeyCode.Delete))
         {
             UnityEngine.SceneManagement.SceneManager.LoadScene("Game Scene");
+        }
+        if (Input.GetKeyDown(KeyCode.Escape))
+        {
+            Application.Quit();
         }
 
     }

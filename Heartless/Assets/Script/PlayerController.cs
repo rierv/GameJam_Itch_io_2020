@@ -59,14 +59,14 @@ public class PlayerController : MonoBehaviour
         if (isAiming && Input.GetMouseButtonUp(0))
         {
             isAiming = false;
-            heartCount++;
-            txtHearts.text = heartCount.ToString();
-            Destroy(spawnedHeart);
+            spawnedHeart.GetComponent<Heart>().Shoot(spawnedHeart.transform.position - transform.position);
         }
         if (isAiming && Input.GetMouseButtonDown(1))
         {
             isAiming = false;
-            spawnedHeart.GetComponent<Heart>().Shoot(spawnedHeart.transform.position - transform.position);
+            heartCount++;
+            txtHearts.text = heartCount.ToString();
+            Destroy(spawnedHeart);
         }
     }
 
